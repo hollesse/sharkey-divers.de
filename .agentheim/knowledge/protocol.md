@@ -5,6 +5,14 @@ Newest entries on top.
 
 ---
 
+## 2026-08-30 16:43 -- Batch started: [infrastructure-001]
+
+**Type:** Work / Batch start
+**Tasks:** infrastructure-001 - "Walking Skeleton: Jekyll + Sveltia + Deploy end-to-end"
+**Parallel:** no (1 worker — only ready task; design-system-001-styleguide blocked on it)
+
+---
+
 ## 2026-08-30 16:41 -- Task completed (verification skipped): infrastructure-d3m1s - "Keine Third-Party-Requests im Auslieferungspfad; kein Analytics in v1"
 
 **Type:** Work / Task completion

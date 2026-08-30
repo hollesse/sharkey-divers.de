@@ -1,7 +1,7 @@
 ---
 id: infrastructure-001-walking-skeleton
 title: "Walking Skeleton: Jekyll + Sveltia + Deploy end-to-end"
-status: todo
+status: doing
 type: spike
 context: infrastructure
 created: 2026-08-30
