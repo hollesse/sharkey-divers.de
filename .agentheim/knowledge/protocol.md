@@ -5,6 +5,14 @@ Newest entries on top.
 
 ---
 
+## 2026-08-30 16:39 -- Batch started: [infrastructure-qxeyp, infrastructure-tck5g, infrastructure-d3m1s]
+
+**Type:** Work / Batch start
+**Tasks:** infrastructure-qxeyp - "Bild-Handling: Optimierung beim Upload statt im Build", infrastructure-tck5g - "DNS-Cutover-Plan: Altseite → Neuseite", infrastructure-d3m1s - "Keine Third-Party-Requests im Auslieferungspfad; kein Analytics in v1"
+**Parallel:** yes (3 workers — full remaining ready set; walking skeleton unblocks after this wave)
+
+---
+
 ## 2026-08-30 16:38 -- Task completed (verification skipped): infrastructure-f8deg - "Build-/Deploy-Pipeline: Jekyll in GitHub Actions, Deploy als austauschbares Blatt"
 
 **Type:** Work / Task completion

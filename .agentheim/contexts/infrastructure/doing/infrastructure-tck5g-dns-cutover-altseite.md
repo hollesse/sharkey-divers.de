@@ -1,7 +1,7 @@
 ---
 id: infrastructure-tck5g
 title: "DNS-Cutover-Plan: Altseite → Neuseite"
-status: todo
+status: doing
 type: decision
 context: infrastructure
 created: 2026-08-30

@@ -11,21 +11,21 @@ research touching this BC, and concept synthesis pages.
 
 <!-- task-counts:start -->
 - **Backlog:** 1
-- **Todo:** 4
-- **Doing:** 0
+- **Todo:** 1
+- **Doing:** 3
 - **Done:** 3
 <!-- task-counts:end -->
 
 ### Todo
 <!-- todo-list:start -->
 - **infrastructure-001-walking-skeleton** — Walking Skeleton: Jekyll + Sveltia + Deploy end-to-end — depends_on: [infrastructure-kwtv6, infrastructure-any72, infrastructure-f8deg, infrastructure-qxeyp, infrastructure-tck5g, infrastructure-d3m1s] — `todo/infrastructure-001-walking-skeleton.md`
-- **infrastructure-d3m1s** — Keine Third-Party-Requests im Auslieferungspfad; kein Analytics in v1 — depends_on: [] — `todo/infrastructure-d3m1s-keine-third-party-requests-kein-analytics.md`
-- **infrastructure-tck5g** — DNS-Cutover-Plan: Altseite → Neuseite — depends_on: [] — `todo/infrastructure-tck5g-dns-cutover-altseite.md`
-- **infrastructure-qxeyp** — Bild-Handling: Optimierung beim Upload statt im Build — depends_on: [] — `todo/infrastructure-qxeyp-bild-handling-upload-transformation.md`
 <!-- todo-list:end -->
 
 ### Doing
 <!-- doing-list:start -->
+- **infrastructure-d3m1s** — "Keine Third-Party-Requests im Auslieferungspfad; kein Analytics in v1" (decision) — `doing/infrastructure-d3m1s-keine-third-party-requests-kein-analytics.md`
+- **infrastructure-tck5g** — "DNS-Cutover-Plan: Altseite → Neuseite" (decision) — `doing/infrastructure-tck5g-dns-cutover-altseite.md`
+- **infrastructure-qxeyp** — "Bild-Handling: Optimierung beim Upload statt im Build" (decision) — `doing/infrastructure-qxeyp-bild-handling-upload-transformation.md`
 <!-- doing-list:end -->
 
 ### Done (most recent first; older entries kept for prior-art search)

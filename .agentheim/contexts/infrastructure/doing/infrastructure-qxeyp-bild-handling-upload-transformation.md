@@ -1,7 +1,7 @@
 ---
 id: infrastructure-qxeyp
 title: "Bild-Handling: Optimierung beim Upload statt im Build"
-status: todo
+status: doing
 type: decision
 context: infrastructure
 created: 2026-08-30

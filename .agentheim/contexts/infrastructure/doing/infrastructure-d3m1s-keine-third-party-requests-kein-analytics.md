@@ -1,7 +1,7 @@
 ---
 id: infrastructure-d3m1s
 title: "Keine Third-Party-Requests im Auslieferungspfad; kein Analytics in v1"
-status: todo
+status: doing
 type: decision
 context: infrastructure
 created: 2026-08-30
