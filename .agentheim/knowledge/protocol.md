@@ -5,6 +5,17 @@ Newest entries on top.
 
 ---
 
+## 2026-08-30 16:41 -- Task completed (verification skipped): infrastructure-qxeyp - "Bild-Handling: Optimierung beim Upload statt im Build"
+
+**Type:** Work / Task completion
+**Task:** infrastructure-qxeyp - "Bild-Handling: Optimierung beim Upload statt im Build"
+**Summary:** ADR 0005: Bildoptimierung beim Upload (WebP, max. 1600 px) statt im Build, Decap-Fallback dokumentiert
+**Duration:** 0m55s
+**Verification:** SKIPPED — decision-only task
+**Files changed:** 1
+
+---
+
 ## 2026-08-30 16:39 -- Batch started: [infrastructure-qxeyp, infrastructure-tck5g, infrastructure-d3m1s]
 
 **Type:** Work / Batch start

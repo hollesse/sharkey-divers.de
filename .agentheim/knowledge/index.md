@@ -19,6 +19,7 @@ For BC-scoped artifacts, see each BC's `INDEX.md`.
 ## Global ADRs (scope: global)
 
 <!-- adr-global:start -->
+- **0005** — Bildoptimierung beim Upload statt im Build — 2026-08-30 — `knowledge/decisions/0005-bildoptimierung-beim-upload.md`
 - **0004** — Build in GitHub Actions, Deploy als austauschbares Blatt — 2026-08-30 — `knowledge/decisions/0004-build-deploy-github-actions.md`
 - **0003** — Sveltia CMS mit GitHub-Backend und eigenem OAuth-Proxy — 2026-08-30 — `knowledge/decisions/0003-cms-auth-sveltia-github-oauth.md`
 - **0002** — Hosting auf GitHub Pages — 2026-08-30 — `knowledge/decisions/0002-hosting-github-pages.md`
