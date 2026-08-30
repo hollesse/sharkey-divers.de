@@ -5,6 +5,30 @@ Newest entries on top.
 
 ---
 
+## 2026-08-30 16:57 -- Task verified and completed: infrastructure-001 - "Walking Skeleton: Jekyll + Sveltia + Deploy end-to-end"
+
+**Type:** Work / Task completion
+**Task:** infrastructure-001 - "Walking Skeleton: Jekyll + Sveltia + Deploy end-to-end"
+**Summary:** Walking Skeleton: Jekyll-Site, Sveltia-Admin, Actions-Deploy, Dependabot und Launch-Checkliste — lokal grün gebaut
+**Duration:** 15m10s
+**Verification:** PASS (iteration 2)
+**Files changed:** 21
+**Tests added:** 0
+**ADRs written:** none
+
+---
+
+## 2026-08-30 16:57 -- Verification failed: infrastructure-001 - Walking Skeleton: Jekyll + Sveltia + Deploy end-to-end
+
+**Type:** Work / Verification failure
+**Task:** infrastructure-001 - Walking Skeleton
+**Iteration:** 1 of 3
+**Reasons:** admin/config.yml ohne pro-Bericht-Unterordner für Uploads (widerspricht ADR 0005), Launch-Checkliste verspricht den Unterordner-Pfad, den die Config nicht erzeugt
+**Iteration hint:** likely-fixable
+**Next:** re-dispatched worker
+
+---
+
 ## 2026-08-30 16:43 -- Batch started: [infrastructure-001]
 
 **Type:** Work / Batch start

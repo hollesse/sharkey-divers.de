@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <!-- Preview-Phase (ADR 0002/0006): noindex, solange die Seite nur unter
+       der *.github.io-Adresse laeuft. Wird beim DNS-Cutover entfernt. -->
+  <meta name="robots" content="noindex, nofollow">
+  <!-- ADR 0007: keine Third-Party-Requests im Auslieferungspfad. Kein CDN,
+       keine Webfonts -- Systemfont-Stack statt externer Schriften. -->
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 2rem auto;
+      max-width: 40rem;
+      padding: 0 1rem;
+      line-height: 1.5;
+    }
+    nav a { margin-right: 1rem; }
+    img { max-width: 100%; height: auto; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="{{ '/' | relative_url }}">Start</a>
+      <a href="{{ '/berichte.html' | relative_url }}">Berichte</a>
+      <a href="{{ '/impressum.html' | relative_url }}">Impressum</a>
+      <a href="{{ '/datenschutz.html' | relative_url }}">Datenschutz</a>
+    </nav>
+  </header>
+  <main>
+    {{ content }}
+  </main>
+  <footer>
+    <p><small>Walking Skeleton &ndash; kein Anspruch an Optik, Design folgt separat.</small></p>
+  </footer>
+</body>
+</html>

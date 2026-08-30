@@ -1,0 +1,39 @@
+title: "Sharky Divers Weilburg (Skeleton)"
+description: "Walking Skeleton: Jekyll + Sveltia CMS + GitHub Actions Deploy."
+
+# Preview-Phase (ADR 0002 / ADR 0006): Seite lebt vorerst unter der
+# persoenlichen *.github.io-Adresse mit noindex/robots.txt. Beim
+# DNS-Cutover wird url auf "https://sharkey-divers.de" und baseurl auf ""
+# umgestellt (ADR 0006).
+url: "https://hollesse.github.io"
+baseurl: "/sharkey-divers.de"
+
+timezone: Europe/Berlin
+
+markdown: kramdown
+
+collections:
+  posts:
+    output: true
+    permalink: /berichte/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+exclude:
+  - .agentheim
+  - .worktrees
+  - vendor
+  - docs
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules

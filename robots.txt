@@ -1,0 +1,5 @@
+# Preview-Phase (ADR 0006): Seite laeuft vorerst nur unter der
+# *.github.io-Adresse und soll nicht indexiert werden.
+# Wird beim DNS-Cutover durch eine offene robots.txt ersetzt.
+User-agent: *
+Disallow: /

@@ -1,0 +1,62 @@
+# Sveltia CMS config (ADR 0003) -- absichtlich Decap-kompatibel gehalten,
+# damit ein Rueckfall auf Decap CMS ein Ein-Zeilen-Change bleibt
+# (nur admin/index.html muesste das <script>-Tag tauschen).
+
+backend:
+  name: github
+  repo: hollesse/sharkey-divers.de
+  branch: main
+  # TODO: Sveltia-Auth-Worker (sveltia-cms-auth, Cloudflare Worker) deployen
+  # und die tatsaechliche Worker-URL hier eintragen. Siehe docs/launch-checkliste.md.
+  base_url: https://SVELTIA-AUTH-WORKER-URL.example
+
+# Kein Editorial Workflow in v1 (ADR 0003) -- Redakteure committen direkt auf main.
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+# Bildoptimierung beim Upload (ADR 0005): Sveltia transformiert automatisch
+# nach WebP, max. 1600px Kantenlaenge, Qualitaet ~80.
+media_library:
+  config:
+    transformations:
+      raster_image:
+        format: webp
+        quality: 80
+        width: 1600
+
+collections:
+  - name: berichte
+    label: "Berichte"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    # Unterordner pro Tauchbericht (ADR 0005): Uploads landen unter
+    # assets/uploads/<slug> statt in einem gemeinsamen Ordner.
+    media_folder: "/assets/uploads/{{slug}}"
+    public_folder: "/assets/uploads/{{slug}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime" }
+      - { label: "Text", name: "body", widget: "markdown" }
+      - label: "Bilder"
+        name: "images"
+        widget: "list"
+        field: { label: "Bild", name: "image", widget: "image" }
+        required: false
+
+  - name: pages
+    label: "Seiten"
+    files:
+      - label: "Impressum"
+        name: "impressum"
+        file: "impressum.md"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Text", name: "body", widget: "markdown" }
+      - label: "Datenschutz"
+        name: "datenschutz"
+        file: "datenschutz.md"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Text", name: "body", widget: "markdown" }

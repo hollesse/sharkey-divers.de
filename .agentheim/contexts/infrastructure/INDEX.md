@@ -12,8 +12,8 @@ research touching this BC, and concept synthesis pages.
 <!-- task-counts:start -->
 - **Backlog:** 1
 - **Todo:** 0
-- **Doing:** 1
-- **Done:** 6
+- **Doing:** 0
+- **Done:** 7
 <!-- task-counts:end -->
 
 ### Todo
@@ -23,11 +23,11 @@ research touching this BC, and concept synthesis pages.
 
 ### Doing
 <!-- doing-list:start -->
-- **infrastructure-001** — "Walking Skeleton: Jekyll + Sveltia + Deploy end-to-end" (spike) — `doing/infrastructure-001-walking-skeleton.md`
 <!-- doing-list:end -->
 
 ### Done (most recent first; older entries kept for prior-art search)
 <!-- done-list:start -->
+- **infrastructure-001** — "Walking Skeleton: Jekyll + Sveltia + Deploy end-to-end" (spike) — `done/infrastructure-001-walking-skeleton.md`
 - **infrastructure-d3m1s** — "Keine Third-Party-Requests im Auslieferungspfad; kein Analytics in v1" (decision) — `done/infrastructure-d3m1s-keine-third-party-requests-kein-analytics.md`
 - **infrastructure-tck5g** — "DNS-Cutover-Plan: Altseite → Neuseite" (decision) — `done/infrastructure-tck5g-dns-cutover-altseite.md`
 - **infrastructure-qxeyp** — "Bild-Handling: Optimierung beim Upload statt im Build" (decision) — `done/infrastructure-qxeyp-bild-handling-upload-transformation.md`

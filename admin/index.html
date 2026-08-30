@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Content-Manager</title>
+  <!-- Preview-Phase (ADR 0002/0006): admin ebenfalls noindex. -->
+  <meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+  <!--
+    ADR 0007 ("keine Third-Party-Requests im Auslieferungspfad") gilt fuer
+    den PUBLIC Auslieferungspfad der Seite. /admin/ ist der Redaktions-Editor,
+    kein Teil des Auslieferungspfads fuer Besucher -- daher ist dies das eine
+    bewusst erlaubte externe Skript im gesamten Projekt (ADR 0003: Sveltia CMS).
+  -->
+  <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js" type="module"></script>
+</body>
+</html>

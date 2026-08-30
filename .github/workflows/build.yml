@@ -1,0 +1,26 @@
+name: Build (PR)
+
+# Regressionsschutz beim Theme-Umbau (ADR 0004): baut nur, deployt nicht.
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.4.2"
+          bundler-cache: true
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build
