@@ -22,13 +22,13 @@ ADR committen, das GitHub Pages als Hosting festschreibt (Empfehlung des Archite
 
 ## Acceptance criteria
 - [ ] ADR in `.agentheim/knowledge/decisions/` committet; Begründung entspricht dem Architekten-Entwurf (oder einer vom Betreiber geänderten Fassung).
-- [ ] Das ADR legt die Interims-Preview-Strategie für die Privat-Phase fest (siehe Notes: Pages aus privatem Repo erfordert bezahlten Plan).
+- [ ] Das ADR hält fest: Repo public, Preview ab Tag 1 unter `*.github.io` (mit `noindex`), Custom Domain erst beim Cutover.
 - [ ] Keine Code-Änderung nötig.
 
 ## Notes
 **Vorfragen — vom Betreiber am 2026-08-30 beantwortet:**
 1. **Persönlicher Account vs. Organization:** Start mit persönlichem Account; Umzug in eine Vereins-Organization bleibt später möglich (GitHub unterstützt Repo-Transfer). Bewusst vertagt, keine Blockade.
-2. **Repo öffentlich:** Ja, grundsätzlich ok — aber **vorerst privat**, solange das Design nicht final ist und noch nicht sichtbar sein soll. Konsequenz: GitHub Pages aus privaten Repos gibt es nur mit bezahltem Plan (Pro/Team). Das ADR muss die Privat-Phase regeln — Optionen: (a) Preview nur lokal / im PR-Build, Pages erst beim Public-Schalten aktivieren; (b) vorhandenen GitHub-Pro-Plan nutzen; (c) Cloudflare Pages als privater Preview-Kanal. Beim Public-Schalten gilt: Commit-Autoren-E-Mails via `@users.noreply.github.com` absichern (rückwirkend prüfen!).
+2. **Repo öffentlich: Ja, ab sofort** (bestätigt 2026-08-30, nachdem klar war, dass eine Pages-Seite ohnehin immer öffentlich erreichbar ist — ein privates Repo hätte nur Quellcode/History versteckt, nicht die Seite). **Live-Deploy unter der `*.github.io`-Adresse ist ab Tag 1 Pflicht** — der Betreiber präsentiert Zwischenstände; die Custom Domain `sharkey-divers.de` kommt erst beim Cutover ([[infrastructure-tck5g]]). Bis dahin `noindex`/`robots.txt` auf der Preview-URL. Vor dem Public-Schalten: Commit-Autoren-E-Mails via `@users.noreply.github.com` prüfen (auch rückwirkend in der History).
 3. **EU-Hosting:** Keine Vorgabe; Start mit GitHub Pages, Wechsel bleibt dank hoster-agnostischem Build ([[infrastructure-f8deg]]) später billig.
 
 **ADR-Entwurf des Architekten:**

@@ -28,7 +28,7 @@ Ein minimales, hässliches, aber vollständig funktionierendes Ende-zu-Ende-Ger�
 - [ ] `Gemfile.lock` und Ruby-Version gepinnt; Dependabot konfiguriert.
 
 ## Notes
-**Constraint (2026-08-30):** Das Repo bleibt vorerst **privat**, bis das Design final ist. GitHub-Pages-Deploy aus privatem Repo erfordert einen bezahlten Plan — die im Hosting-ADR ([[infrastructure-kwtv6]]) festgelegte Interims-Preview-Strategie gilt auch für dieses Task; ggf. gilt das Pages-Deploy-Kriterium erst ab dem Public-Schalten, bis dahin genügt der grüne Actions-Build + lokales `jekyll serve`.
+**Constraint (2026-08-30):** Live-Deploy unter der `*.github.io`-Adresse ist ab Tag 1 **Pflicht** — der Betreiber präsentiert Zwischenstände. Das Repo ist/wird dafür public (siehe [[infrastructure-kwtv6]]); vorher Commit-Autoren-E-Mails prüfen. Die Custom Domain kommt erst beim Cutover. `noindex`/`robots.txt` auf der Preview-URL nicht vergessen.
 
 Kein Anspruch an Optik — das Design kommt danach über [[design-system-001-styleguide]]. Der Original-Design-Prompt des Betreibers (Import des Clot-Prototyps via claude_design MCP) liegt verbatim in den Notes des Styleguide-Tasks; im Prototyp-Projekt existiert außerdem eine Datei `jekyll-decap-setup.md`, die beim Skeleton-Bau gelesen werden sollte — sie enthält vermutlich Setup-Überlegungen aus der Design-Session.
 
