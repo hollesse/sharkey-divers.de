@@ -28,4 +28,5 @@ Generisches Ops-Vokabular (erwartbar dünn): Hosting, Deploy, Build-Pipeline, DN
 - **Upstream von `website` und `design-system`:** stellt Hosting, Build und CMS-Zugang bereit.
 
 ## Open questions
-- Siehe Decision-Tasks in `todo/` (Hosting, Decap-Backend, Pipeline, Bild-Handling, DNS-Cutover).
+- Hosting entschieden: GitHub Pages, öffentliches Repo, persönlicher Account, Deploy via GitHub Actions, Preview ab Tag 1 unter `*.github.io` mit `noindex`, Custom Domain erst beim Cutover (ADR 0002).
+- Siehe verbleibende Decision-Tasks in `todo/` (Decap-Backend, Pipeline, Bild-Handling, DNS-Cutover).

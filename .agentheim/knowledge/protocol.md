@@ -5,6 +5,17 @@ Newest entries on top.
 
 ---
 
+## 2026-08-30 16:37 -- Task completed (verification skipped): infrastructure-kwtv6 - "Hosting-Entscheidung: GitHub Pages"
+
+**Type:** Work / Task completion
+**Task:** infrastructure-kwtv6 - "Hosting-Entscheidung: GitHub Pages"
+**Summary:** ADR 0002: Hosting auf GitHub Pages (öffentliches Repo, Preview ab Tag 1 unter *.github.io, Custom Domain erst beim Cutover)
+**Duration:** 1m01s
+**Verification:** SKIPPED — decision-only task
+**Files changed:** 3
+
+---
+
 ## 2026-08-30 16:34 -- Batch started: [infrastructure-kwtv6, infrastructure-any72, infrastructure-f8deg]
 
 **Type:** Work / Batch start

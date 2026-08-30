@@ -1,15 +1,15 @@
 ---
 id: infrastructure-kwtv6
 title: "Hosting-Entscheidung: GitHub Pages"
-status: doing
+status: done
 type: decision
 context: infrastructure
 created: 2026-08-30
-completed:
+completed: 2026-08-30
 depends_on: []
 blocks: []
 tags: [hosting, foundation]
-related_adrs: [0001]
+related_adrs: [0001, 0002]
 related_research: []
 prior_art: []
 ---
@@ -21,9 +21,12 @@ Die Seite braucht ein Zuhause: kostenlos/billig, wartungsarm, Custom Domain + HT
 ADR committen, das GitHub Pages als Hosting festschreibt (Empfehlung des Architekten), inkl. Plan-B-Dokumentation (Cloudflare Pages, deutscher Webspace).
 
 ## Acceptance criteria
-- [ ] ADR in `.agentheim/knowledge/decisions/` committet; Begründung entspricht dem Architekten-Entwurf (oder einer vom Betreiber geänderten Fassung).
-- [ ] Das ADR hält fest: Repo public, Preview ab Tag 1 unter `*.github.io` (mit `noindex`), Custom Domain erst beim Cutover.
-- [ ] Keine Code-Änderung nötig.
+- [x] ADR in `.agentheim/knowledge/decisions/` committet; Begründung entspricht dem Architekten-Entwurf (oder einer vom Betreiber geänderten Fassung).
+- [x] Das ADR hält fest: Repo public, Preview ab Tag 1 unter `*.github.io` (mit `noindex`), Custom Domain erst beim Cutover.
+- [x] Keine Code-Änderung nötig.
+
+## Outcome
+ADR 0002 (`.agentheim/knowledge/decisions/0002-hosting-github-pages.md`) geschrieben: GitHub Pages, öffentliches Repo, persönlicher Account, Deploy via GitHub Actions, Preview ab Tag 1 unter `*.github.io` mit `noindex`, Custom Domain erst beim DNS-Cutover. BC-README-Open-Questions aktualisiert. Keine Code-Änderung.
 
 ## Notes
 **Vorfragen — vom Betreiber am 2026-08-30 beantwortet:**
