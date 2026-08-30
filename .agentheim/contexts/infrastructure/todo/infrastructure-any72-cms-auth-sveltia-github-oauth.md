@@ -23,7 +23,7 @@ ADR committen, das festschreibt: CMS-Frontend **Sveltia CMS** (Decap-config-komp
 ## Acceptance criteria
 - [ ] ADR committet; Begründung entspricht dem Architekten-Entwurf (oder vom Betreiber angepasst).
 - [ ] Der Betreiber hat der Abweichung vom ursprünglichen Plan (Decap → Sveltia; Redakteure bekommen doch GitHub-Accounts) explizit zugestimmt — das weicht von der Brainstorm-Annahme "ohne GitHub-Account" ab.
-- [ ] Vorfrage geklärt: GitHub Organization für den Verein (siehe [[infrastructure-kwtv6]]).
+- [ ] Vorfrage geklärt (2026-08-30): Start mit persönlichem GitHub-Account des Betreibers; Umzug in eine Vereins-Organization bewusst vertagt (siehe [[infrastructure-kwtv6]]).
 - [ ] Keine Code-Änderung nötig.
 
 ## Notes

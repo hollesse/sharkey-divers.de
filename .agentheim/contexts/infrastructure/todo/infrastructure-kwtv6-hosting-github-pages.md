@@ -22,11 +22,14 @@ ADR committen, das GitHub Pages als Hosting festschreibt (Empfehlung des Archite
 
 ## Acceptance criteria
 - [ ] ADR in `.agentheim/knowledge/decisions/` committet; Begründung entspricht dem Architekten-Entwurf (oder einer vom Betreiber geänderten Fassung).
-- [ ] Offene Vorfragen im ADR beantwortet: darf das Repo öffentlich sein? Gibt es eine EU-Hosting-Vorgabe? Persönlicher Account oder GitHub Organization für den Verein?
+- [ ] Das ADR legt die Interims-Preview-Strategie für die Privat-Phase fest (siehe Notes: Pages aus privatem Repo erfordert bezahlten Plan).
 - [ ] Keine Code-Änderung nötig.
 
 ## Notes
-**Vorfrage (blockiert auch [[infrastructure-any72]]):** Vereins-**GitHub-Organization** statt persönlichem Account — Architekten-Empfehlung klar pro Organization (Nachfolgeregelung).
+**Vorfragen — vom Betreiber am 2026-08-30 beantwortet:**
+1. **Persönlicher Account vs. Organization:** Start mit persönlichem Account; Umzug in eine Vereins-Organization bleibt später möglich (GitHub unterstützt Repo-Transfer). Bewusst vertagt, keine Blockade.
+2. **Repo öffentlich:** Ja, grundsätzlich ok — aber **vorerst privat**, solange das Design nicht final ist und noch nicht sichtbar sein soll. Konsequenz: GitHub Pages aus privaten Repos gibt es nur mit bezahltem Plan (Pro/Team). Das ADR muss die Privat-Phase regeln — Optionen: (a) Preview nur lokal / im PR-Build, Pages erst beim Public-Schalten aktivieren; (b) vorhandenen GitHub-Pro-Plan nutzen; (c) Cloudflare Pages als privater Preview-Kanal. Beim Public-Schalten gilt: Commit-Autoren-E-Mails via `@users.noreply.github.com` absichern (rückwirkend prüfen!).
+3. **EU-Hosting:** Keine Vorgabe; Start mit GitHub Pages, Wechsel bleibt dank hoster-agnostischem Build ([[infrastructure-f8deg]]) später billig.
 
 **ADR-Entwurf des Architekten:**
 
