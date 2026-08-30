@@ -5,6 +5,17 @@ Newest entries on top.
 
 ---
 
+## 2026-08-30 16:38 -- Task completed (verification skipped): infrastructure-f8deg - "Build-/Deploy-Pipeline: Jekyll in GitHub Actions, Deploy als austauschbares Blatt"
+
+**Type:** Work / Task completion
+**Task:** infrastructure-f8deg - "Build-/Deploy-Pipeline: Jekyll in GitHub Actions, Deploy als austauschbares Blatt"
+**Summary:** ADR 0004: Build in GitHub Actions, Deploy als austauschbares Blatt, inkl. Pinning-/Update-Policy
+**Duration:** 0m51s
+**Verification:** SKIPPED — decision-only task
+**Files changed:** 1
+
+---
+
 ## 2026-08-30 16:38 -- Task completed (verification skipped): infrastructure-any72 - "CMS-Auth: Sveltia CMS mit GitHub-Backend und eigenem OAuth-Proxy"
 
 **Type:** Work / Task completion

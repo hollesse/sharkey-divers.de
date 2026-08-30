@@ -12,8 +12,8 @@ research touching this BC, and concept synthesis pages.
 <!-- task-counts:start -->
 - **Backlog:** 1
 - **Todo:** 4
-- **Doing:** 1
-- **Done:** 2
+- **Doing:** 0
+- **Done:** 3
 <!-- task-counts:end -->
 
 ### Todo
@@ -26,11 +26,11 @@ research touching this BC, and concept synthesis pages.
 
 ### Doing
 <!-- doing-list:start -->
-- **infrastructure-f8deg** — "Build-/Deploy-Pipeline: Jekyll in GitHub Actions, Deploy als austauschbares Blatt" (decision) — `doing/infrastructure-f8deg-build-deploy-pipeline-github-actions.md`
 <!-- doing-list:end -->
 
 ### Done (most recent first; older entries kept for prior-art search)
 <!-- done-list:start -->
+- **infrastructure-f8deg** — "Build-/Deploy-Pipeline: Jekyll in GitHub Actions, Deploy als austauschbares Blatt" (decision) — `done/infrastructure-f8deg-build-deploy-pipeline-github-actions.md`
 - **infrastructure-any72** — "CMS-Auth: Sveltia CMS mit GitHub-Backend und eigenem OAuth-Proxy" (decision) — `done/infrastructure-any72-cms-auth-sveltia-github-oauth.md`
 - **infrastructure-kwtv6** — "Hosting-Entscheidung: GitHub Pages" (decision) — `done/infrastructure-kwtv6-hosting-github-pages.md`
 <!-- done-list:end -->
