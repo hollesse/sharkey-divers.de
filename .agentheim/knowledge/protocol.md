@@ -5,6 +5,17 @@ Newest entries on top.
 
 ---
 
+## 2026-08-30 16:38 -- Task completed (verification skipped): infrastructure-any72 - "CMS-Auth: Sveltia CMS mit GitHub-Backend und eigenem OAuth-Proxy"
+
+**Type:** Work / Task completion
+**Task:** infrastructure-any72 - "CMS-Auth: Sveltia CMS mit GitHub-Backend und eigenem OAuth-Proxy"
+**Summary:** ADR 0003: Sveltia CMS mit GitHub-Backend und eigenem OAuth-Proxy als Redaktions-Login
+**Duration:** 1m12s
+**Verification:** SKIPPED — decision-only task
+**Files changed:** 2
+
+---
+
 ## 2026-08-30 16:37 -- Task completed (verification skipped): infrastructure-kwtv6 - "Hosting-Entscheidung: GitHub Pages"
 
 **Type:** Work / Task completion

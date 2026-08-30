@@ -19,6 +19,7 @@ For BC-scoped artifacts, see each BC's `INDEX.md`.
 ## Global ADRs (scope: global)
 
 <!-- adr-global:start -->
+- **0003** — Sveltia CMS mit GitHub-Backend und eigenem OAuth-Proxy — 2026-08-30 — `knowledge/decisions/0003-cms-auth-sveltia-github-oauth.md`
 - **0002** — Hosting auf GitHub Pages — 2026-08-30 — `knowledge/decisions/0002-hosting-github-pages.md`
 - **0001** — Statische Seite mit Jekyll + Decap CMS statt WordPress — 2026-08-30 — `knowledge/decisions/0001-static-site-jekyll-decap-statt-wordpress.md`
 <!-- adr-global:end -->

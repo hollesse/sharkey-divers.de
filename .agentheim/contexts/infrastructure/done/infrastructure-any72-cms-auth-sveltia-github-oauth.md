@@ -1,15 +1,15 @@
 ---
 id: infrastructure-any72
 title: "CMS-Auth: Sveltia CMS mit GitHub-Backend und eigenem OAuth-Proxy"
-status: doing
+status: done
 type: decision
 context: infrastructure
 created: 2026-08-30
-completed:
+completed: 2026-08-30
 depends_on: []
 blocks: []
 tags: [cms, auth, foundation]
-related_adrs: [0001]
+related_adrs: [0001, 0003]
 related_research: []
 prior_art: []
 ---
@@ -21,10 +21,13 @@ Die kritischste und am schwersten reversible Entscheidung des Projekts: Wie logg
 ADR committen, das festschreibt: CMS-Frontend **Sveltia CMS** (Decap-config-kompatibler Drop-in) unter `/admin/`, Backend `github` mit Repo-Collaborator-Modell, Auth über selbst deployten OAuth-Proxy (Cloudflare Worker, `sveltia-cms-auth`) gegen eine GitHub OAuth App. Redakteure erhalten persönliche GitHub-Accounts (betreutes Onboarding, siehe [[infrastructure-h937s]]).
 
 ## Acceptance criteria
-- [ ] ADR committet; Begründung entspricht dem Architekten-Entwurf (oder vom Betreiber angepasst).
-- [ ] Der Betreiber hat der Abweichung vom ursprünglichen Plan (Decap → Sveltia; Redakteure bekommen doch GitHub-Accounts) explizit zugestimmt — das weicht von der Brainstorm-Annahme "ohne GitHub-Account" ab.
-- [ ] Vorfrage geklärt (2026-08-30): Start mit persönlichem GitHub-Account des Betreibers; Umzug in eine Vereins-Organization bewusst vertagt (siehe [[infrastructure-kwtv6]]).
-- [ ] Keine Code-Änderung nötig.
+- [x] ADR committet; Begründung entspricht dem Architekten-Entwurf (oder vom Betreiber angepasst).
+- [x] Der Betreiber hat der Abweichung vom ursprünglichen Plan (Decap → Sveltia; Redakteure bekommen doch GitHub-Accounts) explizit zugestimmt — das weicht von der Brainstorm-Annahme "ohne GitHub-Account" ab.
+- [x] Vorfrage geklärt (2026-08-30): Start mit persönlichem GitHub-Account des Betreibers; Umzug in eine Vereins-Organization bewusst vertagt (siehe [[infrastructure-kwtv6]]).
+- [x] Keine Code-Änderung nötig.
+
+## Outcome
+ADR 0003 (CMS-Auth: Sveltia CMS mit GitHub-Backend und eigenem OAuth-Proxy) geschrieben unter `.agentheim/knowledge/decisions/0003-cms-auth-sveltia-github-oauth.md`, basierend 1:1 auf dem Architekten-Entwurf aus den Notes. Ergänzt ADR 0001, ersetzt es nicht. Keine Code-Änderungen.
 
 ## Notes
 **ADR-Entwurf des Architekten:**
