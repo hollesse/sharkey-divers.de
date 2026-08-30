@@ -5,6 +5,21 @@ Newest entries on top.
 
 ---
 
+## 2026-08-30 17:10 -- Work session ended
+
+**Type:** Work / Session end
+**Duration:** 36m
+**Completed:** 7 (first-try PASS: 6, re-dispatched: 1, skipped: 6 [decision-only])
+**Bounced:** 0
+**Failed:** 0
+**Escalated after verification:** 0
+**Dispatches:** infrastructure-kwtv6: 1, infrastructure-any72: 1, infrastructure-f8deg: 1, infrastructure-qxeyp: 1, infrastructure-tck5g: 1, infrastructure-d3m1s: 1, infrastructure-001: 2
+**Commits:** 10
+**Vision-conformance:** none — batch aligns with vision (Hinweis außerhalb der Flag-Kriterien: vision.md "Users" beschreibt Redakteure als "ohne GitHub-Account"; ADR 0003 gibt ihnen betreute GitHub-Accounts — Wortlaut der Vision ist zu aktualisieren, kein Ziel-Drift)
+**Carry-over:** none — working tree clean
+
+---
+
 ## 2026-08-30 16:57 -- Task verified and completed: infrastructure-001 - "Walking Skeleton: Jekyll + Sveltia + Deploy end-to-end"
 
 **Type:** Work / Task completion
