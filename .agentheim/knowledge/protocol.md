@@ -5,6 +5,14 @@ Newest entries on top.
 
 ---
 
+## 2026-08-30 16:34 -- Batch started: [infrastructure-kwtv6, infrastructure-any72, infrastructure-f8deg]
+
+**Type:** Work / Batch start
+**Tasks:** infrastructure-kwtv6 - "Hosting-Entscheidung: GitHub Pages", infrastructure-any72 - "CMS-Auth: Sveltia CMS mit GitHub-Backend und eigenem OAuth-Proxy", infrastructure-f8deg - "Build-/Deploy-Pipeline: Jekyll in GitHub Actions, Deploy als austauschbares Blatt"
+**Parallel:** yes (3 workers — infrastructure-qxeyp, infrastructure-tck5g, infrastructure-d3m1s held to next wave: MAX_PARALLEL=3 cap; walking skeleton blocked on all six decisions)
+
+---
+
 ## 2026-08-30 14:30 -- Brainstorm: Relaunch sharkey-divers.de (Jekyll + Decap/Sveltia)
 
 **Type:** Brainstorm

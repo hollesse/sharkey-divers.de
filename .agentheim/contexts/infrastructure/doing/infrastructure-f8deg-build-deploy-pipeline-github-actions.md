@@ -1,7 +1,7 @@
 ---
 id: infrastructure-f8deg
 title: "Build-/Deploy-Pipeline: Jekyll in GitHub Actions, Deploy als austauschbares Blatt"
-status: todo
+status: doing
 type: decision
 context: infrastructure
 created: 2026-08-30

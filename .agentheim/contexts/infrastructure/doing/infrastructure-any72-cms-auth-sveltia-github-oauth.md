@@ -1,7 +1,7 @@
 ---
 id: infrastructure-any72
 title: "CMS-Auth: Sveltia CMS mit GitHub-Backend und eigenem OAuth-Proxy"
-status: todo
+status: doing
 type: decision
 context: infrastructure
 created: 2026-08-30

@@ -1,7 +1,7 @@
 ---
 id: infrastructure-kwtv6
 title: "Hosting-Entscheidung: GitHub Pages"
-status: todo
+status: doing
 type: decision
 context: infrastructure
 created: 2026-08-30

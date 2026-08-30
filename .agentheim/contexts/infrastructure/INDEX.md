@@ -11,8 +11,8 @@ research touching this BC, and concept synthesis pages.
 
 <!-- task-counts:start -->
 - **Backlog:** 1
-- **Todo:** 7
-- **Doing:** 0
+- **Todo:** 4
+- **Doing:** 3
 - **Done:** 0
 <!-- task-counts:end -->
 
@@ -22,13 +22,13 @@ research touching this BC, and concept synthesis pages.
 - **infrastructure-d3m1s** — Keine Third-Party-Requests im Auslieferungspfad; kein Analytics in v1 — depends_on: [] — `todo/infrastructure-d3m1s-keine-third-party-requests-kein-analytics.md`
 - **infrastructure-tck5g** — DNS-Cutover-Plan: Altseite → Neuseite — depends_on: [] — `todo/infrastructure-tck5g-dns-cutover-altseite.md`
 - **infrastructure-qxeyp** — Bild-Handling: Optimierung beim Upload statt im Build — depends_on: [] — `todo/infrastructure-qxeyp-bild-handling-upload-transformation.md`
-- **infrastructure-f8deg** — Build-/Deploy-Pipeline: Jekyll in GitHub Actions — depends_on: [] — `todo/infrastructure-f8deg-build-deploy-pipeline-github-actions.md`
-- **infrastructure-any72** — CMS-Auth: Sveltia CMS mit GitHub-Backend und eigenem OAuth-Proxy — depends_on: [] — `todo/infrastructure-any72-cms-auth-sveltia-github-oauth.md`
-- **infrastructure-kwtv6** — Hosting-Entscheidung: GitHub Pages — depends_on: [] — `todo/infrastructure-kwtv6-hosting-github-pages.md`
 <!-- todo-list:end -->
 
 ### Doing
 <!-- doing-list:start -->
+- **infrastructure-f8deg** — "Build-/Deploy-Pipeline: Jekyll in GitHub Actions, Deploy als austauschbares Blatt" (decision) — `doing/infrastructure-f8deg-build-deploy-pipeline-github-actions.md`
+- **infrastructure-any72** — "CMS-Auth: Sveltia CMS mit GitHub-Backend und eigenem OAuth-Proxy" (decision) — `doing/infrastructure-any72-cms-auth-sveltia-github-oauth.md`
+- **infrastructure-kwtv6** — "Hosting-Entscheidung: GitHub Pages" (decision) — `doing/infrastructure-kwtv6-hosting-github-pages.md`
 <!-- doing-list:end -->
 
 ### Done (most recent first; older entries kept for prior-art search)
