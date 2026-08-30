@@ -5,6 +5,14 @@ Newest entries on top.
 
 ---
 
+## 2026-08-30 17:12 -- Batch started: [design-system-001]
+
+**Type:** Work / Batch start
+**Tasks:** design-system-001 - Clot-Design-Prototyp als Jekyll-Theme übertragen (Styleguide-Gate)
+**Parallel:** no (1 worker — last remaining todo task, styleguide gate)
+
+---
+
 ## 2026-08-30 17:10 -- Work session ended
 
 **Type:** Work / Session end

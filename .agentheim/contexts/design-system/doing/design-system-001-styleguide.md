@@ -1,7 +1,7 @@
 ---
 id: design-system-001-styleguide
 title: Clot-Design-Prototyp als Jekyll-Theme übertragen (Styleguide-Gate)
-status: todo
+status: doing
 type: feature
 context: design-system
 created: 2026-08-30
