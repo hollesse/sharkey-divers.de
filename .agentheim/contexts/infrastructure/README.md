@@ -29,4 +29,5 @@ Generisches Ops-Vokabular (erwartbar dünn): Hosting, Deploy, Build-Pipeline, DN
 
 ## Open questions
 - Hosting entschieden: GitHub Pages, öffentliches Repo, persönlicher Account, Deploy via GitHub Actions, Preview ab Tag 1 unter `*.github.io` mit `noindex`, Custom Domain erst beim Cutover (ADR 0002).
-- Siehe verbleibende Decision-Tasks in `todo/` (Decap-Backend, Pipeline, Bild-Handling, DNS-Cutover).
+- DNS-Cutover-Strategie entschieden (ADR 0006): Archivierung → URL-Mapping mit Meta-Refresh-Stubs (`jekyll-redirect-from`, da GitHub Pages keine 301er kann) → Abnahme via `*.github.io` → TTL senken → Cutover (Apex ohne `www` als kanonisch) → HTTPS erst nach Propagation → TTL anheben, Alt-Hoster erst nach Karenzwoche kündigen. Offener Punkt: ob ein URL-Inventar der Altseite existiert oder erst gecrawlt werden muss, klärt der Betreiber vor Umsetzung.
+- Siehe verbleibende Decision-Tasks in `todo/` (Decap-Backend, Pipeline, Bild-Handling).

@@ -1,15 +1,15 @@
 ---
 id: infrastructure-tck5g
 title: "DNS-Cutover-Plan: Altseite → Neuseite"
-status: doing
+status: done
 type: decision
 context: infrastructure
 created: 2026-08-30
-completed:
+completed: 2026-08-30
 depends_on: []
 blocks: []
 tags: [dns, launch, foundation]
-related_adrs: [0001]
+related_adrs: [0001, 0006]
 related_research: []
 prior_art: []
 ---
@@ -21,9 +21,9 @@ prior_art: []
 ADR committen, das die Cutover-Strategie festschreibt (Archivierung, URL-Mapping, Redirects, TTL- und HTTPS-Reihenfolge).
 
 ## Acceptance criteria
-- [ ] ADR committet; Begründung entspricht dem Architekten-Entwurf (oder vom Betreiber angepasst).
-- [ ] Geklärt: Existiert ein URL-Inventar der Altseite oder muss gecrawlt werden?
-- [ ] Keine Code-Änderung nötig — die Umsetzung (Archiv, Redirect-Stubs, DNS-Umstellung) wird nach dem ADR als eigene Tasks modelliert.
+- [x] ADR committet; Begründung entspricht dem Architekten-Entwurf (oder vom Betreiber angepasst).
+- [ ] Geklärt: Existiert ein URL-Inventar der Altseite oder muss gecrawlt werden? — **Offener Punkt, nicht durch diesen Task klärbar** (nur der Betreiber kann das beantworten). In ADR 0006 als expliziter offener Punkt festgehalten: falls kein Inventar vorliegt, wird vor Umsetzung von Schritt 2 aus dem archivierten Mirror (`wget --mirror`) gecrawlt.
+- [x] Keine Code-Änderung nötig — die Umsetzung (Archiv, Redirect-Stubs, DNS-Umstellung) wird nach dem ADR als eigene Tasks modelliert.
 
 ## Notes
 **ADR-Entwurf des Architekten (Cutover-Strategie):**
@@ -35,3 +35,6 @@ ADR committen, das die Cutover-Strategie festschreibt (Archivierung, URL-Mapping
 > 5. Cutover: A/AAAA für Apex auf GitHub-Pages-IPs, `www` als CNAME; kanonische Variante festlegen (Empfehlung: Apex ohne `www`).
 > 6. "Enforce HTTPS" erst nach vollständiger Propagation aktivieren — vorher schlägt die Zertifikatsausstellung fehl (kann bis 24 h dauern).
 > 7. TTL wieder anheben; Alt-Hoster erst nach einer Karenzwoche kündigen.
+
+## Outcome
+ADR 0006 (`.agentheim/knowledge/decisions/0006-dns-cutover-strategie.md`) übernimmt den Architekten-Entwurf unverändert als siebenstufige Cutover-Strategie. Das URL-Inventar bleibt ein expliziter offener Punkt in der ADR (Betreiber-Frage, sonst Crawl-Fallback via `wget --mirror` vor Schritt 2). Keine Code-Änderung; Folge-Tasks (Archiv, Redirect-Stub-Generierung, DNS-Umstellung) werden separat modelliert.

@@ -5,6 +5,17 @@ Newest entries on top.
 
 ---
 
+## 2026-08-30 16:41 -- Task completed (verification skipped): infrastructure-tck5g - "DNS-Cutover-Plan: Altseite → Neuseite"
+
+**Type:** Work / Task completion
+**Task:** infrastructure-tck5g - "DNS-Cutover-Plan: Altseite → Neuseite"
+**Summary:** ADR 0006: Siebenstufige DNS-Cutover-Strategie festgeschrieben; URL-Inventar als offener Betreiber-Punkt
+**Duration:** 1m05s
+**Verification:** SKIPPED — decision-only task
+**Files changed:** 3
+
+---
+
 ## 2026-08-30 16:41 -- Task completed (verification skipped): infrastructure-qxeyp - "Bild-Handling: Optimierung beim Upload statt im Build"
 
 **Type:** Work / Task completion
