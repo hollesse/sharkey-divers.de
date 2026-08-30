@@ -19,6 +19,7 @@ For BC-scoped artifacts, see each BC's `INDEX.md`.
 ## Global ADRs (scope: global)
 
 <!-- adr-global:start -->
+- **0007** — Keine Third-Party-Requests im Auslieferungspfad; kein Analytics in v1 — 2026-08-30 — `knowledge/decisions/0007-keine-third-party-requests-kein-analytics.md`
 - **0006** — DNS-Cutover-Strategie Altseite → Neuseite — 2026-08-30 — `knowledge/decisions/0006-dns-cutover-strategie.md`
 - **0005** — Bildoptimierung beim Upload statt im Build — 2026-08-30 — `knowledge/decisions/0005-bildoptimierung-beim-upload.md`
 - **0004** — Build in GitHub Actions, Deploy als austauschbares Blatt — 2026-08-30 — `knowledge/decisions/0004-build-deploy-github-actions.md`

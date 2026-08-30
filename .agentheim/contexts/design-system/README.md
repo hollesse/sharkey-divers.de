@@ -23,6 +23,9 @@ supporting
 ## Key commands
 - Design-Review anfordern.
 
+## Harte Regeln fürs Theme
+- **Keine Third-Party-Requests im Auslieferungspfad (ADR 0007):** Fonts, Icons und alle Assets werden self-hosted; keine CDN-Einbindungen, Karten nur als verlinktes Bild, Video-Embeds nur mit Klickschutz. Voraussetzung für die Consent-Freiheit der Seite.
+
 ## Relationships with other contexts
 - **Upstream von `website`:** Jedes Frontend-Task dort hängt per `depends_on: [design-system-001-styleguide]` am Styleguide-Gate.
 - **Downstream von `infrastructure`:** baut auf dem Walking Skeleton (laufende Jekyll-Site) auf.

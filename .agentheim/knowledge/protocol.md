@@ -5,6 +5,17 @@ Newest entries on top.
 
 ---
 
+## 2026-08-30 16:41 -- Task completed (verification skipped): infrastructure-d3m1s - "Keine Third-Party-Requests im Auslieferungspfad; kein Analytics in v1"
+
+**Type:** Work / Task completion
+**Task:** infrastructure-d3m1s - "Keine Third-Party-Requests im Auslieferungspfad; kein Analytics in v1"
+**Summary:** ADR 0007: Alle Assets first-party, kein Analytics in v1 (dokumentierte Non-Decision mit Revisionskriterien)
+**Duration:** 1m03s
+**Verification:** SKIPPED — decision-only task
+**Files changed:** 2
+
+---
+
 ## 2026-08-30 16:41 -- Task completed (verification skipped): infrastructure-tck5g - "DNS-Cutover-Plan: Altseite → Neuseite"
 
 **Type:** Work / Task completion

@@ -12,8 +12,8 @@ research touching this BC, and concept synthesis pages.
 <!-- task-counts:start -->
 - **Backlog:** 1
 - **Todo:** 1
-- **Doing:** 1
-- **Done:** 5
+- **Doing:** 0
+- **Done:** 6
 <!-- task-counts:end -->
 
 ### Todo
@@ -23,11 +23,11 @@ research touching this BC, and concept synthesis pages.
 
 ### Doing
 <!-- doing-list:start -->
-- **infrastructure-d3m1s** — "Keine Third-Party-Requests im Auslieferungspfad; kein Analytics in v1" (decision) — `doing/infrastructure-d3m1s-keine-third-party-requests-kein-analytics.md`
 <!-- doing-list:end -->
 
 ### Done (most recent first; older entries kept for prior-art search)
 <!-- done-list:start -->
+- **infrastructure-d3m1s** — "Keine Third-Party-Requests im Auslieferungspfad; kein Analytics in v1" (decision) — `done/infrastructure-d3m1s-keine-third-party-requests-kein-analytics.md`
 - **infrastructure-tck5g** — "DNS-Cutover-Plan: Altseite → Neuseite" (decision) — `done/infrastructure-tck5g-dns-cutover-altseite.md`
 - **infrastructure-qxeyp** — "Bild-Handling: Optimierung beim Upload statt im Build" (decision) — `done/infrastructure-qxeyp-bild-handling-upload-transformation.md`
 - **infrastructure-f8deg** — "Build-/Deploy-Pipeline: Jekyll in GitHub Actions, Deploy als austauschbares Blatt" (decision) — `done/infrastructure-f8deg-build-deploy-pipeline-github-actions.md`
