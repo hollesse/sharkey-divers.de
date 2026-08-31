@@ -251,9 +251,12 @@
 }
 
 .site-footer__logo img {
-  height: 56px;
+  // Prototyp: helles Logo auf dunklem Grund via Invertierung (index.html Footer)
+  height: 110px;
   width: auto;
   max-width: 100%;
+  filter: invert(1);
+  mix-blend-mode: screen;
 }
 
 .site-footer__address {

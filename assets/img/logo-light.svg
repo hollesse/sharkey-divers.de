@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: Platzhalter-Wortmarke (helle Variante fuer den dunklen Footer).
-     Siehe assets/img/logo.svg fuer den Hintergrund zum fehlenden
-     Original-Logo. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 88" width="320" height="88" role="img" aria-label="Tauchclub Sharkey Divers Weilburg">
-  <text x="0" y="38" font-family="'Schibsted Grotesk', 'Source Sans 3', system-ui, sans-serif" font-weight="800" font-size="30" fill="#ffffff">Sharkey Divers</text>
-  <text x="0" y="66" font-family="'Source Sans 3', system-ui, sans-serif" font-weight="600" font-size="16" letter-spacing="0.04em" fill="#9fd2ec">TAUCHCLUB WEILBURG</text>
-</svg>
