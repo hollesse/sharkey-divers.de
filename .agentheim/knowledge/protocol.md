@@ -5,6 +5,22 @@ Newest entries on top.
 
 ---
 
+## 2026-08-31 19:05 -- Work session ended
+
+**Type:** Work / Session end
+**Duration:** ~1h aktive Orchestrierung (Session lief über eine Nutzer-Pause hinweg; Batch-Start 2026-08-30 17:17)
+**Completed:** 1 (first-try PASS: 0, re-dispatched: 1, skipped: 0)
+**Bounced:** 0
+**Failed:** 0
+**Escalated after verification:** 0
+**Dispatches:** design-system-001: 2
+**Commits:** 3
+**Vision-conformance:** none — batch aligns with vision (Theme-Übertragung ist Erfolgskriterium 1 der Vision; Non-Goals unberührt)
+**Carry-over:** none — working tree clean
+**Hinweis:** Styleguide-Gate offen — Betreiber-Review auf der Preview steht aus; bis zur Abnahme keine Frontend-Task-Promotion (website-Backlog wartet).
+
+---
+
 ## 2026-08-31 19:01 -- Task verified and completed: design-system-001 - Clot-Design-Prototyp als Jekyll-Theme übertragen (Styleguide-Gate)
 
 **Type:** Work / Task completion
