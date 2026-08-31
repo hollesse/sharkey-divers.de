@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Datenschutz"
+footer_slim: true
 ---
 
 <!-- TODO: Platzhalter -- Datenschutzerklaerung vor Go-Live ausformulieren.

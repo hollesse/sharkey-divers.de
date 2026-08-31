@@ -1,0 +1,24 @@
+<!-- Header/Nav aus dem Clot-Prototyp (index.html/berichte.html/bericht.html/
+     impressum.html). Sticky nur auf der Startseite (page.nav_sticky), das
+     mobile Menue nutzt den Checkbox-Hack statt externem JS (ADR 0007-nah). -->
+<header class="site-header{% if page.nav_sticky %} site-header--sticky{% endif %}">
+  <div class="site-header__bar">
+    <a href="{{ '/' | relative_url }}" class="site-logo">
+      <!-- TODO: Platzhalter-Logo, siehe assets/img/logo.svg -->
+      <img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="Tauchclub Sharkey Divers Weilburg" width="240" height="88" loading="eager">
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+    <label for="nav-toggle" class="nav-toggle-btn" aria-label="Menü">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <nav class="site-nav">
+      <a href="{{ '/' | relative_url }}#verein">Der Verein</a>
+      <a href="{{ '/' | relative_url }}#ausbildung">Ausbildung</a>
+      <a href="{{ '/' | relative_url }}#termine">Termine</a>
+      <a href="{{ '/berichte.html' | relative_url }}">Berichte</a>
+      <a href="{{ '/' | relative_url }}#mitmachen" class="btn btn--blue">Mitmachen</a>
+    </nav>
+  </div>
+</header>

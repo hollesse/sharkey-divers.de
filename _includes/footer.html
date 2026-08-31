@@ -1,0 +1,56 @@
+<!-- Footer aus dem Clot-Prototyp: volle Variante mit Adresse/Spalten auf
+     der Startseite, schlanke Variante (nur Copyright + Rechtliches) auf
+     den Unterseiten (page.footer_slim). -->
+{% if page.footer_slim %}
+<footer class="site-footer site-footer--slim">
+  <div class="site-footer__legal-inner">
+    <span>&copy; {{ 'now' | date: "%Y" }} Tauchclub Sharkey Divers Weilburg e.V.</span>
+    <span class="site-footer__legal-links">
+      <a href="{{ '/impressum.html' | relative_url }}">Impressum</a>
+      <a href="{{ '/datenschutz.html' | relative_url }}">Datenschutz</a>
+    </span>
+  </div>
+</footer>
+{% else %}
+<footer class="site-footer">
+  <div class="site-footer__columns">
+    <div class="site-footer__brand">
+      <div class="site-footer__logo">
+        <!-- TODO: Platzhalter-Logo, siehe assets/img/logo-light.svg -->
+        <img src="{{ '/assets/img/logo-light.svg' | relative_url }}" alt="Tauchclub Sharkey Divers Weilburg" width="240" height="56" loading="lazy">
+      </div>
+      <p class="site-footer__address">Tauchclub Sharkey Divers Weilburg e.V.<br>Postfach 1142<br>35771 Weilburg / Lahn</p>
+    </div>
+    <div class="site-footer__col">
+      <strong class="site-footer__col-title">Verein</strong>
+      <div class="site-footer__links">
+        <a href="{{ '/' | relative_url }}#verein">Der Verein</a>
+        <a href="{{ '/' | relative_url }}#ausbildung">Ausbildung</a>
+        <a href="{{ '/' | relative_url }}#termine">Termine</a>
+        <a href="{{ '/berichte.html' | relative_url }}">Berichte</a>
+      </div>
+    </div>
+    <div class="site-footer__col">
+      <strong class="site-footer__col-title">Verbände</strong>
+      <div class="site-footer__links">
+        <a href="https://www.vdst.de">VDST</a>
+        <a href="https://www.htsv.org">HTSV</a>
+        <a href="https://www.landessportbund-hessen.de">Landessportbund Hessen</a>
+      </div>
+    </div>
+    <div class="site-footer__col">
+      <strong class="site-footer__col-title">Rechtliches</strong>
+      <div class="site-footer__links">
+        <a href="{{ '/impressum.html' | relative_url }}">Impressum</a>
+        <a href="{{ '/datenschutz.html' | relative_url }}">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+  <div class="site-footer__legal">
+    <div class="site-footer__legal-inner">
+      <span>&copy; {{ 'now' | date: "%Y" }} Tauchclub Sharkey Divers Weilburg e.V.</span>
+      <span>1. Vorsitzender: Markus Schuster</span>
+    </div>
+  </div>
+</footer>
+{% endif %}

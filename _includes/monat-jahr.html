@@ -1,0 +1,6 @@
+{%- comment -%}
+  Gibt "MONAT JAHR" (deutsch, GROSS) fuer include.date zurueck, z. B. "MAI 2026".
+  Aufruf: {% include monat-jahr.html date=post.date %}
+{%- endcomment -%}
+{%- assign monat_nr = include.date | date: "%m" -%}
+{{- site.data.monate[monat_nr] | upcase }} {{ include.date | date: "%Y" -}}

@@ -38,6 +38,9 @@ collections:
     fields:
       - { label: "Titel", name: "title", widget: "string" }
       - { label: "Datum", name: "date", widget: "datetime" }
+      # Kurztext fuer Berichte-Karten (Startseite-Vorschau, Uebersicht),
+      # Theme-Ergaenzung design-system-001.
+      - { label: "Teaser", name: "teaser", widget: "text", required: false }
       - { label: "Text", name: "body", widget: "markdown" }
       - label: "Bilder"
         name: "images"

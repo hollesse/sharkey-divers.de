@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: Platzhalter-Wortmarke. Das echte Logo (dist/assets/logo.png aus
+     dem Clot-Prototyp) konnte beim Design-Import nicht mitgezogen werden
+     (Datei zu gross fuer die Design-API). Sobald das Original vorliegt,
+     hier austauschen -- Referenzstellen: _includes/header.html,
+     _includes/footer.html. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 88" width="320" height="88" role="img" aria-label="Tauchclub Sharkey Divers Weilburg">
+  <text x="0" y="38" font-family="'Schibsted Grotesk', 'Source Sans 3', system-ui, sans-serif" font-weight="800" font-size="30" fill="#0b2a3b">Sharkey Divers</text>
+  <text x="0" y="66" font-family="'Source Sans 3', system-ui, sans-serif" font-weight="600" font-size="16" letter-spacing="0.04em" fill="#0b5e88">TAUCHCLUB WEILBURG</text>
+</svg>

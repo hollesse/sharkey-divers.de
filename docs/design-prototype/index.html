@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#ffffff;color:#16242e;font-family:'Source Sans 3',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#0b5e88;text-decoration:none}
+a:hover{color:#08425f;text-decoration:underline}
+*{box-sizing:border-box}
+</style>
+</helmet>
+<div style="min-width:320px">
+
+<header style="background:#ffffff;border-bottom:1px solid #e3eaee;position:sticky;top:0;z-index:20">
+  <div style="max-width:1140px;margin:0 auto;padding:6px clamp(16px,4vw,40px);display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px">
+    <a href="#start" style="display:flex;align-items:center;color:#16242e">
+      <img src="assets/logo.png" alt="Tauchclub Sharkey Divers Weilburg" style="height:88px;width:auto;display:block">
+    </a>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+    <nav style="display:flex;flex-wrap:wrap;gap:4px 18px;margin-left:auto;font-size:15px;font-weight:600">
+      <a href="#verein" style="color:{{ cVerein }};padding:6px 2px;border-bottom:2px solid {{ bVerein }}">Der Verein</a>
+      <a href="#ausbildung" style="color:{{ cAusbildung }};padding:6px 2px;border-bottom:2px solid {{ bAusbildung }}">Ausbildung</a>
+      <a href="#termine" style="color:{{ cTermine }};padding:6px 2px;border-bottom:2px solid {{ bTermine }}">Termine</a>
+      <a href="#berichte" style="color:{{ cBerichte }};padding:6px 2px;border-bottom:2px solid {{ bBerichte }}">Berichte</a>
+      <a href="#mitmachen" style="background:#0b5e88;color:#ffffff;padding:7px 16px;border-radius:6px">Mitmachen</a>
+    </nav>
+    </sc-if>
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+    <button onClick="{{ toggleMenu }}" aria-label="Menü" style="margin-left:auto;background:none;border:1px solid #d4dee4;border-radius:8px;padding:10px 12px;cursor:pointer;display:flex;flex-direction:column;gap:4px;min-width:44px;min-height:44px;justify-content:center;align-items:center">
+      <span style="width:20px;height:2px;background:#16242e;display:block"></span>
+      <span style="width:20px;height:2px;background:#16242e;display:block"></span>
+      <span style="width:20px;height:2px;background:#16242e;display:block"></span>
+    </button>
+    </sc-if>
+  </div>
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+  <nav style="border-top:1px solid #e3eaee;background:#ffffff;display:flex;flex-direction:column;padding:8px clamp(16px,4vw,40px) 16px;font-size:17px;font-weight:600">
+    <a href="#verein" onClick="{{ closeMenu }}" style="color:{{ cVerein }};padding:12px 2px;border-bottom:1px solid #eef3f6">Der Verein</a>
+    <a href="#ausbildung" onClick="{{ closeMenu }}" style="color:{{ cAusbildung }};padding:12px 2px;border-bottom:1px solid #eef3f6">Ausbildung</a>
+    <a href="#termine" onClick="{{ closeMenu }}" style="color:{{ cTermine }};padding:12px 2px;border-bottom:1px solid #eef3f6">Termine</a>
+    <a href="#berichte" onClick="{{ closeMenu }}" style="color:{{ cBerichte }};padding:12px 2px;border-bottom:1px solid #eef3f6">Berichte</a>
+    <a href="#mitmachen" onClick="{{ closeMenu }}" style="background:#0b5e88;color:#ffffff;padding:12px 16px;border-radius:8px;margin-top:12px;text-align:center">Mitmachen</a>
+  </nav>
+  </sc-if>
+</header>
+
+<section id="start" style="position:relative;background:#0b2a3b">
+  <div style="position:relative;height:clamp(380px,58vh,560px)">
+    <img src="assets/hero.webp" alt="" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:0px">
+    <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(8,28,40,0.78) 0%,rgba(8,28,40,0.45) 45%,rgba(8,28,40,0.05) 75%);pointer-events:none"></div>
+    <div style="position:absolute;inset:0;display:flex;align-items:center;pointer-events:none">
+      <div style="max-width:1140px;margin:0 auto;width:100%;padding:0 clamp(16px,4vw,40px)">
+        <div style="max-width:560px;color:#ffffff">
+          <p style="margin:0 0 10px;font-size:14px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9fd2ec">Tauchclub Sharkey Divers Weilburg e.V.</p>
+          <h1 style="margin:0 0 14px;font-family:'Schibsted Grotesk',sans-serif;font-size:clamp(30px,5.2vw,52px);line-height:1.06;letter-spacing:-0.02em">Gemeinsam abtauchen. Seit 1996.</h1>
+          <p style="margin:0 0 22px;font-size:clamp(16px,1.8vw,19px);line-height:1.55;color:#dce9f0">Über 50 Taucherinnen und Taucher und Ausbildung nach VDST/CMAS, vom ersten Atemzug unter Wasser bis zum technischen Tauchen. Getaucht wird im Verbandssee des HTSV in Schönbach bei Herborn.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;pointer-events:auto">
+            <a href="#mitmachen" style="background:#d5382f;color:#ffffff;padding:12px 22px;border-radius:6px;font-weight:700;font-size:16px" style-hover="background:#b92d25;color:#ffffff;text-decoration:none">Schnuppertauchen anfragen</a>
+            <a href="#ausbildung" style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.45);color:#ffffff;padding:12px 22px;border-radius:6px;font-weight:600;font-size:16px" style-hover="background:rgba(255,255,255,0.24);color:#ffffff;text-decoration:none">Unsere Ausbildung</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="verein" style="max-width:1140px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,40px);scroll-margin-top:92px">
+  <div style="display:flex;flex-wrap:wrap;gap:clamp(28px,4vw,56px);align-items:flex-start">
+    <div style="flex:1 1 420px;min-width:280px">
+      <p style="margin:0 0 8px;font-size:13.5px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#0b5e88">Der Verein</p>
+      <h2 style="margin:0 0 16px;font-family:'Schibsted Grotesk',sans-serif;font-size:clamp(26px,3.4vw,36px);line-height:1.12;letter-spacing:-0.015em">Die Idee kam auf der boot. Der Rest ist Vereinsgeschichte.</h2>
+      <p style="margin:0 0 14px;font-size:17px;line-height:1.65;color:#33454f">Die Idee zum eigenen Tauchclub entstand auf der boot, der Düsseldorfer Wassersportmesse. Im April 1996 wurde daraus Ernst: Gründung in der Weilburger Kneipe „Zum Stadtpfeifer". Aus der kleinen Runde sind über 50 Mitglieder geworden, vom Jugendlichen bis zum Tauchlehrer.</p>
+      <p style="margin:0 0 14px;font-size:17px;line-height:1.65;color:#33454f">Getaucht wird bei uns in aller Breite: vom klassischen Sporttauchen bis zum technischen Tauchen. Zuhause sind wir im Verbandssee in Schönbach bei Herborn und in den Seen der Umgebung. Und meist geht es einmal im Jahr gemeinsam auf Tauchreise.</p>
+      <p style="margin:0;font-size:17px;line-height:1.65;color:#33454f">Als Mitglied im <a href="https://www.vdst.de">VDST</a> bilden wir nach CMAS-Richtlinien aus: weltweit anerkannt, gründlich und ohne Zeitdruck. Der Verein ist außerdem Mitglied im Hessischen Tauchsportverband und im Landessportbund Hessen.</p>
+    </div>
+    <div style="flex:1 1 380px;min-width:280px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div style="grid-column:1 / -1;height:220px"><img src="assets/verein-gruppe.webp" alt="" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:10px"></div>
+      <div style="height:150px"><img src="assets/verein-schoenbach.webp" alt="" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:10px"></div>
+      <div style="height:150px"><img src="assets/verein-stammtisch.webp" alt="" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:10px"></div>
+    </div>
+  </div>
+  <div style="margin-top:clamp(32px,4vw,52px);display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px">
+    <div style="background:#f2f7fa;border:1px solid #dfeaf0;border-radius:10px;padding:20px 22px">
+      <h3 style="margin:0 0 6px;font-family:'Schibsted Grotesk',sans-serif;font-size:17px">Eigener Kompressor</h3>
+      <p style="margin:0;font-size:15px;line-height:1.55;color:#4a5c66">Flaschenfüllungen zum Vorzugspreis, direkt im Verein, ohne Umweg über den Tauchshop.</p>
+    </div>
+    <div style="background:#f2f7fa;border:1px solid #dfeaf0;border-radius:10px;padding:20px 22px">
+      <h3 style="margin:0 0 6px;font-family:'Schibsted Grotesk',sans-serif;font-size:17px">Gemeinsam tauchen</h3>
+      <p style="margin:0;font-size:15px;line-height:1.55;color:#4a5c66">Regelmäßig zusammen im Verbandssee in Schönbach und an den Seen der Umgebung. Keiner taucht allein.</p>
+    </div>
+    <div style="background:#f2f7fa;border:1px solid #dfeaf0;border-radius:10px;padding:20px 22px">
+      <h3 style="margin:0 0 6px;font-family:'Schibsted Grotesk',sans-serif;font-size:17px">Ausfahrten &amp; Reisen</h3>
+      <p style="margin:0;font-size:15px;line-height:1.55;color:#4a5c66">Wochenenden an heimischen Seen, Clubreisen ans Meer. Gemeinsam macht's mehr Spaß.</p>
+    </div>
+  </div>
+</section>
+
+<section id="ausbildung" style="background:#0b2a3b;color:#ffffff;scroll-margin-top:92px">
+  <div style="max-width:1140px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,40px);display:flex;flex-wrap:wrap;gap:clamp(28px,4vw,56px)">
+    <div style="flex:1 1 400px;min-width:280px">
+      <p style="margin:0 0 8px;font-size:13.5px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9fd2ec">Ausbildung</p>
+      <h2 style="margin:0 0 16px;font-family:'Schibsted Grotesk',sans-serif;font-size:clamp(26px,3.4vw,36px);line-height:1.12;letter-spacing:-0.015em">Tauchen lernen. Bei uns im Verein.</h2>
+      <p style="margin:0 0 20px;font-size:17px;line-height:1.65;color:#c8dae4">Nicht jeder Verein hat eigene Tauchlehrer, wir schon. Ausgebildet wird im Verbandssee in Schönbach bei Herborn, nach den Richtlinien des VDST und damit nach weltweit anerkannten CMAS-Standards. Zu fairen Vereinskonditionen, im eigenen Tempo, von Leuten, mit denen du danach auch tauchen gehst.</p>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);border-radius:8px;padding:14px 18px">
+          <strong style="font-family:'Schibsted Grotesk',sans-serif;font-size:16px;min-width:170px">Vereinseigene Tauchlehrer</strong>
+          <span style="font-size:15px;color:#c8dae4">Ausbildung aus dem Verein heraus, vom Schnuppertauchen bis zum Brevet</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);border-radius:8px;padding:14px 18px">
+          <strong style="font-family:'Schibsted Grotesk',sans-serif;font-size:16px;min-width:170px">VDST/CMAS-Brevets</strong>
+          <span style="font-size:15px;color:#c8dae4">Vom Grundtauchschein über die Sterne-Brevets bis zu Spezialkursen</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);border-radius:8px;padding:14px 18px">
+          <strong style="font-family:'Schibsted Grotesk',sans-serif;font-size:16px;min-width:170px">Kostenlose Leihausrüstung</strong>
+          <span style="font-size:15px;color:#c8dae4">Für die Ausbildung stellt der Verein die komplette Ausrüstung, Neumitglieder leihen kostenlos</span>
+        </div>
+      </div>
+      <p style="margin:18px 0 0;font-size:14px;color:#8fa6b3">Interesse? <a href="#mitmachen" style="color:#9fd2ec">Frag ein Schnuppertauchen an</a>, der Rest ergibt sich.</p>
+    </div>
+    <div style="flex:1 1 380px;min-width:280px;min-height:320px"><img src="assets/training-bild.webp" alt="" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:12px"></div>
+  </div>
+</section>
+
+<section id="termine" style="max-width:1140px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,40px);scroll-margin-top:92px">
+  <p style="margin:0 0 8px;font-size:13.5px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#0b5e88">Termine</p>
+  <h2 style="margin:0 0 24px;font-family:'Schibsted Grotesk',sans-serif;font-size:clamp(26px,3.4vw,36px);letter-spacing:-0.015em">Demnächst im Verein</h2>
+  <div style="display:flex;flex-direction:column;border-top:1px solid #e3eaee">
+    <sc-for list="{{ termine }}" as="t" hint-placeholder-count="4">
+      <div style="display:flex;flex-wrap:wrap;gap:4px 24px;align-items:baseline;padding:16px 4px;border-bottom:1px solid #e3eaee">
+        <span style="font-family:'Schibsted Grotesk',sans-serif;font-weight:700;font-size:15.5px;color:#0b5e88;min-width:110px">{{ t.datum }}</span>
+        <strong style="font-size:16.5px;min-width:220px;flex:1 1 220px">{{ t.titel }}</strong>
+        <span style="font-size:15px;color:#5c6d78;flex:2 1 260px">{{ t.info }}</span>
+      </div>
+    </sc-for>
+  </div>
+  <p style="margin:16px 0 0;font-size:14.5px;color:#5c6d78">Alle Termine ohne Gewähr, kurzfristige Änderungen kündigen wir per Mail und in der Vereinsgruppe an.</p>
+</section>
+
+<sc-if value="{{ zeigeBerichte }}" hint-placeholder-val="{{ true }}">
+<section id="berichte" style="background:#f2f7fa;border-top:1px solid #e3eaee;border-bottom:1px solid #e3eaee;scroll-margin-top:92px">
+  <div style="max-width:1140px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,40px)">
+    <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:12px 24px;margin-bottom:24px">
+      <div>
+        <p style="margin:0 0 8px;font-size:13.5px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#0b5e88">Berichte</p>
+        <h2 style="margin:0;font-family:'Schibsted Grotesk',sans-serif;font-size:clamp(26px,3.4vw,36px);letter-spacing:-0.015em">Neues aus dem Vereinsleben</h2>
+      </div>
+      <a href="berichte.html" style="margin-left:auto;font-weight:600;font-size:15.5px">Alle Berichte →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px">
+      <sc-for list="{{ berichte }}" as="b" hint-placeholder-count="3">
+        <article style="background:#ffffff;border:1px solid #dfeaf0;border-radius:12px;overflow:hidden;display:flex;flex-direction:column">
+          <sc-if value="{{ b.hatBild }}" hint-placeholder-val="{{ true }}">
+            <div style="height:170px"><img src="{{ b.imgSrc }}" alt="" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:0px"></div>
+          </sc-if>
+          <div style="padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1">
+            <span style="font-size:13px;font-weight:700;color:#8fa1ac;letter-spacing:0.04em">{{ b.datum }}</span>
+            <h3 style="margin:0;font-family:'Schibsted Grotesk',sans-serif;font-size:18.5px;line-height:1.25">{{ b.titel }}</h3>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:#4a5c66">{{ b.teaser }}</p>
+            <a href="bericht.html" style="margin-top:auto;padding-top:6px;font-weight:600;font-size:14.5px">Weiterlesen →</a>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </div>
+</section>
+</sc-if>
+
+<section id="mitmachen" style="max-width:1140px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(16px,4vw,40px);scroll-margin-top:92px">
+  <div style="background:#0b5e88;border-radius:16px;padding:clamp(32px,5vw,56px);color:#ffffff;display:flex;flex-wrap:wrap;gap:24px 48px;align-items:center">
+    <div style="flex:1 1 380px;min-width:260px">
+      <h2 style="margin:0 0 12px;font-family:'Schibsted Grotesk',sans-serif;font-size:clamp(24px,3.2vw,34px);line-height:1.15;letter-spacing:-0.015em">Lust, es mal zu probieren?</h2>
+      <p style="margin:0;font-size:17px;line-height:1.6;color:#cfe4ef">Komm zum Schnuppertauchen mit, kostenlos und unverbindlich. Ausrüstung stellen wir. Schreib uns kurz eine Mail, dann finden wir einen passenden Termin.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;flex:0 1 auto">
+      <a href="mailto:info@tauchclub-weilburg.de" style="background:#ffffff;color:#0b5e88;padding:13px 26px;border-radius:8px;font-weight:700;font-size:16px;text-align:center" style-hover="background:#e8f2f8;color:#0b5e88;text-decoration:none">info@tauchclub-weilburg.de</a>
+      <span style="font-size:13.5px;color:#9fc4d8;text-align:center">Wir melden uns meist innerhalb weniger Tage.</span>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#0b2a3b;color:#a9bcc7">
+  <div style="max-width:1140px;margin:0 auto;padding:clamp(36px,5vw,56px) clamp(16px,4vw,40px);display:flex;flex-wrap:wrap;gap:28px 56px">
+    <div style="flex:1 1 260px;min-width:240px">
+      <div style="margin-bottom:14px">
+        <img src="assets/logo.png" alt="Tauchclub Sharkey Divers Weilburg" style="height:110px;width:auto;display:block;filter:invert(1);mix-blend-mode:screen;max-width:100%">
+      </div>
+      <p style="margin:0;font-size:14.5px;line-height:1.6">Tauchclub Sharkey Divers Weilburg e.V.<br>Postfach 1142<br>35771 Weilburg / Lahn</p>
+    </div>
+    <div style="flex:1 1 180px;min-width:160px">
+      <strong style="display:block;color:#ffffff;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:12px">Verein</strong>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:15px">
+        <a href="#verein" style="color:#c3d4dd">Der Verein</a>
+        <a href="#ausbildung" style="color:#c3d4dd">Ausbildung</a>
+        <a href="#termine" style="color:#c3d4dd">Termine</a>
+        <a href="#berichte" style="color:#c3d4dd">Berichte</a>
+      </div>
+    </div>
+    <div style="flex:1 1 180px;min-width:160px">
+      <strong style="display:block;color:#ffffff;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:12px">Verbände</strong>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:15px">
+        <a href="https://www.vdst.de" style="color:#c3d4dd">VDST</a>
+        <a href="https://www.htsv.org" style="color:#c3d4dd">HTSV</a>
+        <a href="https://www.landessportbund-hessen.de" style="color:#c3d4dd">Landessportbund Hessen</a>
+      </div>
+    </div>
+    <div style="flex:1 1 180px;min-width:160px">
+      <strong style="display:block;color:#ffffff;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:12px">Rechtliches</strong>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:15px">
+        <a href="impressum.html" style="color:#c3d4dd">Impressum</a>
+        <a href="#datenschutz" style="color:#c3d4dd">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,0.12)">
+    <div style="max-width:1140px;margin:0 auto;padding:16px clamp(16px,4vw,40px);font-size:13px;display:flex;flex-wrap:wrap;gap:8px 24px">
+      <span>© {{ jahr }} Tauchclub Sharkey Divers Weilburg e.V.</span>
+      <span style="margin-left:auto">1. Vorsitzender: Markus Schuster</span>
+    </div>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;zeigeBerichte&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Inhalt&quot;}}">
+class Component extends DCLogic {
+  state = { w: typeof window !== "undefined" ? window.innerWidth : 1200, open: false, active: "" };
+  componentDidMount() {
+    this._onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener("resize", this._onResize);
+    this._onScroll = () => {
+      let a = "";
+      for (const id of ["verein", "ausbildung", "termine", "berichte"]) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= 160) a = id;
+      }
+      if (a !== this.state.active) this.setState({ active: a });
+    };
+    window.addEventListener("scroll", this._onScroll, { passive: true });
+    this._onScroll();
+  }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this._onResize);
+    window.removeEventListener("scroll", this._onScroll);
+  }
+  renderVals() {
+    const mobile = this.state.w < 760;
+    const col = id => this.state.active === id ? "#0b5e88" : "#33454f";
+    const bar = id => this.state.active === id ? "#0b5e88" : "transparent";
+    return {
+      cVerein: col("verein"), bVerein: bar("verein"),
+      cAusbildung: col("ausbildung"), bAusbildung: bar("ausbildung"),
+      cTermine: col("termine"), bTermine: bar("termine"),
+      cBerichte: col("berichte"), bBerichte: bar("berichte"),
+      isDesktop: !mobile,
+      isMobile: mobile,
+      menuOpen: mobile && this.state.open,
+      toggleMenu: () => this.setState(s => ({ open: !s.open })),
+      closeMenu: () => this.setState({ open: false }),
+      jahr: new Date().getFullYear(),
+      zeigeBerichte: this.props.zeigeBerichte ?? true,
+      termine: [
+        { datum: "Sa, 12.09.", titel: "Ausfahrt Schönbach", info: "Gemeinsamer Tauchtag am Verbandssee, Grillen im Anschluss" },
+        { datum: "Do, 24.09.", titel: "Stammtisch", info: "Ab 19:30 Uhr, Ort wird in der Vereinsgruppe angekündigt" },
+        { datum: "Sa, 10.10.", titel: "Kompressor-Wartungstag", info: "Helfende Hände gesucht, danach Flaschenfüllen für alle" }
+      ],
+      berichte: [
+        { slot: "bericht-1", bild: "Foto vom Saisonstart", datum: "MAI 2026", titel: "Saisonstart am Schönbach", teaser: "Acht Grad Wassertemperatur haben niemanden abgeschreckt: 14 Leute waren beim Anbaden dabei, danach gab's Würstchen vom Grill." },
+        { slot: "bericht-2", bild: "Foto von der Clubreise", datum: "MÄRZ 2026", titel: "Clubreise: eine Woche Elba", teaser: "Zwölf Mitglieder, 18 Tauchgänge und ein Wrack, über das noch lange geredet wird. Der Bericht mit allen Bildern." },
+        { slot: "bericht-3", datum: "FEBRUAR 2026", titel: "Jahreshauptversammlung 2026", teaser: "Vorstand im Amt bestätigt, zwei neue Tauchlehrer im Team, und die Beiträge bleiben stabil." }
+      ].map(b => ({ ...b, hatBild: !!b.bild, imgSrc: "assets/" + b.slot + ".webp" }))
+    };
+  }
+}
+</script>
+</body>
+</html>

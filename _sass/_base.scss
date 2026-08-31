@@ -1,0 +1,175 @@
+@use "tokens" as *;
+// Reset & Grundtypografie
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: $color-white;
+  color: $color-ink;
+  font-family: $font-body;
+  -webkit-font-smoothing: antialiased;
+  min-width: 320px;
+}
+
+a {
+  color: $color-blue-700;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $color-navy-800;
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-heading;
+  margin: 0;
+}
+
+// Layout-Hilfsklassen
+
+.container {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding-left: $section-padding-x;
+  padding-right: $section-padding-x;
+}
+
+.container--narrow {
+  max-width: $container-narrow-max;
+}
+
+.container--medium {
+  max-width: $container-medium-max;
+}
+
+.section {
+  padding-top: $section-padding-y;
+  padding-bottom: $section-padding-y;
+}
+
+.section--dark {
+  background: $color-navy-900;
+  color: $color-white;
+}
+
+.section--mist {
+  background: $color-mist-100;
+  border-top: 1px solid $color-line;
+  border-bottom: 1px solid $color-line;
+}
+
+.kicker {
+  margin: 0 0 $space-8;
+  font-size: $font-size-13-5;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $color-blue-700;
+}
+
+.kicker--light {
+  color: $color-sky-200;
+}
+
+// Buttons
+
+.btn {
+  display: inline-block;
+  padding: $space-12 $space-22;
+  border-radius: $radius-sm;
+  font-weight: 700;
+  font-size: $font-size-16;
+  text-align: center;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn--primary {
+  background: $color-red-600;
+  color: $color-white;
+}
+
+.btn--primary:hover {
+  background: $color-red-700;
+  color: $color-white;
+}
+
+.btn--outline {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: $color-white;
+  font-weight: 600;
+}
+
+.btn--outline:hover {
+  background: rgba(255, 255, 255, 0.24);
+  color: $color-white;
+}
+
+.btn--blue {
+  background: $color-blue-700;
+  color: $color-white;
+}
+
+.btn--blue:hover {
+  background: $color-navy-800;
+  color: $color-white;
+}
+
+.btn--white {
+  background: $color-white;
+  color: $color-blue-700;
+}
+
+.btn--white:hover {
+  background: $color-sky-025;
+  color: $color-blue-700;
+}
+
+// Fliesstext-/Markdown-Inhalte (Impressum, Datenschutz, Bericht-Body)
+
+.prose {
+  font-size: $font-size-16-5;
+  line-height: 1.7;
+  color: $color-slate-700;
+}
+
+.prose h2 {
+  margin: 0 0 $space-10;
+  font-size: $font-size-20;
+  color: $color-ink;
+}
+
+.prose h2 + p,
+.prose p {
+  margin: 0 0 $space-24;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.prose img {
+  border-radius: $radius-md;
+  height: auto;
+}

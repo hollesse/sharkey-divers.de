@@ -12,6 +12,12 @@ timezone: Europe/Berlin
 
 markdown: kramdown
 
+# Jekyll-eigene Sass-Pipeline (kein zusaetzliches Gem noetig, ships mit
+# Jekyll 4). Tokens/Layouts/Komponenten liegen als Partials unter _sass/,
+# Einstiegspunkt ist assets/css/main.scss.
+sass:
+  style: compressed
+
 collections:
   posts:
     output: true
@@ -23,6 +29,9 @@ defaults:
       type: posts
     values:
       layout: post
+      # Schlanke Footer-Variante auf allen Bericht-Detailseiten (Theme-
+      # Entscheidung design-system-001, siehe Clot-Prototyp bericht.html).
+      footer_slim: true
   - scope:
       path: ""
     values:

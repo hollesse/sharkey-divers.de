@@ -5,6 +5,30 @@ Newest entries on top.
 
 ---
 
+## 2026-08-31 19:01 -- Task verified and completed: design-system-001 - Clot-Design-Prototyp als Jekyll-Theme übertragen (Styleguide-Gate)
+
+**Type:** Work / Task completion
+**Task:** design-system-001 - Clot-Design-Prototyp als Jekyll-Theme übertragen (Styleguide-Gate)
+**Summary:** Clot-Design-Prototyp treu als Jekyll-Theme übertragen: Token-Skalen, self-hosted Fonts, alle Seiten — Betreiber-Gate offen
+**Duration:** 29m
+**Verification:** PASS (iteration 2)
+**Files changed:** 38
+**Tests added:** 0
+**ADRs written:** none
+
+---
+
+## 2026-08-31 18:55 -- Verification failed: design-system-001 - Clot-Design-Prototyp als Jekyll-Theme (Styleguide-Gate)
+
+**Type:** Work / Verification failure
+**Task:** design-system-001 - Styleguide/Theme
+**Iteration:** 1 of 3
+**Reasons:** Typo-/Spacing-Werte nicht tokenisiert (201 px-Literale verstreut), zwei Farb-Leaks an der Token-Schicht vorbei, BC-README-Aussage widerspricht dem Code
+**Iteration hint:** likely-fixable
+**Next:** re-dispatched worker
+
+---
+
 ## 2026-08-30 17:12 -- Batch started: [design-system-001]
 
 **Type:** Work / Batch start

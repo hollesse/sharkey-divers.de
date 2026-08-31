@@ -1,0 +1,92 @@
+// Design-Tokens, extrahiert aus dem Clot-Prototyp (docs/design-prototype/).
+// Farben, Typografie und Abstaende zentral hier definiert -- keine
+// verstreuten Hex-/Px-Werte in den anderen Partials/Layouts.
+
+// Farben
+$color-white:         #ffffff;
+$color-navy-900:      #0b2a3b; // dunkler Sektionshintergrund (Hero, Ausbildung, Footer)
+$color-navy-800:      #08425f; // Hover auf navy/blue, dunkler Titel-Header
+$color-ink:           #16242e; // dunkelster Fliesstext / Ueberschriften auf hell
+$color-slate-700:     #33454f; // Fliesstext
+$color-slate-600:     #4a5c66; // Sekundaertext
+$color-slate-500:     #5c6d78; // Hinweistext
+$color-slate-400:     #8fa1ac; // Datum-Kicker auf Karten
+$color-slate-300:     #8fa6b3; // gedaempfter Text auf navy
+$color-blue-700:      #0b5e88; // Markenblau: Links, Buttons, Akzente
+$color-red-600:       #d5382f; // CTA rot
+$color-red-700:       #b92d25; // CTA rot Hover
+$color-sky-200:       #9fd2ec; // heller Akzenttext auf navy
+$color-sky-300:       #c8dae4;
+$color-sky-100:       #cfe4ef;
+$color-sky-050:       #dce9f0;
+$color-sky-025:       #e8f2f8; // Hover-Hintergrund .btn--white
+$color-mist-100:      #f2f7fa; // heller Sektionshintergrund
+$color-mist-border:   #dfeaf0; // Kartenrahmen auf hell
+$color-line:          #e3eaee; // Trennlinien auf hell
+$color-line-light:    #eef3f6;
+$color-border-input:  #d4dee4;
+$color-footer-text:   #a9bcc7;
+$color-footer-link:   #c3d4dd;
+$color-footer-accent: #9fc4d8;
+
+// Typografie (self-hosted, ADR 0007 -- siehe _fonts.scss)
+$font-heading: "Schibsted Grotesk", sans-serif;
+$font-body: "Source Sans 3", system-ui, sans-serif;
+
+// Schriftgroessen -- Fliesstext-/UI-Skala (0.5px-Schritte, aus dem
+// Prototyp extrahiert)
+$font-size-13:   13px;
+$font-size-13-5: 13.5px;
+$font-size-14:   14px;
+$font-size-14-5: 14.5px;
+$font-size-15:   15px;
+$font-size-15-5: 15.5px;
+$font-size-16:   16px;
+$font-size-16-5: 16.5px;
+$font-size-17:   17px;
+$font-size-18-5: 18.5px;
+$font-size-19:   19px;
+$font-size-20:   20px;
+
+// Schriftgroessen -- responsive Ueberschriften (clamp), benannt nach
+// Verwendungszweck statt Wert, da je zwei Stellen im Prototyp denselben
+// clamp() teilen
+$font-size-hero-title:       clamp(30px, 5.2vw, 52px); // .hero__title
+$font-size-hero-lead:        clamp($font-size-16, 1.8vw, $font-size-19); // .hero__lead
+$font-size-page-hero-title:  clamp(28px, 4vw, 40px); // .page-hero__title
+$font-size-heading-lg:       clamp(26px, 3.4vw, 36px); // .split__text h2, .section-head h2
+$font-size-heading-md:       clamp(24px, 3.2vw, 34px); // .cta-box__text h2
+$font-size-article-title:    clamp(28px, 4.5vw, 42px); // .bericht-article__title
+
+// Layout / Abstaende
+$container-max: 1140px;
+$container-narrow-max: 820px;
+$container-medium-max: 1000px;
+$section-padding-y: clamp(48px, 7vw, 88px);
+$section-padding-x: clamp(16px, 4vw, 40px);
+$hero-padding-x: clamp(16px, 4vw, 40px);
+
+// Abstands-Skala (gap/padding/margin), aus dem Prototyp extrahiert
+$space-2:  2px;
+$space-4:  4px;
+$space-6:  6px;
+$space-8:  8px;
+$space-10: 10px;
+$space-12: 12px;
+$space-14: 14px;
+$space-16: 16px;
+$space-18: 18px;
+$space-20: 20px;
+$space-22: 22px;
+$space-24: 24px;
+$space-26: 26px;
+$space-28: 28px;
+$space-48: 48px;
+$space-56: 56px;
+
+$radius-sm: 6px;
+$radius-md: 10px;
+$radius-lg: 12px;
+$radius-xl: 16px;
+
+$breakpoint-mobile: 760px;

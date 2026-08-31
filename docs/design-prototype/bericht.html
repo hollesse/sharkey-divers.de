@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#ffffff;color:#16242e;font-family:'Source Sans 3',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#0b5e88;text-decoration:none}
+a:hover{color:#08425f;text-decoration:underline}
+*{box-sizing:border-box}
+</style>
+</helmet>
+<div style="min-width:320px;display:flex;flex-direction:column;min-height:100vh">
+
+<header style="background:#ffffff;border-bottom:1px solid #e3eaee">
+  <div style="max-width:1140px;margin:0 auto;padding:6px clamp(16px,4vw,40px);display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px">
+    <a href="index.html" style="display:flex;align-items:center">
+      <img src="assets/logo.png" alt="Tauchclub Sharkey Divers Weilburg" style="height:88px;width:auto;display:block">
+    </a>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+    <nav style="display:flex;flex-wrap:wrap;gap:4px 18px;margin-left:auto;font-size:15px;font-weight:600">
+      <a href="index.html#verein" style="color:#33454f;padding:6px 2px">Der Verein</a>
+      <a href="index.html#ausbildung" style="color:#33454f;padding:6px 2px">Ausbildung</a>
+      <a href="index.html#termine" style="color:#33454f;padding:6px 2px">Termine</a>
+      <a href="berichte.html" style="color:#0b5e88;padding:6px 2px">Berichte</a>
+      <a href="index.html#mitmachen" style="background:#0b5e88;color:#ffffff;padding:7px 16px;border-radius:6px">Mitmachen</a>
+    </nav>
+    </sc-if>
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+    <button onClick="{{ toggleMenu }}" aria-label="Menü" style="margin-left:auto;background:none;border:1px solid #d4dee4;border-radius:8px;padding:10px 12px;cursor:pointer;display:flex;flex-direction:column;gap:4px;min-width:44px;min-height:44px;justify-content:center;align-items:center">
+      <span style="width:20px;height:2px;background:#16242e;display:block"></span>
+      <span style="width:20px;height:2px;background:#16242e;display:block"></span>
+      <span style="width:20px;height:2px;background:#16242e;display:block"></span>
+    </button>
+    </sc-if>
+  </div>
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+  <nav style="border-top:1px solid #e3eaee;background:#ffffff;display:flex;flex-direction:column;padding:8px clamp(16px,4vw,40px) 16px;font-size:17px;font-weight:600">
+    <a href="index.html#verein" style="color:#33454f;padding:12px 2px;border-bottom:1px solid #eef3f6">Der Verein</a>
+    <a href="index.html#ausbildung" style="color:#33454f;padding:12px 2px;border-bottom:1px solid #eef3f6">Ausbildung</a>
+    <a href="index.html#termine" style="color:#33454f;padding:12px 2px;border-bottom:1px solid #eef3f6">Termine</a>
+    <a href="berichte.html" style="color:#0b5e88;padding:12px 2px;border-bottom:1px solid #eef3f6">Berichte</a>
+    <a href="index.html#mitmachen" style="background:#0b5e88;color:#ffffff;padding:12px 16px;border-radius:8px;margin-top:12px;text-align:center">Mitmachen</a>
+  </nav>
+  </sc-if>
+</header>
+
+<main style="flex:1">
+  <article>
+    <div style="max-width:820px;margin:0 auto;padding:clamp(28px,4vw,48px) clamp(16px,4vw,40px) 0">
+      <a href="berichte.html" style="font-size:14.5px;font-weight:600">← Alle Berichte</a>
+      <p style="margin:18px 0 6px;font-size:13.5px;font-weight:700;letter-spacing:0.08em;color:#8fa1ac">MÄRZ 2026 · VON ANJA</p>
+      <h1 style="margin:0 0 14px;font-family:'Schibsted Grotesk',sans-serif;font-size:clamp(28px,4.5vw,42px);line-height:1.1;letter-spacing:-0.02em">Clubreise: eine Woche Elba</h1>
+      <p style="margin:0 0 24px;font-size:19px;line-height:1.55;color:#4a5c66">Zwölf Mitglieder, 18 Tauchgänge und ein Wrack, über das noch lange geredet wird: unser Reisebericht.</p>
+    </div>
+    <div style="max-width:1000px;margin:0 auto;padding:0 clamp(16px,4vw,40px)">
+      <div style="height:clamp(240px,45vw,460px)"><img src="assets/bericht-hero.webp" alt="" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:12px"></div>
+    </div>
+    <div style="max-width:820px;margin:0 auto;padding:clamp(28px,4vw,48px) clamp(16px,4vw,40px);font-size:17px;line-height:1.75;color:#33454f">
+      <p style="margin:0 0 18px">Dass es dieses Jahr nach Elba gehen sollte, stand schon auf der Jahreshauptversammlung fest. Ende März war es dann so weit: zwölf Sharkeys, zwei voll beladene Autos und eine Fähre ab Piombino.</p>
+      <p style="margin:0 0 18px">Getaucht wurde jeden Tag, meist zwei Gänge am Vormittag. Highlight der Woche war ganz klar das Wrack der Elviscot vor Pomonte, auf nur zwölf Metern Tiefe, also auch für die frisch Brevetierten gut machbar. Sicht: gefühlt endlos.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:26px 0">
+        <div style="height:200px"><img src="assets/bericht-bild-1.webp" alt="" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:10px"></div>
+        <div style="height:200px"><img src="assets/bericht-bild-2.webp" alt="" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:10px"></div>
+      </div>
+      <p style="margin:0 0 18px">Abends wurde gekocht, gefachsimpelt und die Logbücher wurden gefüllt. Und ja: Über wen beim Nachttauchgang der Oktopus hinweggeschwommen ist, wird hier nicht verraten. Dafür muss man schon zum Stammtisch kommen.</p>
+      <p style="margin:0">Danke an alle Mitgereisten fürs Organisieren, Fahren und Flaschenschleppen. Nächstes Jahr wieder? Nächstes Jahr wieder.</p>
+    </div>
+  </article>
+  <sc-if value="{{ zeigeBanner }}" hint-placeholder-val="{{ true }}">
+  <div style="background:#f2f7fa;border-top:1px solid #e3eaee">
+    <div style="max-width:820px;margin:0 auto;padding:28px clamp(16px,4vw,40px);display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center">
+      <p style="margin:0;font-size:16px;color:#33454f"><strong style="font-family:'Schibsted Grotesk',sans-serif">Lust mitzufahren?</strong> Komm vorbei und lern uns kennen.</p>
+      <a href="index.html#mitmachen" style="margin-left:auto;background:#0b5e88;color:#ffffff;padding:10px 20px;border-radius:6px;font-weight:700;font-size:15px" style-hover="background:#08425f;color:#ffffff;text-decoration:none">Schnuppertauchen anfragen</a>
+    </div>
+  </div>
+  </sc-if>
+</main>
+
+<footer style="background:#0b2a3b;color:#a9bcc7">
+  <div style="max-width:1140px;margin:0 auto;padding:18px clamp(16px,4vw,40px);font-size:13.5px;display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center">
+    <span>© {{ jahr }} Tauchclub Sharkey Divers Weilburg e.V.</span>
+    <span style="margin-left:auto;display:flex;gap:18px">
+      <a href="impressum.html" style="color:#c3d4dd">Impressum</a>
+      <a href="#datenschutz" style="color:#c3d4dd">Datenschutz</a>
+    </span>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;zeigeBanner&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Inhalt&quot;}}">
+class Component extends DCLogic {
+  state = { w: typeof window !== "undefined" ? window.innerWidth : 1200, open: false };
+  componentDidMount() {
+    this._onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener("resize", this._onResize);
+  }
+  componentWillUnmount() { window.removeEventListener("resize", this._onResize); }
+  renderVals() {
+    const mobile = this.state.w < 760;
+    return {
+      jahr: new Date().getFullYear(),
+      zeigeBanner: this.props.zeigeBanner ?? true,
+      isDesktop: !mobile,
+      isMobile: mobile,
+      menuOpen: mobile && this.state.open,
+      toggleMenu: () => this.setState(s => ({ open: !s.open }))
+    };
+  }
+}
+</script>
+</body>
+</html>

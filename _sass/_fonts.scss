@@ -1,0 +1,28 @@
+@use "tokens" as *;
+// Self-hosted Fonts (ADR 0007 / design-system README "Harte Regeln fuers
+// Theme"): keine Google-Fonts-CDN-Einbindung im Auslieferungspfad.
+//
+// Der Prototyp laedt "Schibsted Grotesk" (500/700/800) und "Source Sans 3"
+// (400/500/600/700) ueber fonts.googleapis.com. Beide Familien werden von
+// Google inzwischen als Variable Fonts ausgeliefert: eine einzelne
+// woff2-Datei je Familie deckt den kompletten benoetigten Gewichtsbereich
+// ab (kein CDN, kein separates Nachladen pro Schnitt).
+//
+// Dateien unter assets/fonts/ (Subset "latin", von
+// https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap
+// heruntergeladen, siehe Task design-system-001).
+@font-face {
+  font-family: "Schibsted Grotesk";
+  font-style: normal;
+  font-weight: 500 800;
+  font-display: swap;
+  src: url("../fonts/schibsted-grotesk-variable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../fonts/source-sans-3-variable.woff2") format("woff2");
+}

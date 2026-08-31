@@ -1,0 +1,431 @@
+@use "tokens" as *;
+// Der Verein / Ausbildung -- zweispaltige Content-Bloecke
+
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(28px, 4vw, 56px);
+  align-items: flex-start;
+}
+
+.split__text {
+  flex: 1 1 400px;
+  min-width: 280px;
+}
+
+.split__text h2 {
+  margin: 0 0 $space-16;
+  font-size: $font-size-heading-lg;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+
+.split__text p {
+  margin: 0 0 $space-14;
+  font-size: $font-size-17;
+  line-height: 1.65;
+}
+
+.split__text p:last-child {
+  margin-bottom: 0;
+}
+
+.section--dark .split__text p {
+  color: $color-sky-300;
+}
+
+// Verein-Bildergrid
+
+.split__media--grid {
+  flex: 1 1 380px;
+  min-width: 280px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $space-12;
+}
+
+.split__media--grid .split__media-lead {
+  grid-column: 1 / -1;
+  height: 220px;
+}
+
+.split__media--grid .split__media-lead img,
+.split__media--grid .split__media-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: $radius-md;
+}
+
+.split__media--grid .split__media-item {
+  height: 150px;
+}
+
+.split__media--single {
+  flex: 1 1 380px;
+  min-width: 280px;
+  min-height: 320px;
+}
+
+.split__media--single img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: $radius-lg;
+}
+
+// Feature-Karten (Der Verein)
+
+.feature-grid {
+  margin-top: clamp(32px, 4vw, 52px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: $space-14;
+}
+
+.feature-card {
+  background: $color-mist-100;
+  border: 1px solid $color-mist-border;
+  border-radius: $radius-md;
+  padding: $space-20 $space-22;
+}
+
+.feature-card h3 {
+  margin: 0 0 $space-6;
+  font-size: $font-size-17;
+}
+
+.feature-card p {
+  margin: 0;
+  font-size: $font-size-15;
+  line-height: 1.55;
+  color: $color-slate-600;
+}
+
+// Ausbildung -- Info-Zeilen
+
+.info-rows {
+  display: flex;
+  flex-direction: column;
+  gap: $space-10;
+  margin-top: $space-20;
+}
+
+.info-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-6 $space-16;
+  align-items: baseline;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  padding: $space-14 $space-18;
+}
+
+.info-row strong {
+  font-family: $font-heading;
+  font-size: $font-size-16;
+  min-width: 170px;
+}
+
+.info-row span {
+  font-size: $font-size-15;
+  color: $color-sky-300;
+}
+
+.section-note {
+  margin: $space-18 0 0;
+  font-size: $font-size-14;
+  color: $color-slate-300;
+}
+
+.section-note a {
+  color: $color-sky-200;
+}
+
+// Termine
+
+.termine-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid $color-line;
+}
+
+.termine-list__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-4 $space-24;
+  align-items: baseline;
+  padding: $space-16 $space-4;
+  border-bottom: 1px solid $color-line;
+}
+
+.termine-list__date {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: $font-size-15-5;
+  color: $color-blue-700;
+  min-width: 110px;
+}
+
+.termine-list__title {
+  font-size: $font-size-16-5;
+  min-width: 220px;
+  flex: 1 1 220px;
+}
+
+.termine-list__info {
+  font-size: $font-size-15;
+  color: $color-slate-500;
+  flex: 2 1 260px;
+}
+
+.termine-hint {
+  margin: $space-16 0 0;
+  font-size: $font-size-14-5;
+  color: $color-slate-500;
+}
+
+// Berichte -- Sektions-/Seitenkopf mit "Alle Berichte"-Link
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: $space-12 $space-24;
+  margin-bottom: $space-24;
+}
+
+.section-head h2 {
+  font-size: $font-size-heading-lg;
+  letter-spacing: -0.015em;
+}
+
+.section-head__link {
+  margin-left: auto;
+  font-weight: 600;
+  font-size: $font-size-15-5;
+}
+
+// Bericht-Karten (Startseite-Vorschau, Uebersicht)
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: $space-18;
+}
+
+.card-grid--overview {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: $space-20;
+}
+
+.bericht-card {
+  background: $color-white;
+  border: 1px solid $color-mist-border;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.bericht-card__media {
+  height: 170px;
+}
+
+.card-grid--overview .bericht-card__media {
+  height: 180px;
+}
+
+.bericht-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bericht-card__body {
+  padding: $space-18 $space-20 $space-20;
+  display: flex;
+  flex-direction: column;
+  gap: $space-8;
+  flex: 1;
+}
+
+.bericht-card__date {
+  font-size: $font-size-13;
+  font-weight: 700;
+  color: $color-slate-400;
+  letter-spacing: 0.04em;
+}
+
+.bericht-card__title {
+  margin: 0;
+  font-size: $font-size-18-5;
+  line-height: 1.25;
+}
+
+.card-grid--overview .bericht-card__title {
+  font-size: $font-size-19;
+}
+
+.bericht-card__title a {
+  color: $color-ink;
+}
+
+.bericht-card__teaser {
+  margin: 0;
+  font-size: $font-size-15;
+  line-height: 1.55;
+  color: $color-slate-600;
+}
+
+.bericht-card__link {
+  margin-top: auto;
+  padding-top: $space-6;
+  font-weight: 600;
+  font-size: $font-size-14-5;
+}
+
+// Mitmachen -- CTA-Box
+
+.cta-box {
+  background: $color-blue-700;
+  border-radius: $radius-xl;
+  padding: clamp(32px, 5vw, 56px);
+  color: $color-white;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-24 $space-48;
+  align-items: center;
+}
+
+.cta-box__text {
+  flex: 1 1 380px;
+  min-width: 260px;
+}
+
+.cta-box__text h2 {
+  margin: 0 0 $space-12;
+  font-size: $font-size-heading-md;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+.cta-box__text p {
+  margin: 0;
+  font-size: $font-size-17;
+  line-height: 1.6;
+  color: $color-sky-100;
+}
+
+.cta-box__action {
+  display: flex;
+  flex-direction: column;
+  gap: $space-10;
+  flex: 0 1 auto;
+}
+
+.cta-box__hint {
+  font-size: $font-size-13-5;
+  color: $color-footer-accent;
+  text-align: center;
+}
+
+// Bericht-Detailseite
+
+.bericht-article__head {
+  max-width: $container-narrow-max;
+  margin: 0 auto;
+  padding: clamp(28px, 4vw, 48px) $hero-padding-x 0;
+}
+
+.bericht-article__back {
+  font-size: $font-size-14-5;
+  font-weight: 600;
+}
+
+.bericht-article__meta {
+  margin: $space-18 0 $space-6;
+  font-size: $font-size-13-5;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: $color-slate-400;
+}
+
+.bericht-article__title {
+  margin: 0 0 $space-14;
+  font-size: $font-size-article-title;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.bericht-article__teaser {
+  margin: 0 0 $space-24;
+  font-size: $font-size-19;
+  line-height: 1.55;
+  color: $color-slate-600;
+}
+
+.bericht-article__hero {
+  max-width: $container-medium-max;
+  margin: 0 auto;
+  padding: 0 $hero-padding-x;
+}
+
+.bericht-article__hero-media {
+  height: clamp(240px, 45vw, 460px);
+}
+
+.bericht-article__hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: $radius-lg;
+}
+
+.bericht-article__body {
+  max-width: $container-narrow-max;
+  margin: 0 auto;
+  padding: clamp(28px, 4vw, 48px) $hero-padding-x;
+}
+
+.bericht-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: $space-14;
+  margin: $space-26 0;
+}
+
+.bericht-gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: $radius-md;
+}
+
+.bericht-banner {
+  background: $color-mist-100;
+  border-top: 1px solid $color-line;
+}
+
+.bericht-banner__inner {
+  max-width: $container-narrow-max;
+  margin: 0 auto;
+  padding: $space-28 $hero-padding-x;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-12 $space-24;
+  align-items: center;
+}
+
+.bericht-banner__inner p {
+  margin: 0;
+  font-size: $font-size-16;
+  color: $color-slate-700;
+}
+
+.bericht-banner__inner .btn {
+  margin-left: auto;
+  padding: $space-10 $space-20;
+  font-size: $font-size-15;
+}

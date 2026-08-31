@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#ffffff;color:#16242e;font-family:'Source Sans 3',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#0b5e88;text-decoration:none}
+a:hover{color:#08425f;text-decoration:underline}
+*{box-sizing:border-box}
+</style>
+</helmet>
+<div style="min-width:320px;display:flex;flex-direction:column;min-height:100vh">
+
+<header style="background:#ffffff;border-bottom:1px solid #e3eaee">
+  <div style="max-width:1140px;margin:0 auto;padding:6px clamp(16px,4vw,40px);display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px">
+    <a href="index.html" style="display:flex;align-items:center">
+      <img src="assets/logo.png" alt="Tauchclub Sharkey Divers Weilburg" style="height:88px;width:auto;display:block">
+    </a>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+    <nav style="display:flex;flex-wrap:wrap;gap:4px 18px;margin-left:auto;font-size:15px;font-weight:600">
+      <a href="index.html#verein" style="color:#33454f;padding:6px 2px">Der Verein</a>
+      <a href="index.html#ausbildung" style="color:#33454f;padding:6px 2px">Ausbildung</a>
+      <a href="index.html#termine" style="color:#33454f;padding:6px 2px">Termine</a>
+      <a href="berichte.html" style="color:#33454f;padding:6px 2px">Berichte</a>
+      <a href="index.html#mitmachen" style="background:#0b5e88;color:#ffffff;padding:7px 16px;border-radius:6px">Mitmachen</a>
+    </nav>
+    </sc-if>
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+    <button onClick="{{ toggleMenu }}" aria-label="Menü" style="margin-left:auto;background:none;border:1px solid #d4dee4;border-radius:8px;padding:10px 12px;cursor:pointer;display:flex;flex-direction:column;gap:4px;min-width:44px;min-height:44px;justify-content:center;align-items:center">
+      <span style="width:20px;height:2px;background:#16242e;display:block"></span>
+      <span style="width:20px;height:2px;background:#16242e;display:block"></span>
+      <span style="width:20px;height:2px;background:#16242e;display:block"></span>
+    </button>
+    </sc-if>
+  </div>
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+  <nav style="border-top:1px solid #e3eaee;background:#ffffff;display:flex;flex-direction:column;padding:8px clamp(16px,4vw,40px) 16px;font-size:17px;font-weight:600">
+    <a href="index.html#verein" style="color:#33454f;padding:12px 2px;border-bottom:1px solid #eef3f6">Der Verein</a>
+    <a href="index.html#ausbildung" style="color:#33454f;padding:12px 2px;border-bottom:1px solid #eef3f6">Ausbildung</a>
+    <a href="index.html#termine" style="color:#33454f;padding:12px 2px;border-bottom:1px solid #eef3f6">Termine</a>
+    <a href="berichte.html" style="color:#33454f;padding:12px 2px;border-bottom:1px solid #eef3f6">Berichte</a>
+    <a href="index.html#mitmachen" style="background:#0b5e88;color:#ffffff;padding:12px 16px;border-radius:8px;margin-top:12px;text-align:center">Mitmachen</a>
+  </nav>
+  </sc-if>
+</header>
+
+<main style="flex:1">
+  <div style="background:#0b2a3b;color:#ffffff">
+    <div style="max-width:820px;margin:0 auto;padding:clamp(32px,5vw,56px) clamp(16px,4vw,40px)">
+      <h1 style="margin:0;font-family:'Schibsted Grotesk',sans-serif;font-size:clamp(28px,4vw,40px);letter-spacing:-0.015em">Impressum</h1>
+    </div>
+  </div>
+  <article style="max-width:820px;margin:0 auto;padding:clamp(32px,5vw,56px) clamp(16px,4vw,40px);font-size:16.5px;line-height:1.7;color:#33454f">
+    <h2 style="margin:0 0 10px;font-family:'Schibsted Grotesk',sans-serif;font-size:20px;color:#16242e">Angaben gemäß § 5 TMG</h2>
+    <p style="margin:0 0 24px">Tauchclub Sharkey Divers Weilburg e.V.<br>Postfach 1142<br>35771 Weilburg / Lahn</p>
+    <h2 style="margin:0 0 10px;font-family:'Schibsted Grotesk',sans-serif;font-size:20px;color:#16242e">Vertreten durch</h2>
+    <p style="margin:0 0 24px">1. Vorsitzender: Markus Schuster</p>
+    <h2 style="margin:0 0 10px;font-family:'Schibsted Grotesk',sans-serif;font-size:20px;color:#16242e">Kontakt</h2>
+    <p style="margin:0 0 24px">E-Mail: <a href="mailto:info@tauchclub-weilburg.de">info@tauchclub-weilburg.de</a></p>
+    <h2 style="margin:0 0 10px;font-family:'Schibsted Grotesk',sans-serif;font-size:20px;color:#16242e">Haftung für Inhalte</h2>
+    <p style="margin:0 0 24px">Die Inhalte dieser Website wurden mit Sorgfalt erstellt. Für Richtigkeit, Vollständigkeit und Aktualität können wir dennoch keine Gewähr übernehmen. Als Verein sind wir für eigene Inhalte nach den allgemeinen Gesetzen verantwortlich.</p>
+    <h2 style="margin:0 0 10px;font-family:'Schibsted Grotesk',sans-serif;font-size:20px;color:#16242e">Haftung für Links</h2>
+    <p style="margin:0 0 24px">Unsere Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für diese fremden Inhalte ist stets der jeweilige Anbieter verantwortlich.</p>
+    <h2 style="margin:0 0 10px;font-family:'Schibsted Grotesk',sans-serif;font-size:20px;color:#16242e">Urheberrecht</h2>
+    <p style="margin:0">Die Inhalte und Bilder auf dieser Website unterliegen dem deutschen Urheberrecht. Vervielfältigung und Verwendung außerhalb der Grenzen des Urheberrechts bedürfen der Zustimmung des Vereins.</p>
+  </article>
+</main>
+
+<footer style="background:#0b2a3b;color:#a9bcc7">
+  <div style="max-width:1140px;margin:0 auto;padding:18px clamp(16px,4vw,40px);font-size:13.5px;display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center">
+    <span>© {{ jahr }} Tauchclub Sharkey Divers Weilburg e.V.</span>
+    <span style="margin-left:auto;display:flex;gap:18px">
+      <a href="impressum.html" style="color:#c3d4dd">Impressum</a>
+      <a href="#datenschutz" style="color:#c3d4dd">Datenschutz</a>
+    </span>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { w: typeof window !== "undefined" ? window.innerWidth : 1200, open: false };
+  componentDidMount() {
+    this._onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener("resize", this._onResize);
+  }
+  componentWillUnmount() { window.removeEventListener("resize", this._onResize); }
+  renderVals() {
+    const mobile = this.state.w < 760;
+    return {
+      jahr: new Date().getFullYear(),
+      isDesktop: !mobile,
+      isMobile: mobile,
+      menuOpen: mobile && this.state.open,
+      toggleMenu: () => this.setState(s => ({ open: !s.open }))
+    };
+  }
+}
+</script>
+</body>
+</html>

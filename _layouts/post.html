@@ -1,8 +1,38 @@
 ---
 layout: default
 ---
-<article>
-  <h1>{{ page.title }}</h1>
-  <p><small>{{ page.date | date: "%d.%m.%Y" }}</small></p>
-  {{ content }}
+<article class="bericht-article">
+  <div class="bericht-article__head">
+    <a href="{{ '/berichte.html' | relative_url }}" class="bericht-article__back">&larr; Alle Berichte</a>
+    <p class="bericht-article__meta">{% include monat-jahr.html date=page.date %}</p>
+    <h1 class="bericht-article__title">{{ page.title }}</h1>
+    {% if page.teaser %}<p class="bericht-article__teaser">{{ page.teaser }}</p>{% endif %}
+  </div>
+
+  {% if page.images and page.images.size > 0 %}
+  <div class="bericht-article__hero">
+    <div class="bericht-article__hero-media">
+      <img src="{{ page.images[0] | relative_url }}" alt="" loading="lazy">
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="bericht-article__body prose">
+    {{ content }}
+
+    {% if page.images and page.images.size > 1 %}
+    <div class="bericht-gallery">
+      {% for bild in page.images offset:1 %}
+      <img src="{{ bild | relative_url }}" alt="" loading="lazy">
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
 </article>
+
+<div class="bericht-banner">
+  <div class="bericht-banner__inner">
+    <p><strong>Lust mitzufahren?</strong> Komm vorbei und lern uns kennen.</p>
+    <a href="{{ '/' | relative_url }}#mitmachen" class="btn btn--blue">Schnuppertauchen anfragen</a>
+  </div>
+</div>

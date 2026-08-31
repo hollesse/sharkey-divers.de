@@ -1,0 +1,325 @@
+@use "tokens" as *;
+// Header / Navigation
+
+.site-header {
+  background: $color-white;
+  border-bottom: 1px solid $color-line;
+  position: relative;
+  z-index: 20;
+}
+
+.site-header--sticky {
+  position: sticky;
+  top: 0;
+}
+
+.site-header__bar {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: $space-6 $hero-padding-x;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $space-12 $space-24;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  color: $color-ink;
+}
+
+.site-logo img {
+  height: 88px;
+  width: auto;
+}
+
+// Checkbox-Hack fuer das mobile Menue (kein externes JS, ADR 0007-nah:
+// weniger ist mehr) -- die Checkbox selbst wird ausgeblendet, das Label
+// dient als Burger-Button.
+.nav-toggle-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-toggle-btn {
+  display: none;
+  margin-left: auto;
+  background: none;
+  border: 1px solid $color-border-input;
+  border-radius: 8px;
+  padding: $space-10 $space-12;
+  cursor: pointer;
+  flex-direction: column;
+  gap: $space-4;
+  min-width: 44px;
+  min-height: 44px;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-toggle-btn span {
+  width: 20px;
+  height: 2px;
+  background: $color-ink;
+  display: block;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-4 $space-18;
+  margin-left: auto;
+  font-size: $font-size-15;
+  font-weight: 600;
+}
+
+.site-nav a {
+  color: $color-slate-700;
+  padding: $space-6 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover {
+  text-decoration: none;
+  color: $color-blue-700;
+}
+
+.site-nav .btn {
+  color: $color-white;
+}
+
+.site-nav .btn:hover {
+  text-decoration: none;
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .nav-toggle-btn {
+    display: flex;
+  }
+
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+    border-top: 1px solid $color-line;
+    padding: $space-8 $hero-padding-x $space-16;
+    font-size: $font-size-17;
+  }
+
+  .site-nav a {
+    padding: $space-12 2px;
+    border-bottom: 1px solid $color-line-light;
+  }
+
+  .site-nav .btn {
+    margin-top: $space-12;
+    text-align: center;
+  }
+
+  .nav-toggle-checkbox:checked ~ .site-nav {
+    display: flex;
+  }
+}
+
+// Hero (Startseite)
+
+.hero {
+  position: relative;
+  background: $color-navy-900;
+}
+
+.hero__media {
+  position: relative;
+  height: clamp(380px, 58vh, 560px);
+}
+
+.hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(8, 28, 40, 0.78) 0%,
+    rgba(8, 28, 40, 0.45) 45%,
+    rgba(8, 28, 40, 0.05) 75%
+  );
+  pointer-events: none;
+}
+
+.hero__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.hero__inner {
+  max-width: $container-max;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 $hero-padding-x;
+}
+
+.hero__text {
+  max-width: 560px;
+  color: $color-white;
+}
+
+.hero__text .kicker--light {
+  font-size: $font-size-14;
+}
+
+.hero__title {
+  margin: 0 0 $space-14;
+  font-size: $font-size-hero-title;
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+}
+
+.hero__lead {
+  margin: 0 0 $space-22;
+  font-size: $font-size-hero-lead;
+  line-height: 1.55;
+  color: $color-sky-050;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-10;
+  pointer-events: auto;
+}
+
+// Dunkler Titel-Header fuer Unterseiten (Berichte-Uebersicht, Impressum,
+// Datenschutz)
+
+.page-hero {
+  background: $color-navy-900;
+  color: $color-white;
+}
+
+.page-hero__inner {
+  padding-top: clamp(32px, 5vw, 56px);
+  padding-bottom: clamp(32px, 5vw, 56px);
+}
+
+.page-hero__title {
+  margin: 0 0 $space-10;
+  font-size: $font-size-page-hero-title;
+  letter-spacing: -0.015em;
+}
+
+.page-hero__intro {
+  margin: 0;
+  font-size: $font-size-17;
+  color: $color-sky-300;
+  max-width: 560px;
+}
+
+// Footer
+
+.site-footer {
+  background: $color-navy-900;
+  color: $color-footer-text;
+}
+
+.site-footer__columns {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: clamp(36px, 5vw, 56px) $hero-padding-x;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-28 $space-56;
+}
+
+.site-footer__brand {
+  flex: 1 1 260px;
+  min-width: 240px;
+}
+
+.site-footer__logo {
+  margin-bottom: $space-14;
+}
+
+.site-footer__logo img {
+  height: 56px;
+  width: auto;
+  max-width: 100%;
+}
+
+.site-footer__address {
+  margin: 0;
+  font-size: $font-size-14-5;
+  line-height: 1.6;
+}
+
+.site-footer__col {
+  flex: 1 1 180px;
+  min-width: 160px;
+}
+
+.site-footer__col-title {
+  display: block;
+  color: $color-white;
+  font-size: $font-size-14;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: $space-12;
+}
+
+.site-footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: $space-8;
+  font-size: $font-size-15;
+}
+
+.site-footer__links a {
+  color: $color-footer-link;
+}
+
+.site-footer__legal {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.site-footer__legal-inner {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: $space-16 $hero-padding-x;
+  font-size: $font-size-13;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-8 $space-24;
+}
+
+.site-footer__legal-inner span:last-child {
+  margin-left: auto;
+}
+
+// Schlanke Footer-Variante fuer Unterseiten (Berichte, Bericht, Impressum,
+// Datenschutz)
+
+.site-footer--slim .site-footer__legal-inner {
+  padding: $space-18 $hero-padding-x;
+  font-size: $font-size-13-5;
+  align-items: center;
+}
+
+.site-footer--slim .site-footer__legal-links {
+  margin-left: auto;
+  display: flex;
+  gap: $space-18;
+}
+
+.site-footer--slim .site-footer__legal-links a {
+  color: $color-footer-link;
+}
