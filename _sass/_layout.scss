@@ -265,6 +265,11 @@
   line-height: 1.6;
 }
 
+.site-footer__copyright {
+  margin: $space-12 0 0;
+  font-size: $font-size-13;
+}
+
 .site-footer__col {
   flex: 1 1 180px;
   min-width: 160px;
