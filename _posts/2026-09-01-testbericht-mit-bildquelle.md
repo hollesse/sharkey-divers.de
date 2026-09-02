@@ -15,7 +15,7 @@ bild_plattform: "Unsplash"
 Dieser Beispielbericht ist eine Kopie des Walking-Skeleton-Testberichts und
 demonstriert die **Titelbild-Quelle**: Über die optionalen Felder
 `Titelbild: Fotograf/-Link, Foto-Link, Plattform` im CMS erscheint unten rechts
-im Titelbild ein kleines Copyright-Overlay (hier beispielhaft mit der Quelle des Hero-Banners:
-&bdquo;Max Mustermann / Unsplash&ldquo;)bdquo;Bobbi Wu / Unsplash&bdquo;Max Mustermann / Unsplash&ldquo;)ldquo;).
+im Titelbild ein kleines Copyright-Overlay (hier beispielhaft mit der Quelle
+des Hero-Banners: &bdquo;Foto: Bobbi Wu / Unsplash&ldquo;).
 
 Die Galerie darunter funktioniert unverändert wie im ersten Testbericht.
