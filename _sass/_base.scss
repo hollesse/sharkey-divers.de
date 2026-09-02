@@ -18,6 +18,15 @@ body {
   color: $color-ink;
   font-family: $font-body;
   -webkit-font-smoothing: antialiased;
+  // Sticky Footer (wie im Prototyp: Flex-Column über min. Viewport-Höhe,
+  // main füllt den Rest — Footer sitzt auch auf kurzen Seiten ganz unten)
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  > main {
+    flex: 1;
+  }
   min-width: 320px;
 }
 
