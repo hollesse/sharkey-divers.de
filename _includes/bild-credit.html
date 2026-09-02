@@ -1,12 +1,14 @@
 <!-- Bildnachweis-Overlay (unten rechts im Bild). Parameter:
      author     — Name der Fotografin / des Fotografen
      author_url — Link zum Profil (z. B. Unsplash-Profil)
-     photo_url  — optional: Link zum Foto selbst (verlinkt das Wort "Unsplash")
+     photo_url  — optional: Link zum Foto selbst (verlinkt das Plattform-Wort)
+     source     — optional: Plattform-Name (Default: "Unsplash")
      Nutzung: {% raw %}{% include bild-credit.html author="…" author_url="…" photo_url="…" %}{% endraw %} -->
+{% assign quelle = include.source | default: "Unsplash" %}
 <span class="bild-credit">Foto:
   {%- if include.author_url %} <a href="{{ include.author_url }}" rel="noopener">{{ include.author }}</a>
   {%- else %} {{ include.author }}
   {%- endif %} /
-  {%- if include.photo_url %} <a href="{{ include.photo_url }}" rel="noopener">Unsplash</a>
-  {%- else %} Unsplash
+  {%- if include.photo_url %} <a href="{{ include.photo_url }}" rel="noopener">{{ quelle }}</a>
+  {%- else %} {{ quelle }}
   {%- endif %}</span>

@@ -47,10 +47,13 @@ collections:
         widget: "list"
         field: { label: "Bild", name: "image", widget: "image" }
         required: false
-      # Quelle/Copyright des Titelbilds (erstes Bild), z. B. "Bobbi Wu / Unsplash".
-      # Wird als kleines Overlay unten rechts im Titelbild angezeigt.
-      - { label: "Titelbild-Quelle", name: "bild_quelle", widget: "string", required: false }
-      - { label: "Titelbild-Quelle-Link", name: "bild_quelle_url", widget: "string", required: false }
+      # Quelle/Copyright des Titelbilds (erstes Bild) — gleiche Struktur wie
+      # die Theme-Bildnachweise: "Foto: <Fotograf> / <Plattform>", Fotograf
+      # verlinkt aufs Profil, Plattform-Wort aufs Foto. Overlay unten rechts.
+      - { label: "Titelbild: Fotograf", name: "bild_fotograf", widget: "string", required: false }
+      - { label: "Titelbild: Fotograf-Link", name: "bild_fotograf_url", widget: "string", required: false }
+      - { label: "Titelbild: Foto-Link", name: "bild_foto_url", widget: "string", required: false }
+      - { label: "Titelbild: Plattform", name: "bild_plattform", widget: "string", required: false, default: "Unsplash" }
 
   - name: pages
     label: "Seiten"

@@ -6,14 +6,16 @@ images:
   - /assets/uploads/2026-09-01-testbericht-mit-bildquelle/bericht-hero.webp
   - /assets/uploads/2026-09-01-testbericht-mit-bildquelle/bericht-bild-1.webp
   - /assets/uploads/2026-09-01-testbericht-mit-bildquelle/bericht-bild-2.webp
-bild_quelle: "Max Mustermann / Unsplash"
-bild_quelle_url: "https://unsplash.com"
+bild_fotograf: "Bobbi Wu"
+bild_fotograf_url: "https://unsplash.com/de/@bobbiwu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+bild_foto_url: "https://unsplash.com/de/fotos/person-die-unter-wasser-schwimmt-fotografie-3_h9trxhQmY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+bild_plattform: "Unsplash"
 ---
 
 Dieser Beispielbericht ist eine Kopie des Walking-Skeleton-Testberichts und
 demonstriert die **Titelbild-Quelle**: Über die optionalen Felder
-`Titelbild-Quelle` und `Titelbild-Quelle-Link` im CMS erscheint unten rechts
-im Titelbild ein kleines Copyright-Overlay (hier mit Beispieldaten
-&bdquo;Max Mustermann / Unsplash&ldquo;).
+`Titelbild: Fotograf/-Link, Foto-Link, Plattform` im CMS erscheint unten rechts
+im Titelbild ein kleines Copyright-Overlay (hier beispielhaft mit der Quelle des Hero-Banners:
+&bdquo;Max Mustermann / Unsplash&ldquo;)bdquo;Bobbi Wu / Unsplash&bdquo;Max Mustermann / Unsplash&ldquo;)ldquo;).
 
 Die Galerie darunter funktioniert unverändert wie im ersten Testbericht.
