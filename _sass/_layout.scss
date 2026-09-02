@@ -95,10 +95,14 @@
 
 .site-nav .btn {
   // Prototyp-Nav-Button: padding 7px 16px — die generische .site-nav-a-Regel
-  // (padding $space-6 2px) darf den Button nicht zusammenquetschen.
+  // (padding $space-6 2px) darf den Button nicht zusammenquetschen. Typografie
+  // erbt er von der Nav (15px/600) — die 16px/700 der .btn-Basiskomponente
+  // gelten nur fuer die Hero-/Content-CTAs, nicht hier.
   color: $color-white;
   padding: 7px $space-16;
   border-bottom: none;
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 .site-nav .btn:hover {
