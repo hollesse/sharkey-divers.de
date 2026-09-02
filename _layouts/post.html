@@ -13,6 +13,12 @@ layout: default
   <div class="bericht-article__hero">
     <div class="bericht-article__hero-media">
       <img src="{{ page.images[0] | relative_url }}" alt="" loading="lazy">
+      {% if page.bild_quelle %}
+      <span class="bild-credit">Foto:
+        {%- if page.bild_quelle_url %} <a href="{{ page.bild_quelle_url }}" rel="noopener">{{ page.bild_quelle }}</a>
+        {%- else %} {{ page.bild_quelle }}
+        {%- endif %}</span>
+      {% endif %}
     </div>
   </div>
   {% endif %}

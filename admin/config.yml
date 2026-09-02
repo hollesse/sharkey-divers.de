@@ -47,6 +47,10 @@ collections:
         widget: "list"
         field: { label: "Bild", name: "image", widget: "image" }
         required: false
+      # Quelle/Copyright des Titelbilds (erstes Bild), z. B. "Bobbi Wu / Unsplash".
+      # Wird als kleines Overlay unten rechts im Titelbild angezeigt.
+      - { label: "Titelbild-Quelle", name: "bild_quelle", widget: "string", required: false }
+      - { label: "Titelbild-Quelle-Link", name: "bild_quelle_url", widget: "string", required: false }
 
   - name: pages
     label: "Seiten"

@@ -409,6 +409,7 @@
 
 .bericht-article__hero-media {
   height: clamp(240px, 45vw, 460px);
+  position: relative; // Anker fuer .bild-credit (Titelbild-Quelle)
 }
 
 .bericht-article__hero-media img {
