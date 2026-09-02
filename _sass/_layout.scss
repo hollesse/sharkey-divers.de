@@ -86,6 +86,13 @@
   color: $color-blue-700;
 }
 
+// Aktive Seite/Sektion (Prototyp: blaue Schrift + 2px-Unterstrich; auf
+// Unterseiten statisch via Liquid, auf der Startseite via nav-active.js)
+.site-nav a.is-active {
+  color: $color-blue-700;
+  border-bottom-color: $color-blue-700;
+}
+
 .site-nav .btn {
   // Prototyp-Nav-Button: padding 7px 16px — die generische .site-nav-a-Regel
   // (padding $space-6 2px) darf den Button nicht zusammenquetschen.
@@ -116,6 +123,12 @@
   .site-nav a {
     padding: $space-12 2px;
     border-bottom: 1px solid $color-line-light;
+  }
+
+  // Mobil markiert nur die Schriftfarbe die aktive Seite (Prototyp);
+  // die Trennlinie bleibt neutral.
+  .site-nav a.is-active {
+    border-bottom-color: $color-line-light;
   }
 
   .site-nav .btn {

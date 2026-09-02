@@ -16,7 +16,7 @@
       <a href="{{ '/' | relative_url }}#verein">Der Verein</a>
       <a href="{{ '/' | relative_url }}#ausbildung">Ausbildung</a>
       <a href="{{ '/' | relative_url }}#termine">Termine</a>
-      <a href="{{ '/berichte.html' | relative_url }}">Berichte</a>
+      <a href="{{ '/berichte.html' | relative_url }}"{% if page.url contains '/berichte' %} class="is-active"{% endif %}>Berichte</a>
       <a href="{{ '/' | relative_url }}#mitmachen" class="btn btn--blue">Mitmachen</a>
     </nav>
   </div>
