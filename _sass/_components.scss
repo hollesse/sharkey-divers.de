@@ -26,6 +26,13 @@
   line-height: 1.65;
 }
 
+// Kicker darf nicht von der Fliesstext-Regel (17px) ueberschrieben werden --
+// Prototyp: 13.5px, Abstand 8px (Spezifitaet: .split__text p schlaegt .kicker)
+.split__text .kicker {
+  margin: 0 0 $space-8;
+  font-size: $font-size-13-5;
+}
+
 .split__text p:last-child {
   margin-bottom: 0;
 }
