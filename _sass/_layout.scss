@@ -149,6 +149,16 @@
   }
 }
 
+// Anker-Sprünge der Startseiten-Nav: Sektionen landen unterhalb des
+// Sticky-Headers (Prototyp: scroll-margin-top 92px auf allen Sektionen)
+#verein,
+#ausbildung,
+#termine,
+#berichte,
+#mitmachen {
+  scroll-margin-top: 92px;
+}
+
 // Hero (Startseite)
 
 .hero {
