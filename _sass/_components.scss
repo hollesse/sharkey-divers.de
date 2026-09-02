@@ -41,6 +41,11 @@
   color: $color-sky-300;
 }
 
+// Der helle Kicker behaelt seinen Prototyp-Ton (#9fd2ec) auch im dunklen Split
+.section--dark .split__text .kicker--light {
+  color: $color-sky-200;
+}
+
 // Verein-Bildergrid
 
 .split__media--grid {
