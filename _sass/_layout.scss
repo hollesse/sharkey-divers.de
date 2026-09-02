@@ -305,6 +305,23 @@
   font-size: $font-size-13;
 }
 
+// Mobil: Marken-Spalte auflösen, damit das Copyright per order ganz ans
+// Ende des gestapelten Footers rückt (Desktop: unter der Adresse).
+@media (max-width: $breakpoint-mobile) {
+  .site-footer__brand {
+    display: contents;
+  }
+
+  .site-footer__brand > * {
+    width: 100%;
+  }
+
+  .site-footer__copyright {
+    order: 99;
+    margin-top: 0;
+  }
+}
+
 .site-footer__col {
   flex: 1 1 180px;
   min-width: 160px;
