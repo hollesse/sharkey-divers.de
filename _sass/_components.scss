@@ -145,13 +145,9 @@
   color: $color-sky-300;
 }
 
-.section-note {
-  margin: $space-18 0 0;
-  font-size: $font-size-14;
-  color: $color-slate-300;
-}
-
-.section-note a {
+// Links im dunklen Split (z. B. "Frag ein Schnuppertauchen an" im
+// Ausbildungs-Absatz) brauchen den hellen Akzentton statt Standard-Blau
+.section--dark .split__text a {
   color: $color-sky-200;
 }
 
