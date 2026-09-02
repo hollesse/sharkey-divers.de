@@ -267,18 +267,61 @@
   color: $color-footer-text;
 }
 
+// CSS Grid mit benannten Areas: fr-Spalten schrumpfen mit dem Viewport
+// (kein zu frühes Umbrechen wie bei flex-basis), das Copyright liegt auf
+// dem Desktop unter der Marke und rückt bei jedem Umbruch als volle Zeile
+// ganz ans Ende.
 .site-footer__columns {
   max-width: $container-max;
   margin: 0 auto;
   padding: clamp(36px, 5vw, 56px) $hero-padding-x;
-  display: flex;
-  flex-wrap: wrap;
-  gap: $space-28 $space-56;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "brand verein verbaende recht"
+    "copy  verein verbaende recht";
+  column-gap: clamp($space-24, 4vw, $space-56);
+  row-gap: $space-12;
+  align-items: start;
 }
 
 .site-footer__brand {
-  flex: 1 1 260px;
-  min-width: 240px;
+  grid-area: brand;
+}
+
+.site-footer__col--verein {
+  grid-area: verein;
+}
+
+.site-footer__col--verbaende {
+  grid-area: verbaende;
+}
+
+.site-footer__col--recht {
+  grid-area: recht;
+}
+
+@media (max-width: $breakpoint-footer) {
+  .site-footer__columns {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "brand brand brand"
+      "verein verbaende recht"
+      "copy copy copy";
+    row-gap: $space-28;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .site-footer__columns {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "brand"
+      "verein"
+      "verbaende"
+      "recht"
+      "copy";
+  }
 }
 
 .site-footer__logo {
@@ -301,30 +344,13 @@
 }
 
 .site-footer__copyright {
-  margin: $space-12 0 0;
+  grid-area: copy;
+  margin: 0;
   font-size: $font-size-13;
 }
 
-// Mobil: Marken-Spalte auflösen, damit das Copyright per order ganz ans
-// Ende des gestapelten Footers rückt (Desktop: unter der Adresse).
-@media (max-width: $breakpoint-mobile) {
-  .site-footer__brand {
-    display: contents;
-  }
-
-  .site-footer__brand > * {
-    width: 100%;
-  }
-
-  .site-footer__copyright {
-    order: 99;
-    margin-top: 0;
-  }
-}
-
 .site-footer__col {
-  flex: 1 1 180px;
-  min-width: 160px;
+  min-width: 0; // Grid-Item darf schrumpfen
 }
 
 .site-footer__col-title {

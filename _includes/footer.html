@@ -19,9 +19,8 @@
         <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Tauchclub Sharkey Divers Weilburg" width="238" height="110" loading="lazy">
       </div>
       <p class="site-footer__address">Tauchclub Sharkey Divers Weilburg e.V.<br>Postfach 1142<br>35771 Weilburg / Lahn</p>
-      <p class="site-footer__copyright">&copy; {{ 'now' | date: "%Y" }} Tauchclub Sharkey Divers Weilburg e.V.</p>
     </div>
-    <div class="site-footer__col">
+    <div class="site-footer__col site-footer__col--verein">
       <strong class="site-footer__col-title">Verein</strong>
       <div class="site-footer__links">
         <a href="{{ '/' | relative_url }}#verein">Der Verein</a>
@@ -30,7 +29,7 @@
         <a href="{{ '/berichte.html' | relative_url }}">Berichte</a>
       </div>
     </div>
-    <div class="site-footer__col">
+    <div class="site-footer__col site-footer__col--verbaende">
       <strong class="site-footer__col-title">Verbände</strong>
       <div class="site-footer__links">
         <a href="https://www.vdst.de">VDST</a>
@@ -38,13 +37,14 @@
         <a href="https://www.landessportbund-hessen.de">Landessportbund Hessen</a>
       </div>
     </div>
-    <div class="site-footer__col">
+    <div class="site-footer__col site-footer__col--recht">
       <strong class="site-footer__col-title">Rechtliches</strong>
       <div class="site-footer__links">
         <a href="{{ '/impressum.html' | relative_url }}">Impressum</a>
         <a href="{{ '/datenschutz.html' | relative_url }}">Datenschutz</a>
       </div>
     </div>
+    <p class="site-footer__copyright">&copy; {{ 'now' | date: "%Y" }} Tauchclub Sharkey Divers Weilburg e.V.</p>
   </div>
 </footer>
 {% endif %}
