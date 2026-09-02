@@ -186,6 +186,14 @@
   color: $color-slate-500;
 }
 
+// Einfache Sektions-Ueberschrift ohne Kopfzeile (Prototyp Termine-H2:
+// margin 0 0 24px, clamp(26px,3.4vw,36px), letter-spacing -0.015em)
+.section-title {
+  margin: 0 0 $space-24;
+  font-size: $font-size-heading-lg;
+  letter-spacing: -0.015em;
+}
+
 // Berichte -- Sektions-/Seitenkopf mit "Alle Berichte"-Link
 
 .section-head {
