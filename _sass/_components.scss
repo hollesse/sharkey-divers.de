@@ -77,6 +77,25 @@
   flex: 1 1 380px;
   min-width: 280px;
   min-height: 320px;
+  position: relative; // Anker fuer .bild-credit
+}
+
+// Bildnachweis-Overlay (Hero + Ausbildungsbild, Unsplash-Attribution)
+.bild-credit {
+  position: absolute;
+  right: $space-8;
+  bottom: $space-8;
+  z-index: 2;
+  padding: 2px $space-8;
+  border-radius: $radius-sm;
+  background: rgba(8, 28, 40, 0.55);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.bild-credit a {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .split__media--single img {
