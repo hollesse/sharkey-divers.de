@@ -87,7 +87,11 @@
 }
 
 .site-nav .btn {
+  // Prototyp-Nav-Button: padding 7px 16px — die generische .site-nav-a-Regel
+  // (padding $space-6 2px) darf den Button nicht zusammenquetschen.
   color: $color-white;
+  padding: 7px $space-16;
+  border-bottom: none;
 }
 
 .site-nav .btn:hover {
@@ -115,8 +119,12 @@
   }
 
   .site-nav .btn {
+    // Prototyp mobil: padding 12px 16px, Radius 8px
     margin-top: $space-12;
     text-align: center;
+    padding: $space-12 $space-16;
+    border-bottom: none;
+    border-radius: 8px;
   }
 
   .nav-toggle-checkbox:checked ~ .site-nav {
