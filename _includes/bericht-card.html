@@ -1,0 +1,16 @@
+<!-- Bericht-Karte (Startseite + Berichte-Uebersicht). Parameter:
+     post    — der Post
+     heading — Ueberschriften-Tag der Karte ("h2" | "h3", Default h3)
+     Titel und Bild verlinken immer auf den Bericht. -->
+{% assign hl = include.heading | default: "h3" %}
+<article class="bericht-card">
+  {% if include.post.images and include.post.images.size > 0 %}
+  <a href="{{ include.post.url | relative_url }}" class="bericht-card__media"><img src="{{ include.post.images[0] | relative_url }}" alt="" loading="lazy"></a>
+  {% endif %}
+  <div class="bericht-card__body">
+    <span class="bericht-card__date">{% include monat-jahr.html date=include.post.date %}</span>
+    <{{ hl }} class="bericht-card__title"><a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></{{ hl }}>
+    {% if include.post.teaser %}<p class="bericht-card__teaser">{{ include.post.teaser }}</p>{% endif %}
+    <a href="{{ include.post.url | relative_url }}" class="bericht-card__link">Weiterlesen &rarr;</a>
+  </div>
+</article>

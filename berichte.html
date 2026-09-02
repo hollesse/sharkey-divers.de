@@ -10,17 +10,7 @@ hero_intro: "Ausfahrten, Reisen und alles, was sonst im Verein passiert, aufgesc
 <div class="container section">
   <div class="card-grid card-grid--overview">
     {% for post in site.posts %}
-    <article class="bericht-card">
-      {% if post.images and post.images.size > 0 %}
-      <a href="{{ post.url | relative_url }}" class="bericht-card__media"><img src="{{ post.images[0] | relative_url }}" alt="" loading="lazy"></a>
-      {% endif %}
-      <div class="bericht-card__body">
-        <span class="bericht-card__date">{% include monat-jahr.html date=post.date %}</span>
-        <h2 class="bericht-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-        {% if post.teaser %}<p class="bericht-card__teaser">{{ post.teaser }}</p>{% endif %}
-        <a href="{{ post.url | relative_url }}" class="bericht-card__link">Weiterlesen &rarr;</a>
-      </div>
-    </article>
+    {% include bericht-card.html post=post heading="h2" %}
     {% endfor %}
   </div>
 </div>

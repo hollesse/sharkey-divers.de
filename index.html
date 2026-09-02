@@ -124,17 +124,7 @@ nav_sticky: true
     </div>
     <div class="card-grid">
       {% for post in neueste_berichte %}
-      <article class="bericht-card">
-        {% if post.images and post.images.size > 0 %}
-        <div class="bericht-card__media"><img src="{{ post.images[0] | relative_url }}" alt="" loading="lazy"></div>
-        {% endif %}
-        <div class="bericht-card__body">
-          <span class="bericht-card__date">{% include monat-jahr.html date=post.date %}</span>
-          <h3 class="bericht-card__title">{{ post.title }}</h3>
-          {% if post.teaser %}<p class="bericht-card__teaser">{{ post.teaser }}</p>{% endif %}
-          <a href="{{ post.url | relative_url }}" class="bericht-card__link">Weiterlesen &rarr;</a>
-        </div>
-      </article>
+      {% include bericht-card.html post=post heading="h3" %}
       {% endfor %}
     </div>
   </div>
