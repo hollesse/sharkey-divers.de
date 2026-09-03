@@ -1,10 +1,14 @@
 <!-- Dunkler Titel-Header fuer Unterseiten (Berichte-Uebersicht, Impressum,
-     Datenschutz). Erwartet page.hero_title (faellt auf page.title zurueck),
-     optional page.hero_kicker und page.hero_intro. -->
+     Datenschutz). Werte kommen aus den Include-Parametern kicker/title/intro
+     oder ersatzweise aus page.hero_kicker/hero_title/hero_intro
+     (hero_title faellt auf page.title zurueck). -->
+{% assign ph_kicker = include.kicker | default: page.hero_kicker %}
+{% assign ph_title = include.title | default: page.hero_title | default: page.title %}
+{% assign ph_intro = include.intro | default: page.hero_intro %}
 <div class="page-hero">
   <div class="container page-hero__inner">
-    {% if page.hero_kicker %}<p class="kicker kicker--light">{{ page.hero_kicker }}</p>{% endif %}
-    <h1 class="page-hero__title">{{ page.hero_title | default: page.title }}</h1>
-    {% if page.hero_intro %}<p class="page-hero__intro">{{ page.hero_intro }}</p>{% endif %}
+    {% if ph_kicker %}<p class="kicker kicker--light">{{ ph_kicker }}</p>{% endif %}
+    <h1 class="page-hero__title">{{ ph_title }}</h1>
+    {% if ph_intro %}<p class="page-hero__intro">{{ ph_intro }}</p>{% endif %}
   </div>
 </div>

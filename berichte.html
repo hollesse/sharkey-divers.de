@@ -2,11 +2,9 @@
 layout: default
 title: "Berichte"
 footer_slim: true
-hero_kicker: "Vereinsleben"
-hero_title: "Berichte"
-hero_intro: "Ausfahrten, Reisen und alles, was sonst im Verein passiert, aufgeschrieben von Mitgliedern für Mitglieder."
 ---
-{% include page-hero.html %}
+{% assign uebersicht = site.data.berichte.uebersicht %}
+{% include page-hero.html kicker=uebersicht.kicker title=uebersicht.titel intro=uebersicht.text %}
 <div class="container section">
   <div class="card-grid card-grid--overview">
     {% for post in site.posts %}

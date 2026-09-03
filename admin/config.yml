@@ -74,6 +74,39 @@ collections:
         required: false
         fields: *bild_mit_quelle_felder
 
+  # Konfigseite fuer die Berichte-Bereiche (Uebersichtsseiten-Kopf,
+  # Startseiten-Vorschau, Banner unter jedem Bericht).
+  - name: berichte_einstellungen
+    label: "Berichte: Einstellungen"
+    files:
+      - label: "Berichte-Einstellungen"
+        name: "berichte"
+        file: "_data/berichte.yml"
+        fields:
+          - label: "Uebersichtsseite (Kopf von /berichte)"
+            name: "uebersicht"
+            widget: "object"
+            fields:
+              - { label: "Kicker (kleine Zeile ueber dem Titel)", name: "kicker", widget: "string" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Vorschau auf der Startseite"
+            name: "startseite"
+            widget: "object"
+            fields:
+              - { label: "Kicker (kleine Zeile ueber dem Titel)", name: "kicker", widget: "string" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Link-Text zur Uebersicht", name: "link_text", widget: "string" }
+              - { label: "Anzahl Berichte", name: "anzahl", widget: "number", value_type: "int", min: 1, max: 6, default: 3, hint: "Wie viele der neuesten Berichte auf der Startseite erscheinen." }
+          - label: "Banner unter jedem Bericht"
+            name: "banner"
+            widget: "object"
+            fields:
+              - { label: "Text (fett)", name: "text_fett", widget: "string" }
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "Button-Beschriftung", name: "button_label", widget: "string" }
+              - { label: "Button-Link", name: "button_link", widget: "string", hint: "z. B. /#mitmachen fuer den Mitmachen-Bereich der Startseite." }
+
   # Termine als eigene Collection (_termine/, je Termin eine Datei) — werden
   # haeufiger gepflegt als der Rest der Startseite. Angezeigt in der
   # Startseiten-Sektion "Termine" (dort auch der Aktiv-Schalter).

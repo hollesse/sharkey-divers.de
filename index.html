@@ -99,16 +99,17 @@ nav_sticky: true
 </section>
 {% endif %}
 
-{% assign neueste_berichte = site.posts | slice: 0, 3 %}
+{% assign berichte_cfg = site.data.berichte.startseite %}
+{% assign neueste_berichte = site.posts | slice: 0, berichte_cfg.anzahl %}
 {% if neueste_berichte.size > 0 %}
 <section id="berichte" class="section section--mist">
   <div class="container">
     <div class="section-head">
       <div>
-        <p class="kicker">Berichte</p>
-        <h2>Neues aus dem Vereinsleben</h2>
+        <p class="kicker">{{ berichte_cfg.kicker }}</p>
+        <h2>{{ berichte_cfg.titel }}</h2>
       </div>
-      <a href="{{ '/berichte.html' | relative_url }}" class="section-head__link">Alle Berichte &rarr;</a>
+      <a href="{{ '/berichte.html' | relative_url }}" class="section-head__link">{{ berichte_cfg.link_text }} &rarr;</a>
     </div>
     <div class="card-grid">
       {% for post in neueste_berichte %}

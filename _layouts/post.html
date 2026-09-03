@@ -30,9 +30,10 @@ layout: default
   </div>
 </article>
 
+{% assign banner = site.data.berichte.banner %}
 <div class="bericht-banner">
   <div class="bericht-banner__inner">
-    <p><strong>Lust mitzufahren?</strong> Komm vorbei und lern uns kennen.</p>
-    <a href="{{ '/' | relative_url }}#mitmachen" class="btn btn--blue">Schnuppertauchen anfragen</a>
+    <p><strong>{{ banner.text_fett }}</strong> {{ banner.text }}</p>
+    <a href="{{ banner.button_link | relative_url }}" class="btn btn--blue">{{ banner.button_label }}</a>
   </div>
 </div>
