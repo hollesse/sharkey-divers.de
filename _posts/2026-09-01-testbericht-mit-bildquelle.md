@@ -12,12 +12,13 @@ titelbild:
     foto_url: https://unsplash.com/de/fotos/ein-mann-im-tauchanzug-schwimmt-im-wasser-fQLOft9MaM4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
     plattform: Unsplash
 images:
-  - src: /assets/uploads/2026-09-01-testbericht-mit-bildquelle/bericht-bild-1.webp
+  - src: /assets/uploads/2026-09-01-testbericht-mit-bildquelle/karl-callwood-vMXggrXITYU-unsplash.webp
     alt: Beispielbild aus dem Tauchbericht
-    quelle: null
-  - src: /assets/uploads/2026-09-01-testbericht-mit-bildquelle/bericht-bild-2.webp
-    alt: Weiteres Beispielbild aus dem Tauchbericht
-    quelle: null
+    quelle:
+      fotograf: Karl Callwood
+      fotograf_url: https://unsplash.com/de/@climatechangevi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+      foto_url: https://unsplash.com/de/fotos/unterwasseransicht-eines-swimmingpools-vMXggrXITYU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+      plattform: Unsplash
 ---
 
 Dieser Beispielbericht ist eine Kopie des Walking-Skeleton-Testberichts und demonstriert die **Titelbild-Quelle**: Über das optionale Unter-Objekt `Quelle` (Fotograf, Fotograf-Link, Foto-Link, Plattform) im Titelbild-Feld erscheint unten rechts im Titelbild ein kleines Copyright-Overlay (hier beispielhaft mit der Quelle des Hero-Banners: &bdquo;Foto: Bobbi Wu / Unsplash&ldquo;).
