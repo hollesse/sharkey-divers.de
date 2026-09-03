@@ -137,6 +137,28 @@ collections:
             fields:
               - { label: "Titel", name: "titel", widget: "string" }
               - { label: "Text", name: "text", widget: "text" }
+      - label: "Ausbildung"
+        name: "ausbildung"
+        file: "_data/startseite/ausbildung.yml"
+        media_folder: "/assets/uploads/startseite"
+        public_folder: "/assets/uploads/startseite"
+        fields:
+          - { label: "Kicker (kleine Zeile ueber dem Titel)", name: "kicker", widget: "string" }
+          - { label: "Titel", name: "titel", widget: "string" }
+          - { label: "Text", name: "text", widget: "markdown", hint: "Links im Text sind moeglich, z. B. auf #mitmachen." }
+          - label: "Info-Zeilen"
+            name: "info_zeilen"
+            widget: "list"
+            min: 2
+            max: 4
+            hint: "Zwei bis vier Zeilen, untereinander unter dem Text."
+            fields:
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Bild"
+            name: "bild"
+            widget: "object"
+            fields: *bild_mit_quelle_felder
 
   - name: pages
     label: "Seiten"

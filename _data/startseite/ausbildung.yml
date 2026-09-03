@@ -1,0 +1,23 @@
+# Sektion "Ausbildung" der Startseite, pflegbar via Sveltia CMS
+# (Collection "Startseite" -> Eintrag "Ausbildung").
+# Text als Markdown (Links moeglich), Bild vom Typ "Bild mit Quelle",
+# Info-Zeilen als Liste.
+kicker: "Ausbildung"
+titel: "Tauchen lernen. Bei uns im Verein."
+text: |
+  Nicht jeder Verein hat eigene Tauchlehrer, wir schon. Ausgebildet wird im Verbandssee in Schönbach bei Herborn, nach den Richtlinien des VDST und damit nach weltweit anerkannten CMAS-Standards. Zu fairen Vereinskonditionen, im eigenen Tempo, von Leuten, mit denen du danach auch tauchen gehst. Interesse? [Frag ein Schnuppertauchen an](#mitmachen), der Rest ergibt sich.
+info_zeilen:
+  - titel: "Vereinseigene Tauchlehrer"
+    text: "Ausbildung aus dem Verein heraus, vom Schnuppertauchen bis zum Brevet"
+  - titel: "VDST/CMAS-Brevets"
+    text: "Vom Grundtauchschein über die Sterne-Brevets bis zu Spezialkursen"
+  - titel: "Kostenlose Leihausrüstung"
+    text: "Für die Ausbildung stellt der Verein die komplette Ausrüstung, Neumitglieder leihen kostenlos"
+bild:
+  src: /assets/img/training-bild.webp
+  alt: "Zwei Personen bei der Tauchausbildung unter Wasser"
+  quelle:
+    fotograf: "Francisco Jesús Navarro Hernández"
+    fotograf_url: "https://unsplash.com/de/@bergoglio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+    foto_url: "https://unsplash.com/de/fotos/fotografie-von-zwei-personen-unter-wasser-dtCTfjTEOgg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+    plattform: "Unsplash"

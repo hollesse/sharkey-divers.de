@@ -53,31 +53,29 @@ nav_sticky: true
   {% endif %}
 </section>
 
+{% assign ausbildung = site.data.startseite.ausbildung %}
 <section id="ausbildung" class="section section--dark">
   <div class="container split">
     <div class="split__text">
-      <p class="kicker kicker--light">Ausbildung</p>
-      <h2>Tauchen lernen. Bei uns im Verein.</h2>
-      <p>Nicht jeder Verein hat eigene Tauchlehrer, wir schon. Ausgebildet wird im Verbandssee in Schönbach bei Herborn, nach den Richtlinien des VDST und damit nach weltweit anerkannten CMAS-Standards. Zu fairen Vereinskonditionen, im eigenen Tempo, von Leuten, mit denen du danach auch tauchen gehst. Interesse? <a href="#mitmachen">Frag ein Schnuppertauchen an</a>, der Rest ergibt sich.</p>
+      <p class="kicker kicker--light">{{ ausbildung.kicker }}</p>
+      <h2>{{ ausbildung.titel }}</h2>
+      {{ ausbildung.text | markdownify }}
+      {% if ausbildung.info_zeilen and ausbildung.info_zeilen.size > 0 %}
       <div class="info-rows">
+        {% for zeile in ausbildung.info_zeilen %}
         <div class="info-row">
-          <strong>Vereinseigene Tauchlehrer</strong>
-          <span>Ausbildung aus dem Verein heraus, vom Schnuppertauchen bis zum Brevet</span>
+          <strong>{{ zeile.titel }}</strong>
+          <span>{{ zeile.text }}</span>
         </div>
-        <div class="info-row">
-          <strong>VDST/CMAS-Brevets</strong>
-          <span>Vom Grundtauchschein über die Sterne-Brevets bis zu Spezialkursen</span>
-        </div>
-        <div class="info-row">
-          <strong>Kostenlose Leihausrüstung</strong>
-          <span>Für die Ausbildung stellt der Verein die komplette Ausrüstung, Neumitglieder leihen kostenlos</span>
-        </div>
+        {% endfor %}
       </div>
+      {% endif %}
     </div>
+    {% if ausbildung.bild.src %}
     <div class="split__media--single">
-      <img src="{{ '/assets/img/training-bild.webp' | relative_url }}" alt="" width="713" height="992" loading="lazy">
-      {% include bild-credit.html author="Francisco Jesús Navarro Hernández" author_url="https://unsplash.com/de/@bergoglio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" photo_url="https://unsplash.com/de/fotos/fotografie-von-zwei-personen-unter-wasser-dtCTfjTEOgg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" %}
+      {% include bild-mit-quelle.html bild=ausbildung.bild %}
     </div>
+    {% endif %}
   </div>
 </section>
 
