@@ -1,10 +1,11 @@
 <!-- Footer aus dem Clot-Prototyp: volle Variante mit Adresse/Spalten auf
      der Startseite, schlanke Variante (nur Copyright + Rechtliches) auf
      den Unterseiten (page.footer_slim). -->
+{% assign footer = site.data.startseite.footer %}
 {% if page.footer_slim %}
 <footer class="site-footer site-footer--slim">
   <div class="site-footer__legal-inner">
-    <span>&copy; {{ 'now' | date: "%Y" }} Tauchclub Sharkey Divers Weilburg e.V.</span>
+    <span>&copy; {{ 'now' | date: "%Y" }} {{ footer.copyright_name }}</span>
     <span class="site-footer__legal-links">
       <a href="{{ '/impressum.html' | relative_url }}">Impressum</a>
       <a href="{{ '/datenschutz.html' | relative_url }}">Datenschutz</a>
@@ -18,7 +19,7 @@
       <div class="site-footer__logo">
         <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Tauchclub Sharkey Divers Weilburg" width="238" height="110" loading="lazy">
       </div>
-      <p class="site-footer__address">Tauchclub Sharkey Divers Weilburg e.V.<br>Postfach 1142<br>35771 Weilburg / Lahn</p>
+      <p class="site-footer__address">{{ footer.adresse | newline_to_br }}</p>
     </div>
     <div class="site-footer__col site-footer__col--verein">
       <strong class="site-footer__col-title">Verein</strong>
@@ -29,14 +30,16 @@
         <a href="{{ '/berichte.html' | relative_url }}">Berichte</a>
       </div>
     </div>
+    {% if footer.verbaende and footer.verbaende.size > 0 %}
     <div class="site-footer__col site-footer__col--verbaende">
       <strong class="site-footer__col-title">Verbände</strong>
       <div class="site-footer__links">
-        <a href="https://www.vdst.de">VDST</a>
-        <a href="https://www.htsv.org">HTSV</a>
-        <a href="https://www.landessportbund-hessen.de">Landessportbund Hessen</a>
+        {% for verband in footer.verbaende %}
+        <a href="{{ verband.url }}">{{ verband.name }}</a>
+        {% endfor %}
       </div>
     </div>
+    {% endif %}
     <div class="site-footer__col site-footer__col--recht">
       <strong class="site-footer__col-title">Rechtliches</strong>
       <div class="site-footer__links">
@@ -44,7 +47,7 @@
         <a href="{{ '/datenschutz.html' | relative_url }}">Datenschutz</a>
       </div>
     </div>
-    <p class="site-footer__copyright">&copy; {{ 'now' | date: "%Y" }} Tauchclub Sharkey Divers Weilburg e.V.</p>
+    <p class="site-footer__copyright">&copy; {{ 'now' | date: "%Y" }} {{ footer.copyright_name }}</p>
   </div>
 </footer>
 {% endif %}
