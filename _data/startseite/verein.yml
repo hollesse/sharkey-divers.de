@@ -15,9 +15,13 @@ bild_gross:
     foto_url: https://unsplash.com/de/fotos/eine-person-in-einem-tauchanzug-taucht-im-meer-yrJ1PLuUzDU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
     plattform: Unsplash
 bilder_klein:
-  - src: /assets/img/verein-schoenbach.webp
+  - src: /assets/uploads/startseite/laya-clode-AwfxsOAkHXI-unsplash.webp
     alt: Verbandssee in Schönbach bei Herborn
-    quelle: null
+    quelle:
+      fotograf: Laya Clode
+      fotograf_url: https://unsplash.com/de/@layaclode?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+      foto_url: https://unsplash.com/de/fotos/person-die-vor-einem-gewasser-sitzt-AwfxsOAkHXI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+      plattform: Unsplash
   - src: /assets/img/verein-stammtisch.webp
     alt: Vereinsmitglieder beim Stammtisch
     quelle: null
