@@ -1,28 +1,30 @@
-# Sektion "Der Verein" der Startseite, pflegbar via Sveltia CMS
-# (Collection "Startseite" -> Eintrag "Der Verein").
-# Text als Markdown (Links moeglich), ein grosses Bild + Liste kleiner
-# Bilder (Vereinsfotos, daher ohne Quelle-Objekt), Feature-Karten als
-# Liste (das Grid vertraegt beliebig viele).
-kicker: "Der Verein"
-titel: "Die Idee kam auf der boot. Der Rest ist Vereinsgeschichte."
-text: |
+kicker: Der Verein
+titel: Die Idee kam auf der boot. Der Rest ist Vereinsgeschichte.
+text: |-
   Die Idee zum eigenen Tauchclub entstand auf der boot, der Düsseldorfer Wassersportmesse. Im April 1996 wurde daraus Ernst: Gründung in der Weilburger Kneipe „Zum Stadtpfeifer“. Aus der kleinen Runde sind über 50 Mitglieder geworden, vom Jugendlichen bis zum Tauchlehrer.
 
   Getaucht wird bei uns in aller Breite: vom klassischen Sporttauchen bis zum technischen Tauchen. Zuhause sind wir im Verbandssee in Schönbach bei Herborn und in den Seen der Umgebung. Und meist geht es einmal im Jahr gemeinsam auf Tauchreise.
 
   Als Mitglied im [VDST](https://www.vdst.de) bilden wir nach CMAS-Richtlinien aus: weltweit anerkannt, gründlich und ohne Zeitdruck. Der Verein ist außerdem Mitglied im Hessischen Tauchsportverband und im Landessportbund Hessen.
 bild_gross:
-  src: /assets/img/verein-gruppe.webp
-  alt: "Gruppenfoto der Vereinsmitglieder"
+  src: /assets/uploads/startseite/janesca-yrJ1PLuUzDU-unsplash.webp
+  alt: Gruppenfoto der Vereinsmitglieder
+  quelle:
+    fotograf: Janesca
+    fotograf_url: https://unsplash.com/de/@janesca?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+    foto_url: https://unsplash.com/de/fotos/eine-person-in-einem-tauchanzug-taucht-im-meer-yrJ1PLuUzDU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+    plattform: Unsplash
 bilder_klein:
   - src: /assets/img/verein-schoenbach.webp
-    alt: "Verbandssee in Schönbach bei Herborn"
+    alt: Verbandssee in Schönbach bei Herborn
+    quelle: null
   - src: /assets/img/verein-stammtisch.webp
-    alt: "Vereinsmitglieder beim Stammtisch"
+    alt: Vereinsmitglieder beim Stammtisch
+    quelle: null
 features:
-  - titel: "Eigener Kompressor"
-    text: "Flaschenfüllungen zum Vorzugspreis, direkt im Verein, ohne Umweg über den Tauchshop."
-  - titel: "Gemeinsam tauchen"
-    text: "Regelmäßig zusammen im Verbandssee in Schönbach und an den Seen der Umgebung. Keiner taucht allein."
-  - titel: "Ausfahrten & Reisen"
-    text: "Wochenenden an heimischen Seen, Clubreisen ans Meer. Gemeinsam macht's mehr Spaß."
+  - titel: Eigener Kompressor
+    text: Flaschenfüllungen zum Vorzugspreis, direkt im Verein, ohne Umweg über den Tauchshop.
+  - titel: Gemeinsam tauchen
+    text: Regelmäßig zusammen im Verbandssee in Schönbach und an den Seen der Umgebung. Keiner taucht allein.
+  - titel: Ausfahrten & Reisen
+    text: Wochenenden an heimischen Seen, Clubreisen ans Meer. Gemeinsam macht's mehr Spaß.
