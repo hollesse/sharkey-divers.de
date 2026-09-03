@@ -9,12 +9,12 @@ layout: default
     {% if page.teaser %}<p class="bericht-article__teaser">{{ page.teaser }}</p>{% endif %}
   </div>
 
-  {% if page.images and page.images.size > 0 %}
+  {% if page.titelbild.src %}
   <div class="bericht-article__hero">
     <div class="bericht-article__hero-media">
-      <img src="{{ page.images[0] | relative_url }}" alt="" loading="lazy">
-      {% if page.bild_fotograf %}
-      {% include bild-credit.html author=page.bild_fotograf author_url=page.bild_fotograf_url photo_url=page.bild_foto_url source=page.bild_plattform %}
+      <img src="{{ page.titelbild.src | relative_url }}" alt="{{ page.titelbild.alt | escape }}" loading="lazy">
+      {% if page.titelbild.quelle.fotograf %}
+      {% include bild-credit.html author=page.titelbild.quelle.fotograf author_url=page.titelbild.quelle.fotograf_url photo_url=page.titelbild.quelle.foto_url source=page.titelbild.quelle.plattform %}
       {% endif %}
     </div>
   </div>
@@ -23,9 +23,9 @@ layout: default
   <div class="bericht-article__body prose">
     {{ content }}
 
-    {% if page.images and page.images.size > 1 %}
+    {% if page.images and page.images.size > 0 %}
     <div class="bericht-gallery">
-      {% for bild in page.images offset:1 %}
+      {% for bild in page.images %}
       <img src="{{ bild | relative_url }}" alt="" loading="lazy">
       {% endfor %}
     </div>

@@ -4,11 +4,11 @@
      Titel und Bild verlinken immer auf den Bericht. -->
 {% assign hl = include.heading | default: "h3" %}
 <article class="bericht-card">
-  {% if include.post.images and include.post.images.size > 0 %}
+  {% if include.post.titelbild.src %}
   <div class="bericht-card__media-wrap">
-    <a href="{{ include.post.url | relative_url }}" class="bericht-card__media"><img src="{{ include.post.images[0] | relative_url }}" alt="" loading="lazy"></a>
-    {%- if include.post.bild_fotograf %}
-    {% include bild-credit.html author=include.post.bild_fotograf author_url=include.post.bild_fotograf_url photo_url=include.post.bild_foto_url source=include.post.bild_plattform %}
+    <a href="{{ include.post.url | relative_url }}" class="bericht-card__media"><img src="{{ include.post.titelbild.src | relative_url }}" alt="{{ include.post.titelbild.alt | escape }}" loading="lazy"></a>
+    {%- if include.post.titelbild.quelle.fotograf %}
+    {% include bild-credit.html author=include.post.titelbild.quelle.fotograf author_url=include.post.titelbild.quelle.fotograf_url photo_url=include.post.titelbild.quelle.foto_url source=include.post.titelbild.quelle.plattform %}
     {%- endif %}
   </div>
   {% endif %}

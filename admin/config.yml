@@ -45,18 +45,32 @@ collections:
       # Theme-Ergaenzung design-system-001.
       - { label: "Teaser", name: "teaser", widget: "text", required: false }
       - { label: "Text", name: "body", widget: "markdown" }
-      - label: "Bilder"
+      # Titelbild als Objekt (Muster aus der Sveltia-Doku, docs/fields/image):
+      # Bild + Alt-Text gebuendelt, Quelle/Copyright als eigenes Unter-Objekt.
+      # Quelle-Struktur wie die Theme-Bildnachweise: "Foto: <Fotograf> /
+      # <Plattform>", Fotograf verlinkt aufs Profil, Plattform-Wort aufs
+      # Foto. Overlay unten rechts.
+      - label: "Titelbild"
+        name: "titelbild"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Bild", name: "src", widget: "image" }
+          - { label: "Alt-Text", name: "alt", widget: "string", hint: "Kurze Bildbeschreibung fuer Screenreader, z. B. \"Taucherin schwimmt ueber ein Riff\"." }
+          - label: "Quelle"
+            name: "quelle"
+            widget: "object"
+            required: false
+            fields:
+              - { label: "Fotograf", name: "fotograf", widget: "string", required: false }
+              - { label: "Fotograf-Link", name: "fotograf_url", widget: "string", required: false }
+              - { label: "Foto-Link", name: "foto_url", widget: "string", required: false }
+              - { label: "Plattform", name: "plattform", widget: "string", required: false, default: "Unsplash" }
+      - label: "Galerie"
         name: "images"
         widget: "list"
         field: { label: "Bild", name: "image", widget: "image" }
         required: false
-      # Quelle/Copyright des Titelbilds (erstes Bild) — gleiche Struktur wie
-      # die Theme-Bildnachweise: "Foto: <Fotograf> / <Plattform>", Fotograf
-      # verlinkt aufs Profil, Plattform-Wort aufs Foto. Overlay unten rechts.
-      - { label: "Titelbild: Fotograf", name: "bild_fotograf", widget: "string", required: false }
-      - { label: "Titelbild: Fotograf-Link", name: "bild_fotograf_url", widget: "string", required: false }
-      - { label: "Titelbild: Foto-Link", name: "bild_foto_url", widget: "string", required: false }
-      - { label: "Titelbild: Plattform", name: "bild_plattform", widget: "string", required: false, default: "Unsplash" }
 
   - name: pages
     label: "Seiten"
