@@ -124,8 +124,9 @@ collections:
           - label: "Kleine Bilder"
             name: "bilder_klein"
             widget: "list"
-            required: false
-            hint: "Werden zweispaltig unter dem grossen Bild angezeigt — am besten eine gerade Anzahl."
+            min: 2
+            max: 2
+            hint: "Genau zwei Bilder, zweispaltig unter dem grossen Bild."
             fields: *bild_mit_quelle_felder
           - label: "Feature-Karten"
             name: "features"
