@@ -39,17 +39,51 @@ Worker-Kontext verfügbar). Reihenfolge einhalten.
 
 ## 4. Sveltia-CMS-Auth-Worker deployen (Cloudflare Worker)
 
-1. Repo `sveltia-cms-auth` (github.com/sveltia/sveltia-cms-auth) als
-   Cloudflare Worker deployen (`wrangler deploy` oder über das Cloudflare
-   Dashboard).
-2. Environment-Variablen/Secrets am Worker setzen:
-   - `GITHUB_CLIENT_ID` = Client ID aus Schritt 3
-   - `GITHUB_CLIENT_SECRET` = Client Secret aus Schritt 3
-   - (optional `ALLOWED_DOMAINS`, siehe sveltia-cms-auth-Doku, um den Worker
-     auf die eigene Admin-URL einzuschränken)
-3. Nach dem Deploy liefert Cloudflare eine Worker-URL, z. B.
-   `https://sharkey-divers-cms-auth.<account>.workers.dev`.
-4. Diese Worker-URL an zwei Stellen eintragen:
+Voraussetzungen: Node.js lokal installiert, kostenloser Cloudflare-Account
+(dash.cloudflare.com). Das Repo bringt eine `wrangler.toml` mit (Worker-Name
+`sveltia-cms-auth`, Entrypoint `src/index.js`) — Wrangler weiß daraus, *was*
+deployt wird; *wohin* (welcher Account) klärt der einmalige `wrangler login`.
+
+1. Repo klonen und in den Cloudflare-Account einloggen (öffnet den Browser,
+   dort "Allow" klicken):
+
+   ```bash
+   git clone https://github.com/sveltia/sveltia-cms-auth
+   cd sveltia-cms-auth
+   npx wrangler login
+   ```
+
+2. Deployen:
+
+   ```bash
+   npx wrangler deploy
+   ```
+
+   Die Ausgabe endet mit der Worker-URL, z. B.
+   `https://sveltia-cms-auth.<account>.workers.dev` — notieren.
+
+3. Secrets am Worker setzen (Werte aus Schritt 3; jeder Befehl fragt den
+   Wert interaktiv ab, sodass nichts in der Shell-History landet):
+
+   ```bash
+   npx wrangler secret put GITHUB_CLIENT_ID
+   npx wrangler secret put GITHUB_CLIENT_SECRET
+   ```
+
+   Alternativ im Cloudflare-Dashboard: Workers & Pages → `sveltia-cms-auth`
+   → Settings → Variables (beim Client Secret "Encrypt" wählen).
+
+4. `ALLOWED_DOMAINS` als (unverschlüsselte) Variable setzen — beschränkt den
+   Worker auf unsere Site, empfohlen als Missbrauchs-Schutz. Im Dashboard
+   unter Settings → Variables anlegen, Wert: `hollesse.github.io`
+   (nach DNS-Cutover um die echte Domain ergänzen, kommagetrennt).
+
+5. Danach ist am Worker nichts mehr zu tun — er hat keine
+   Runtime-Dependencies (nur devDependencies wie ESLint/Wrangler), also
+   auch keine Security-Updates, die gepflegt werden müssten. Das lokale
+   Klon-Verzeichnis kann gelöscht werden.
+
+6. Die Worker-URL aus Schritt 2 an drei Stellen eintragen:
    - Hier in dieser Checkliste als Referenz.
    - In `admin/config.yml` → `backend.base_url` (ersetzt den Platzhalter
      `https://SVELTIA-AUTH-WORKER-URL.example`).
