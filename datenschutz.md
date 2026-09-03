@@ -18,13 +18,13 @@ Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Des
 
 #### Wie erfassen wir Ihre Daten?
 
-Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben.
+Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie uns per E-Mail oder Telefon mitteilen.
 
 Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.
 
 #### Wofür nutzen wir Ihre Daten?
 
-Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden. Sofern über die Website Verträge geschlossen oder angebahnt werden können, werden die übermittelten Daten auch für Vertragsangebote, Bestellungen oder sonstige Auftragsanfragen verarbeitet.
+Die Daten werden erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten und Ihre Anfragen zu bearbeiten. Eine Analyse Ihres Nutzerverhaltens findet nicht statt.
 
 #### Welche Rechte haben Sie bezüglich Ihrer Daten?
 
@@ -34,9 +34,7 @@ Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit
 
 ### Analyse-Tools und Tools von Drittanbietern
 
-Beim Besuch dieser Website kann Ihr Surf-Verhalten statistisch ausgewertet werden. Das geschieht vor allem mit sogenannten Analyseprogrammen.
-
-Detaillierte Informationen zu diesen Analyseprogrammen finden Sie in der folgenden Datenschutzerklärung.
+Wir setzen auf dieser Website keine Analyse-Tools, kein Tracking und keine Werbedienste ein. Es werden keine Cookies gesetzt und Ihr Surf-Verhalten wird nicht ausgewertet.
 
 ## 2. Hosting
 
@@ -46,7 +44,7 @@ Wir hosten die Inhalte unserer Website bei folgendem Anbieter:
 
 Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters / der Hoster gespeichert. Hierbei kann es sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.
 
-Das externe Hosting erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO). Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des TDDDG umfasst. Die Einwilligung ist jederzeit widerrufbar.
+Das externe Hosting erfolgt im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).
 
 Unser(e) Hoster wird bzw. werden Ihre Daten nur insoweit verarbeiten, wie dies zur Erfüllung seiner Leistungspflichten erforderlich ist und unsere Weisungen in Bezug auf diese Daten befolgen.
 
@@ -56,6 +54,8 @@ GitHub Inc.
 88 Colin P Kelly Jr St
 San Francisco, CA 94107
 United States
+
+Der Hoster hat seinen Sitz in den USA. GitHub ist nach dem EU-US Data Privacy Framework (DPF) zertifiziert; die Übermittlung personenbezogener Daten in die USA stützt sich auf den Angemessenheitsbeschluss der EU-Kommission zum DPF (Art. 45 DSGVO). Details finden Sie unter: [https://www.dataprivacyframework.gov](https://www.dataprivacyframework.gov)
 
 ## 3. Allgemeine Hinweise und Pflichtinformationen
 
@@ -156,4 +156,16 @@ Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSG
 
 Die von Ihnen an uns per Kontaktanfragen übersandten Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen – insbesondere gesetzliche Aufbewahrungsfristen – bleiben unberührt.
 
-Quelle: [https://www.e-recht24.de](https://www.e-recht24.de)
+### Fotos aus dem Vereinsleben
+
+In den Berichten auf dieser Website veröffentlichen wir Fotos aus dem Vereinsleben (z. B. von Ausfahrten, Ausbildungen und Veranstaltungen), auf denen Vereinsmitglieder und Teilnehmer erkennbar sein können. Die Veröffentlichung erfolgt auf Grundlage der Einwilligung der abgebildeten Personen (Art. 6 Abs. 1 lit. a DSGVO) bzw. auf Grundlage unseres berechtigten Interesses an der Berichterstattung über das Vereinsleben (Art. 6 Abs. 1 lit. f DSGVO).
+
+Abgebildete Personen können ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen bzw. der Veröffentlichung widersprechen. Wenden Sie sich dazu an die oben genannte verantwortliche Stelle; das betreffende Foto wird dann von der Website entfernt.
+
+### Redaktionsbereich
+
+Diese Website verfügt unter `/admin/` über einen Redaktionsbereich, der ausschließlich von Redakteuren des Vereins genutzt wird und für Besucher der Website ohne Bedeutung ist. Die Anmeldung erfolgt dort über ein GitHub-Benutzerkonto; dabei werden Daten an GitHub Inc. (USA, siehe Abschnitt „Hosting“) sowie an einen von uns betriebenen Anmelde-Dienst auf der Infrastruktur von Cloudflare Inc. (USA) übermittelt. Cloudflare ist ebenfalls nach dem EU-US Data Privacy Framework zertifiziert. Das Redaktionssystem speichert im Browser der Redakteure ausschließlich technisch notwendige Daten (Anmelde-Token und zwischengespeicherte Inhalte); diese Speicherung ist für den ausdrücklich angeforderten Dienst erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG) und erfordert keine Einwilligung. Rechtsgrundlage der Verarbeitung ist unser berechtigtes Interesse an der redaktionellen Pflege der Website (Art. 6 Abs. 1 lit. f DSGVO).
+
+Stand: September 2026
+
+Quelle (Grundlage): [https://www.e-recht24.de](https://www.e-recht24.de)
