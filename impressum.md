@@ -1,37 +1,53 @@
 ---
-layout: page
-title: "Impressum"
+title: Impressum
 footer_slim: true
+layout: page
 ---
 
-<!-- TODO: Platzhalter -- vollstaendige Angaben nach § 5 TMG vor Go-Live
-     ergaenzen (Inhalt ist Aufgabe des website-BC, nicht dieses Themes).
-     Gliederung an den Clot-Prototyp angelehnt (docs/design-prototype/impressum.html). -->
+Tauchclub Sharkey Divers Weilburg e.V.
 
-## Angaben gemäß § 5 TMG
+Postfach 1142
 
-**TODO:** Vereinsname
+35771 Weilburg an der Lahn
 
-**TODO:** Anschrift (Straße, PLZ, Ort)
+Vereinsregister: HRB 999999 **// TODO**
 
-## Vertreten durch
+Registergericht: Amtsgericht Limburg an der Lahn **// TODO**
 
-**TODO:** Vertretungsberechtigte(r) Vorsitzende(r)
+**Vertreten durch:**
+
+1. Vorsitzender:
+
+Herrn Markus Schuster
+
+Am weißen Rain 4
+
+D - 35789 Weilmünster
 
 ## Kontakt
 
-**TODO:** Kontakt (E-Mail, Telefon)
+Telefon: 06472 / 911 707
 
-**TODO:** Vereinsregister-Eintrag (Registergericht, Registernummer), falls vorhanden
+E-Mail: info@sharkey-divers.de
 
-## Haftung für Inhalte
+## Umsatzsteuer-ID
 
-**TODO:** Haftungsausschluss ergänzen.
+Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
 
-## Haftung für Links
+DE999999999 **// TODO**
 
-**TODO:** Haftungsausschluss für externe Links ergänzen.
+## Redaktionell verantwortlich
 
-## Urheberrecht
+Herrn Markus Schuster
 
-**TODO:** Urheberrechtshinweis ergänzen.
+Am weißen Rain 4
+
+D - 35789 Weilmünster
+
+## Verbraucherstreitbeilegung/Universalschlichtungsstelle
+
+Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+
+Verbraucherschlichtungsstelle teilzunehmen.
+
+Quelle: [https://www.e-recht24.de/impressum-generator.html](https://www.e-recht24.de/impressum-generator.html)
