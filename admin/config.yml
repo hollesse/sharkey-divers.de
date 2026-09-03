@@ -72,82 +72,81 @@ collections:
         field: { label: "Bild", name: "image", widget: "image" }
         required: false
 
-  # Startseiten-Inhalte als Daten-Datei (_data/startseite.yml). Vorerst nur
-  # der Herobanner; weitere Startseiten-Sektionen sollen hier nach und nach
-  # konfigurierbar werden.
+  # Startseiten-Sektionen als je eigene Daten-Datei (_data/startseite/*.yml,
+  # Jekyll mappt den Ordner auf site.data.startseite.<name>). Jede Sektion
+  # erscheint im CMS als eigener Eintrag der Sammlung "Startseite"; weitere
+  # Sektionen (Ausbildung, Termine, CTA) sollen hier nach und nach folgen.
   - name: startseite
     label: "Startseite"
     files:
-      - label: "Startseite"
-        name: "startseite"
-        file: "_data/startseite.yml"
-        # Hero-Bild-Uploads landen in einem eigenen Unterordner.
+      - label: "Herobanner"
+        name: "hero"
+        file: "_data/startseite/hero.yml"
+        # Bild-Uploads der Startseite landen in einem eigenen Unterordner.
         media_folder: "/assets/uploads/startseite"
         public_folder: "/assets/uploads/startseite"
         fields:
-          - label: "Herobanner"
-            name: "hero"
+          - { label: "Kicker (kleine Zeile ueber dem Titel)", name: "kicker", widget: "string" }
+          - { label: "Titel", name: "titel", widget: "string" }
+          - { label: "Text", name: "text", widget: "text" }
+          - label: "Bild"
+            name: "bild"
             widget: "object"
             fields:
-              - { label: "Kicker (kleine Zeile ueber dem Titel)", name: "kicker", widget: "string" }
+              - { label: "Bild", name: "src", widget: "image" }
+              - { label: "Alt-Text", name: "alt", widget: "string", hint: "Kurze Bildbeschreibung fuer Screenreader." }
+              - label: "Quelle"
+                name: "quelle"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Fotograf", name: "fotograf", widget: "string", required: false }
+                  - { label: "Fotograf-Link", name: "fotograf_url", widget: "string", required: false }
+                  - { label: "Foto-Link", name: "foto_url", widget: "string", required: false }
+                  - { label: "Plattform", name: "plattform", widget: "string", required: false, default: "Unsplash" }
+          - label: "Button (primaer)"
+            name: "button_primaer"
+            widget: "object"
+            fields:
+              - { label: "Beschriftung", name: "label", widget: "string" }
+              - { label: "Link", name: "link", widget: "string", hint: "Anker auf der Startseite (z. B. #mitmachen) oder URL." }
+          - label: "Button (sekundaer)"
+            name: "button_sekundaer"
+            widget: "object"
+            required: false
+            fields:
+              - { label: "Beschriftung", name: "label", widget: "string", required: false }
+              - { label: "Link", name: "link", widget: "string", required: false }
+      - label: "Der Verein"
+        name: "verein"
+        file: "_data/startseite/verein.yml"
+        media_folder: "/assets/uploads/startseite"
+        public_folder: "/assets/uploads/startseite"
+        fields:
+          - { label: "Kicker (kleine Zeile ueber dem Titel)", name: "kicker", widget: "string" }
+          - { label: "Titel", name: "titel", widget: "string" }
+          - { label: "Text", name: "text", widget: "markdown", hint: "Absaetze durch Leerzeile trennen, Links im Text sind moeglich." }
+          - label: "Grosses Bild"
+            name: "bild_gross"
+            widget: "object"
+            fields:
+              - { label: "Bild", name: "src", widget: "image" }
+              - { label: "Alt-Text", name: "alt", widget: "string", hint: "Kurze Bildbeschreibung fuer Screenreader." }
+          - label: "Kleine Bilder"
+            name: "bilder_klein"
+            widget: "list"
+            required: false
+            hint: "Werden zweispaltig unter dem grossen Bild angezeigt — am besten eine gerade Anzahl."
+            fields:
+              - { label: "Bild", name: "src", widget: "image" }
+              - { label: "Alt-Text", name: "alt", widget: "string" }
+          - label: "Feature-Karten"
+            name: "features"
+            widget: "list"
+            required: false
+            fields:
               - { label: "Titel", name: "titel", widget: "string" }
               - { label: "Text", name: "text", widget: "text" }
-              - label: "Bild"
-                name: "bild"
-                widget: "object"
-                fields:
-                  - { label: "Bild", name: "src", widget: "image" }
-                  - { label: "Alt-Text", name: "alt", widget: "string", hint: "Kurze Bildbeschreibung fuer Screenreader." }
-                  - label: "Quelle"
-                    name: "quelle"
-                    widget: "object"
-                    required: false
-                    fields:
-                      - { label: "Fotograf", name: "fotograf", widget: "string", required: false }
-                      - { label: "Fotograf-Link", name: "fotograf_url", widget: "string", required: false }
-                      - { label: "Foto-Link", name: "foto_url", widget: "string", required: false }
-                      - { label: "Plattform", name: "plattform", widget: "string", required: false, default: "Unsplash" }
-              - label: "Button (primaer)"
-                name: "button_primaer"
-                widget: "object"
-                fields:
-                  - { label: "Beschriftung", name: "label", widget: "string" }
-                  - { label: "Link", name: "link", widget: "string", hint: "Anker auf der Startseite (z. B. #mitmachen) oder URL." }
-              - label: "Button (sekundaer)"
-                name: "button_sekundaer"
-                widget: "object"
-                required: false
-                fields:
-                  - { label: "Beschriftung", name: "label", widget: "string", required: false }
-                  - { label: "Link", name: "link", widget: "string", required: false }
-          - label: "Sektion: Der Verein"
-            name: "verein"
-            widget: "object"
-            fields:
-              - { label: "Kicker (kleine Zeile ueber dem Titel)", name: "kicker", widget: "string" }
-              - { label: "Titel", name: "titel", widget: "string" }
-              - { label: "Text", name: "text", widget: "markdown", hint: "Absaetze durch Leerzeile trennen, Links im Text sind moeglich." }
-              - label: "Grosses Bild"
-                name: "bild_gross"
-                widget: "object"
-                fields:
-                  - { label: "Bild", name: "src", widget: "image" }
-                  - { label: "Alt-Text", name: "alt", widget: "string", hint: "Kurze Bildbeschreibung fuer Screenreader." }
-              - label: "Kleine Bilder"
-                name: "bilder_klein"
-                widget: "list"
-                required: false
-                hint: "Werden zweispaltig unter dem grossen Bild angezeigt — am besten eine gerade Anzahl."
-                fields:
-                  - { label: "Bild", name: "src", widget: "image" }
-                  - { label: "Alt-Text", name: "alt", widget: "string" }
-              - label: "Feature-Karten"
-                name: "features"
-                widget: "list"
-                required: false
-                fields:
-                  - { label: "Titel", name: "titel", widget: "string" }
-                  - { label: "Text", name: "text", widget: "text" }
 
   - name: pages
     label: "Seiten"
