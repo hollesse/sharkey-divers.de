@@ -591,6 +591,13 @@
   border-radius: $radius-md;
 }
 
+// Hinweistext der Termin-Sektion, wenn keine Termine anstehen
+.termine-leer {
+  margin: $space-16 0 0;
+  font-size: $font-size-16-5;
+  color: $color-slate-500;
+}
+
 .bericht-banner {
   background: $color-mist-100;
   border-top: 1px solid $color-line;

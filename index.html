@@ -85,6 +85,7 @@ nav_sticky: true
   <p class="kicker">{{ termine_cfg.kicker }}</p>
   <h2 class="section-title">{{ termine_cfg.titel }}</h2>
   {% assign termine = site.termine | sort: "datum" %}
+  {% if termine.size > 0 %}
   {% assign wochentage = "Mo,Di,Mi,Do,Fr,Sa,So" | split: "," %}
   <div class="termine-list">
     {% for termin in termine %}
@@ -96,6 +97,9 @@ nav_sticky: true
     </div>
     {% endfor %}
   </div>
+  {% else %}
+  <p class="termine-leer">{{ termine_cfg.kein_termin_text }}</p>
+  {% endif %}
 </section>
 {% endif %}
 
