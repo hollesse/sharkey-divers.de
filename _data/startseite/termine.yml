@@ -1,7 +1,3 @@
-# Sektion "Termine" der Startseite, pflegbar via Sveltia CMS
-# (Collection "Startseite" -> Eintrag "Termine").
-# Die Termine selbst liegen als eigene Collection unter _termine/.
-# aktiv: false blendet die Sektion samt Menuepunkt (Navbar + Footer) aus.
-aktiv: true
-kicker: "Termine"
-titel: "Demnächst im Verein"
+aktiv: false
+kicker: Termine
+titel: Demnächst im Verein
