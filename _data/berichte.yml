@@ -1,16 +1,11 @@
-# Konfiguration der Berichte-Bereiche, pflegbar via Sveltia CMS
-# (Collection "Berichte: Einstellungen"). Drei Bereiche: Kopf der
-# Uebersichtsseite /berichte.html, Vorschau-Sektion auf der Startseite,
-# Banner unter jedem Bericht.
+# Konfiguration der Berichte-Seite, pflegbar via Sveltia CMS
+# (Collection "Seiten" -> Eintrag "Berichte"): Kopf der Uebersichtsseite
+# /berichte.html und Banner unter jedem Bericht. Die Startseiten-Vorschau
+# liegt unter _data/startseite/berichte.yml.
 uebersicht:
   kicker: "Vereinsleben"
   titel: "Berichte"
   text: "Ausfahrten, Reisen und alles, was sonst im Verein passiert, aufgeschrieben von Mitgliedern für Mitglieder."
-startseite:
-  kicker: "Berichte"
-  titel: "Neues aus dem Vereinsleben"
-  link_text: "Alle Berichte"
-  anzahl: 3
 banner:
   text_fett: "Lust mitzufahren?"
   text: "Komm vorbei und lern uns kennen."

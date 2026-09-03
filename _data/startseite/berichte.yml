@@ -1,0 +1,6 @@
+# Berichte-Vorschau der Startseite, pflegbar via Sveltia CMS
+# (Collection "Startseite" -> Eintrag "Berichte (Vorschau)").
+kicker: "Berichte"
+titel: "Neues aus dem Vereinsleben"
+link_text: "Alle Berichte"
+anzahl: 3

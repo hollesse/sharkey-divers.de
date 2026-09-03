@@ -30,6 +30,7 @@ layout: default
   </div>
 </article>
 
+{% unless page.cta_banner == false %}
 {% assign banner = site.data.berichte.banner %}
 <div class="bericht-banner">
   <div class="bericht-banner__inner">
@@ -37,3 +38,4 @@ layout: default
     <a href="{{ banner.button_link | relative_url }}" class="btn btn--blue">{{ banner.button_label }}</a>
   </div>
 </div>
+{% endunless %}

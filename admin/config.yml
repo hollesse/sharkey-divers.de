@@ -45,6 +45,7 @@ collections:
       # Theme-Ergaenzung design-system-001.
       - { label: "Teaser", name: "teaser", widget: "text", required: false }
       - { label: "Text", name: "body", widget: "markdown" }
+      - { label: "CTA-Banner unter dem Bericht anzeigen", name: "cta_banner", widget: "boolean", default: true, required: false, hint: "Der 'Lust mitzufahren?'-Kasten am Ende des Berichts (Inhalt: Seiten -> Berichte)." }
       # "Feldtyp" Bild-mit-Quelle: Sveltia unterstuetzt registerFieldType
       # noch nicht (Stand 09/2026, sveltia-cms#709), daher als YAML-Anker —
       # hier einmal definiert, ueberall per Alias *bild_mit_quelle_felder
@@ -73,39 +74,6 @@ collections:
         widget: "list"
         required: false
         fields: *bild_mit_quelle_felder
-
-  # Konfigseite fuer die Berichte-Bereiche (Uebersichtsseiten-Kopf,
-  # Startseiten-Vorschau, Banner unter jedem Bericht).
-  - name: berichte_einstellungen
-    label: "Berichte: Einstellungen"
-    files:
-      - label: "Berichte-Einstellungen"
-        name: "berichte"
-        file: "_data/berichte.yml"
-        fields:
-          - label: "Uebersichtsseite (Kopf von /berichte)"
-            name: "uebersicht"
-            widget: "object"
-            fields:
-              - { label: "Kicker (kleine Zeile ueber dem Titel)", name: "kicker", widget: "string" }
-              - { label: "Titel", name: "titel", widget: "string" }
-              - { label: "Text", name: "text", widget: "text" }
-          - label: "Vorschau auf der Startseite"
-            name: "startseite"
-            widget: "object"
-            fields:
-              - { label: "Kicker (kleine Zeile ueber dem Titel)", name: "kicker", widget: "string" }
-              - { label: "Titel", name: "titel", widget: "string" }
-              - { label: "Link-Text zur Uebersicht", name: "link_text", widget: "string" }
-              - { label: "Anzahl Berichte", name: "anzahl", widget: "number", value_type: "int", min: 1, max: 6, default: 3, hint: "Wie viele der neuesten Berichte auf der Startseite erscheinen." }
-          - label: "Banner unter jedem Bericht"
-            name: "banner"
-            widget: "object"
-            fields:
-              - { label: "Text (fett)", name: "text_fett", widget: "string" }
-              - { label: "Text", name: "text", widget: "string" }
-              - { label: "Button-Beschriftung", name: "button_label", widget: "string" }
-              - { label: "Button-Link", name: "button_link", widget: "string", hint: "z. B. /#mitmachen fuer den Mitmachen-Bereich der Startseite." }
 
   # Termine als eigene Collection (_termine/, je Termin eine Datei) — werden
   # haeufiger gepflegt als der Rest der Startseite. Angezeigt in der
@@ -220,6 +188,14 @@ collections:
           - { label: "Text", name: "text", widget: "text" }
           - { label: "E-Mail-Adresse", name: "email", widget: "string", hint: "Wird als Button angezeigt und als mailto-Link verlinkt." }
           - { label: "Hinweis unter dem Button", name: "hinweis", widget: "string", required: false }
+      - label: "Berichte (Vorschau)"
+        name: "berichte"
+        file: "_data/startseite/berichte.yml"
+        fields:
+          - { label: "Kicker (kleine Zeile ueber dem Titel)", name: "kicker", widget: "string" }
+          - { label: "Titel", name: "titel", widget: "string" }
+          - { label: "Link-Text zur Uebersicht", name: "link_text", widget: "string" }
+          - { label: "Anzahl Berichte", name: "anzahl", widget: "number", value_type: "int", min: 1, max: 6, default: 3, hint: "Wie viele der neuesten Berichte auf der Startseite erscheinen." }
       - label: "Footer"
         name: "footer"
         file: "_data/startseite/footer.yml"
@@ -238,6 +214,28 @@ collections:
   - name: pages
     label: "Seiten"
     files:
+      # Konfig der Berichte-Seite: Kopf der Uebersichtsseite /berichte.html
+      # und Banner unter jedem Bericht. Die Startseiten-Vorschau liegt in
+      # der Sammlung "Startseite" (Eintrag "Berichte (Vorschau)").
+      - label: "Berichte"
+        name: "berichte"
+        file: "_data/berichte.yml"
+        fields:
+          - label: "Seitenkopf"
+            name: "uebersicht"
+            widget: "object"
+            fields:
+              - { label: "Kicker (kleine Zeile ueber dem Titel)", name: "kicker", widget: "string" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "Banner unter jedem Bericht"
+            name: "banner"
+            widget: "object"
+            fields:
+              - { label: "Text (fett)", name: "text_fett", widget: "string" }
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "Button-Beschriftung", name: "button_label", widget: "string" }
+              - { label: "Button-Link", name: "button_link", widget: "string", hint: "z. B. /#mitmachen fuer den Mitmachen-Bereich der Startseite." }
       - label: "Impressum"
         name: "impressum"
         file: "impressum.md"

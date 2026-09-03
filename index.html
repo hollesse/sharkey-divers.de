@@ -99,7 +99,7 @@ nav_sticky: true
 </section>
 {% endif %}
 
-{% assign berichte_cfg = site.data.berichte.startseite %}
+{% assign berichte_cfg = site.data.startseite.berichte %}
 {% assign neueste_berichte = site.posts | slice: 0, berichte_cfg.anzahl %}
 {% if neueste_berichte.size > 0 %}
 <section id="berichte" class="section section--mist">
