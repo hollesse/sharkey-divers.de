@@ -1,13 +1,9 @@
-# Konfiguration der Berichte-Seite, pflegbar via Sveltia CMS
-# (Collection "Seiten" -> Eintrag "Berichte"): Kopf der Uebersichtsseite
-# /berichte.html und Banner unter jedem Bericht. Die Startseiten-Vorschau
-# liegt unter _data/startseite/berichte.yml.
 uebersicht:
-  kicker: "Vereinsleben"
-  titel: "Berichte"
-  text: "Ausfahrten, Reisen und alles, was sonst im Verein passiert, aufgeschrieben von Mitgliedern für Mitglieder."
+  kicker: Berichte
+  titel: Neues aus dem Vereinsleben
+  text: Ausfahrten, Reisen und alles, was sonst im Verein passiert, aufgeschrieben von Mitgliedern für Mitglieder.
 banner:
-  text_fett: "Lust mitzufahren?"
-  text: "Komm vorbei und lern uns kennen."
-  button_label: "Schnuppertauchen anfragen"
-  button_link: "/#mitmachen"
+  text_fett: Lust mitzufahren?
+  text: Komm vorbei und lern uns kennen.
+  button_label: Schnuppertauchen anfragen
+  button_link: /#mitmachen
