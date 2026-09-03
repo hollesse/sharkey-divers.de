@@ -71,9 +71,7 @@ Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kom
 
 Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
 
-Herrn Markus Schuster
-Am weißen Rain 4
-D - 35789 Weilmünster
+{{ site.data.verein.vorsitzender_adresse }}
 
 Telefon: {{ site.data.verein.telefon }}
 E-Mail: {% include email-geschuetzt.html email=site.data.verein.email %}

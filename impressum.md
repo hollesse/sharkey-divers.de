@@ -6,14 +6,12 @@ layout: page
 
 {{ site.data.verein.adresse }}
 
-Vereinsregister: HRB 999999 **// TODO**
-Registergericht: Amtsgericht Limburg an der Lahn **// TODO**
+Vereinsregister: {{ site.data.verein.registernummer }} **// TODO**
+Registergericht: {{ site.data.verein.registergericht }} **// TODO**
 
 **Vertreten durch:**
 1\. Vorsitzender:
-Herrn Markus Schuster
-Am weißen Rain 4
-D - 35789 Weilmünster
+{{ site.data.verein.vorsitzender_adresse }}
 
 ## Kontakt
 Telefon: {{ site.data.verein.telefon }}
@@ -24,9 +22,7 @@ Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
 DE999999999 **// TODO**
 
 ## Redaktionell verantwortlich
-Herrn Markus Schuster
-Am weißen Rain 4
-D - 35789 Weilmünster
+{{ site.data.verein.vorsitzender_adresse }}
 
 ## Verbraucherstreitbeilegung/Universalschlichtungsstelle
 Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.

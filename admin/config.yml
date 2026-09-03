@@ -282,7 +282,10 @@ collections:
         name: "verein"
         file: "_data/verein.yml"
         fields:
-          - { label: "Vereinsname", name: "name", widget: "string" }
+          - { label: "Vereinsname", name: "name", widget: "string", hint: "Platzhalter im Text: {{ site.data.verein.name }}" }
           - { label: "Adresse", name: "adresse", widget: "text", hint: "Mehrzeilig. Wird im Footer angezeigt und ueberall dort, wo im Text der Platzhalter {{ site.data.verein.adresse }} steht." }
           - { label: "Telefon", name: "telefon", widget: "string", hint: "Platzhalter im Text: {{ site.data.verein.telefon }}" }
-          - { label: "E-Mail", name: "email", widget: "string", hint: "Platzhalter im Text: {{ site.data.verein.email }}" }
+          - { label: "E-Mail", name: "email", widget: "string", hint: "Platzhalter fuer die spam-geschuetzte Anzeige im Text: {% include email-geschuetzt.html email=site.data.verein.email %}" }
+          - { label: "Adresse 1. Vorsitzender", name: "vorsitzender_adresse", widget: "text", hint: "Mehrzeilig. Platzhalter im Text: {{ site.data.verein.vorsitzender_adresse }}" }
+          - { label: "Vereinsregister-Nummer", name: "registernummer", widget: "string", hint: "Platzhalter im Text: {{ site.data.verein.registernummer }}" }
+          - { label: "Registergericht", name: "registergericht", widget: "string", hint: "Platzhalter im Text: {{ site.data.verein.registergericht }}" }

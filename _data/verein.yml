@@ -12,3 +12,10 @@ adresse: |-
   35771 Weilburg an der Lahn
 telefon: "06472 / 911 707"
 email: "info@sharkey-divers.de"
+vorsitzender_adresse: |-
+  Herrn Markus Schuster
+  Am weißen Rain 4
+  D - 35789 Weilmünster
+# TODO: echte Registernummer eintragen (Vereinsregister, nicht HRB)
+registernummer: "HRB 999999"
+registergericht: "Amtsgericht Limburg an der Lahn"
