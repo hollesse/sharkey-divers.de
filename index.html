@@ -128,7 +128,7 @@ nav_sticky: true
       <p>{{ cta.text }}</p>
     </div>
     <div class="cta-box__action">
-      <a href="mailto:{{ cta.email }}" class="btn btn--white">{{ cta.email }}</a>
+      {% include email-geschuetzt.html email=cta.email class="btn btn--white" %}
       {% if cta.hinweis %}<span class="cta-box__hint">{{ cta.hinweis }}</span>{% endif %}
     </div>
   </div>

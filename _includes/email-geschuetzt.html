@@ -1,0 +1,34 @@
+{% comment %} Spam-geschuetzter E-Mail-Link. Die Adresse steht nie komplett im
+     ausgelieferten HTML (kein mailto:, kein x@y-Muster): das Template
+     zerlegt sie beim Build in Nutzer- und Domain-Teil, ein kleines
+     Inline-Script setzt sie im Browser zusammen. Ohne JavaScript erscheint
+     statt der Adresse ein Hinweis (bewusst OHNE "(at)"-Schreibweise —
+     die koennen Harvester genauso lesen).
+     Parameter:
+       email — die Adresse (aus dem CMS, normal gepflegt)
+       class — optional: CSS-Klassen fuer den Link (z. B. Button-Stile)
+     Grenze des Verfahrens: Harvester, die einen echten Browser ausfuehren,
+     kommen weiterhin an die Adresse — mehr ist ohne Server/Fremddienst
+     auf einer statischen Seite nicht moeglich. {% endcomment %}
+{% assign email_teile = include.email | split: "@" %}
+<a href="#" class="email-schutz{% if include.class %} {{ include.class }}{% endif %}" data-n="{{ email_teile[0] }}" data-d="{{ email_teile[1] }}" hidden>E-Mail</a>
+<noscript>Bitte aktivieren Sie JavaScript, um die E-Mail-Adresse zu sehen.</noscript>
+<script>
+  (function () {
+    if (window.emailSchutzAktiv) return;
+    window.emailSchutzAktiv = true;
+    var zusammensetzen = function () {
+      document.querySelectorAll("a.email-schutz").forEach(function (el) {
+        var adresse = el.dataset.n + "@" + el.dataset.d;
+        el.href = "mailto:" + adresse;
+        el.textContent = adresse;
+        el.hidden = false;
+      });
+    };
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", zusammensetzen);
+    } else {
+      zusammensetzen();
+    }
+  })();
+</script>
