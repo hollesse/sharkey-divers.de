@@ -11,7 +11,10 @@
 
   var links = {};
   ids.forEach(function (id) {
-    var link = document.querySelector('.site-nav a[href$="#' + id + '"]');
+    // Sektions-Links enden auf #<id>; Links auf eigene Seiten (Berichte)
+    // tragen stattdessen data-section="<id>".
+    var link = document.querySelector('.site-nav a[data-section="' + id + '"]') ||
+      document.querySelector('.site-nav a[href$="#' + id + '"]');
     if (link) links[id] = link;
   });
 
