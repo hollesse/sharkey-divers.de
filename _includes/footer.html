@@ -1,14 +1,15 @@
 <!-- Footer aus dem Clot-Prototyp: volle Variante mit Adresse/Spalten auf
      der Startseite, schlanke Variante (nur Copyright + Rechtliches) auf
      den Unterseiten (page.footer_slim). -->
-{% assign footer = site.data.startseite.footer %}
+{% assign footer = site.data.footer %}
 {% if page.footer_slim %}
 <footer class="site-footer site-footer--slim">
   <div class="site-footer__legal-inner">
     <span>&copy; {{ 'now' | date: "%Y" }} {{ footer.copyright_name }}</span>
     <span class="site-footer__legal-links">
-      <a href="{{ '/impressum.html' | relative_url }}">Impressum</a>
-      <a href="{{ '/datenschutz.html' | relative_url }}">Datenschutz</a>
+      {% for link in footer.rechtliches %}
+      <a href="{{ link.url | relative_url }}">{{ link.label }}</a>
+      {% endfor %}
     </span>
   </div>
 </footer>
@@ -40,13 +41,16 @@
       </div>
     </div>
     {% endif %}
+    {% if footer.rechtliches and footer.rechtliches.size > 0 %}
     <div class="site-footer__col site-footer__col--recht">
       <strong class="site-footer__col-title">Rechtliches</strong>
       <div class="site-footer__links">
-        <a href="{{ '/impressum.html' | relative_url }}">Impressum</a>
-        <a href="{{ '/datenschutz.html' | relative_url }}">Datenschutz</a>
+        {% for link in footer.rechtliches %}
+        <a href="{{ link.url | relative_url }}">{{ link.label }}</a>
+        {% endfor %}
       </div>
     </div>
+    {% endif %}
     <p class="site-footer__copyright">&copy; {{ 'now' | date: "%Y" }} {{ footer.copyright_name }}</p>
   </div>
 </footer>

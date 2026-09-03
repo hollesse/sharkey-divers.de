@@ -196,21 +196,6 @@ collections:
           - { label: "Text", name: "text", widget: "text" }
           - { label: "E-Mail-Adresse", name: "email", widget: "string", hint: "Wird als Button angezeigt und als mailto-Link verlinkt." }
           - { label: "Hinweis unter dem Button", name: "hinweis", widget: "string", required: false }
-      - label: "Footer"
-        name: "footer"
-        file: "_data/startseite/footer.yml"
-        fields:
-          - { label: "Adresse", name: "adresse", widget: "text", hint: "Mehrzeilig, Zeilenumbrueche werden uebernommen." }
-          - label: "Verbaende"
-            name: "verbaende"
-            widget: "list"
-            required: false
-            hint: "Link-Liste in der Spalte 'Verbaende'; leer = Spalte wird ausgeblendet."
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Link", name: "url", widget: "string" }
-          - { label: "Copyright-Name", name: "copyright_name", widget: "string", hint: "Erscheint hinter der automatischen Jahreszahl, auch im schlanken Footer der Unterseiten." }
-
   - name: pages
     label: "Seiten"
     files:
@@ -248,3 +233,31 @@ collections:
         fields:
           - { label: "Titel", name: "title", widget: "string" }
           - { label: "Text", name: "body", widget: "markdown" }
+
+  # Footer (alle Seiten): Adresse, Verbaende- und Rechtliches-Links,
+  # Copyright-Name. Rechtliches + Copyright gelten auch fuer den schlanken
+  # Footer der Unterseiten.
+  - name: footer
+    label: "Footer"
+    files:
+      - label: "Footer"
+        name: "footer"
+        file: "_data/footer.yml"
+        fields:
+          - { label: "Adresse", name: "adresse", widget: "text", hint: "Mehrzeilig, Zeilenumbrueche werden uebernommen." }
+          - label: "Verbaende"
+            name: "verbaende"
+            widget: "list"
+            required: false
+            hint: "Link-Liste in der Spalte 'Verbaende'; leer = Spalte wird ausgeblendet."
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Link", name: "url", widget: "string" }
+          - label: "Rechtliches"
+            name: "rechtliches"
+            widget: "list"
+            hint: "Links der Spalte 'Rechtliches', erscheinen auch im schlanken Footer der Unterseiten."
+            fields:
+              - { label: "Beschriftung", name: "label", widget: "string" }
+              - { label: "Link", name: "url", widget: "string", hint: "Interner Pfad (z. B. /impressum.html) oder URL." }
+          - { label: "Copyright-Name", name: "copyright_name", widget: "string", hint: "Erscheint hinter der automatischen Jahreszahl, auch im schlanken Footer der Unterseiten." }
