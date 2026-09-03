@@ -3,20 +3,23 @@ layout: default
 title: "Sharkey Divers Weilburg – Tauchclub seit 1996"
 nav_sticky: true
 ---
+{% assign hero = site.data.startseite.hero %}
 <section id="start" class="hero">
   <div class="hero__media">
-    <img src="{{ '/assets/img/hero.webp' | relative_url }}" alt="" width="1200" height="900" loading="eager">
+    <img src="{{ hero.bild.src | relative_url }}" alt="{{ hero.bild.alt | escape }}" loading="eager">
     <div class="hero__scrim"></div>
-    {% include bild-credit.html author="Bobbi Wu" author_url="https://unsplash.com/de/@bobbiwu?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" photo_url="https://unsplash.com/de/fotos/person-die-unter-wasser-schwimmt-fotografie-3_h9trxhQmY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" %}
+    {% if hero.bild.quelle.fotograf %}
+    {% include bild-credit.html author=hero.bild.quelle.fotograf author_url=hero.bild.quelle.fotograf_url photo_url=hero.bild.quelle.foto_url source=hero.bild.quelle.plattform %}
+    {% endif %}
     <div class="hero__content">
       <div class="hero__inner">
         <div class="hero__text">
-          <p class="kicker kicker--light">Tauchclub Sharkey Divers Weilburg e.V.</p>
-          <h1 class="hero__title">Gemeinsam abtauchen. Seit 1996.</h1>
-          <p class="hero__lead">Über 50 Taucherinnen und Taucher und Ausbildung nach VDST/CMAS, vom ersten Atemzug unter Wasser bis zum technischen Tauchen. Getaucht wird im Verbandssee des HTSV in Schönbach bei Herborn.</p>
+          <p class="kicker kicker--light">{{ hero.kicker }}</p>
+          <h1 class="hero__title">{{ hero.titel }}</h1>
+          <p class="hero__lead">{{ hero.text }}</p>
           <div class="hero__actions">
-            <a href="#mitmachen" class="btn btn--primary">Schnuppertauchen anfragen</a>
-            <a href="#ausbildung" class="btn btn--outline">Unsere Ausbildung</a>
+            {% if hero.button_primaer.label %}<a href="{{ hero.button_primaer.link }}" class="btn btn--primary">{{ hero.button_primaer.label }}</a>{% endif %}
+            {% if hero.button_sekundaer.label %}<a href="{{ hero.button_sekundaer.link }}" class="btn btn--outline">{{ hero.button_sekundaer.label }}</a>{% endif %}
           </div>
         </div>
       </div>
