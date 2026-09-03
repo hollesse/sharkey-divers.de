@@ -1,6 +1,4 @@
-# CTA-Box "Mitmachen" der Startseite, pflegbar via Sveltia CMS
-# (Collection "Startseite" -> Eintrag "Mitmachen (CTA-Box)").
-titel: "Lust, es mal zu probieren?"
-text: "Komm zum Schnuppertauchen mit, kostenlos und unverbindlich. Ausrüstung stellen wir. Schreib uns kurz eine Mail, dann finden wir einen passenden Termin."
-email: "info@tauchclub-weilburg.de"
-hinweis: "Wir melden uns meist innerhalb weniger Tage."
+titel: Lust, es mal zu probieren?
+text: Komm zum Schnuppertauchen mit, kostenlos und unverbindlich. Ausrüstung stellen wir. Schreib uns kurz eine Mail, dann finden wir einen passenden Termin.
+email: info@sharkey-divers.de
+hinweis: Wir melden uns meist innerhalb weniger Tage.
