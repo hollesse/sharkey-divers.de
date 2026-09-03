@@ -254,7 +254,6 @@ collections:
         name: "footer"
         file: "_data/footer.yml"
         fields:
-          - { label: "Adresse", name: "adresse", widget: "text", hint: "Mehrzeilig, Zeilenumbrueche werden uebernommen." }
           - label: "Verbaende"
             name: "verbaende"
             widget: "list"
@@ -271,3 +270,19 @@ collections:
               - { label: "Beschriftung", name: "label", widget: "string" }
               - { label: "Link", name: "url", widget: "string", hint: "Interner Pfad (z. B. /impressum.html) oder URL." }
           - { label: "Copyright-Name", name: "copyright_name", widget: "string", hint: "Erscheint hinter der automatischen Jahreszahl, auch im schlanken Footer der Unterseiten." }
+
+  # Zentrale Vereins-Stammdaten — einzige Pflegestelle fuer Adresse,
+  # Telefon und E-Mail. Der Footer liest sie direkt; in Impressum und
+  # Datenschutzerklaerung stehen Liquid-Platzhalter im Markdown-Text
+  # (z. B. {{ site.data.verein.adresse }}), die beim Build ersetzt werden.
+  - name: verein_daten
+    label: "Vereinsdaten"
+    files:
+      - label: "Vereinsdaten"
+        name: "verein"
+        file: "_data/verein.yml"
+        fields:
+          - { label: "Vereinsname", name: "name", widget: "string" }
+          - { label: "Adresse", name: "adresse", widget: "text", hint: "Mehrzeilig. Wird im Footer angezeigt und ueberall dort, wo im Text der Platzhalter {{ site.data.verein.adresse }} steht." }
+          - { label: "Telefon", name: "telefon", widget: "string", hint: "Platzhalter im Text: {{ site.data.verein.telefon }}" }
+          - { label: "E-Mail", name: "email", widget: "string", hint: "Platzhalter im Text: {{ site.data.verein.email }}" }

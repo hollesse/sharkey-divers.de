@@ -1,0 +1,14 @@
+# Zentrale Vereins-Stammdaten, pflegbar via Sveltia CMS (Collection
+# "Vereinsdaten"). Einzige Pflegestelle fuer Adresse/Telefon/E-Mail:
+# der Footer liest sie direkt, Impressum und Datenschutzerklaerung
+# binden sie ueber Liquid-Platzhalter im Markdown ein, z. B.
+#   {{ site.data.verein.adresse }}
+#   Telefon: {{ site.data.verein.telefon }}
+#   {% include email-geschuetzt.html email=site.data.verein.email %}
+name: "Tauchclub Sharkey Divers Weilburg e.V."
+adresse: |-
+  Tauchclub Sharkey Divers Weilburg e.V.
+  Postfach 1142
+  35771 Weilburg an der Lahn
+telefon: "06472 / 911 707"
+email: "info@sharkey-divers.de"

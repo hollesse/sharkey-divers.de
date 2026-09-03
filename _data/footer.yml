@@ -1,11 +1,7 @@
 # Footer (alle Seiten), pflegbar via Sveltia CMS (eigene Collection
-# "Footer"). Adresse mehrzeilig, Verbaende und Rechtliches als Link-Listen.
-# Rechtliches-Links und Copyright-Name gelten auch fuer den schlanken
-# Footer der Unterseiten; die Jahreszahl setzt das Template automatisch.
-adresse: |-
-  Tauchclub Sharkey Divers Weilburg e.V.
-  Postfach 1142
-  35771 Weilburg / Lahn
+# "Footer"). Verbaende und Rechtliches als Link-Listen; die Adresse kommt
+# zentral aus _data/verein.yml. Rechtliches-Links und Copyright-Name gelten
+# auch fuer den schlanken Footer; die Jahreszahl setzt das Template.
 verbaende:
   - name: "VDST"
     url: "https://www.vdst.de"

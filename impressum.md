@@ -4,9 +4,7 @@ footer_slim: true
 layout: page
 ---
 
-Tauchclub Sharkey Divers Weilburg e.V.
-Postfach 1142
-35771 Weilburg an der Lahn
+{{ site.data.verein.adresse }}
 
 Vereinsregister: HRB 999999 **// TODO**
 Registergericht: Amtsgericht Limburg an der Lahn **// TODO**
@@ -18,8 +16,8 @@ Am weißen Rain 4
 D - 35789 Weilmünster
 
 ## Kontakt
-Telefon: 06472 / 911 707
-E-Mail: info@sharkey-divers.de
+Telefon: {{ site.data.verein.telefon }}
+E-Mail: {% include email-geschuetzt.html email=site.data.verein.email %}
 
 ## Umsatzsteuer-ID
 Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
