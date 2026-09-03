@@ -443,10 +443,11 @@
   // damit das Overlay nicht neben der Bildunterschrift landet)
 }
 
+// Die Bildunterschrift ist im Grid unsichtbar und erscheint nur in der
+// Lightbox (lightbox.js liest sie aus diesem Element). display:none statt
+// Entfernen, damit sie als Datenquelle im DOM bleibt.
 .bericht-gallery__caption {
-  margin-top: $space-8;
-  font-size: $font-size-14-5;
-  color: $color-slate-500;
+  display: none;
 }
 
 // Lightbox fuer die Bericht-Galerie (assets/js/lightbox.js, ADR 0007:
