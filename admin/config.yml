@@ -120,6 +120,34 @@ collections:
                 fields:
                   - { label: "Beschriftung", name: "label", widget: "string", required: false }
                   - { label: "Link", name: "link", widget: "string", required: false }
+          - label: "Sektion: Der Verein"
+            name: "verein"
+            widget: "object"
+            fields:
+              - { label: "Kicker (kleine Zeile ueber dem Titel)", name: "kicker", widget: "string" }
+              - { label: "Titel", name: "titel", widget: "string" }
+              - { label: "Text", name: "text", widget: "markdown", hint: "Absaetze durch Leerzeile trennen, Links im Text sind moeglich." }
+              - label: "Grosses Bild"
+                name: "bild_gross"
+                widget: "object"
+                fields:
+                  - { label: "Bild", name: "src", widget: "image" }
+                  - { label: "Alt-Text", name: "alt", widget: "string", hint: "Kurze Bildbeschreibung fuer Screenreader." }
+              - label: "Kleine Bilder"
+                name: "bilder_klein"
+                widget: "list"
+                required: false
+                hint: "Werden zweispaltig unter dem grossen Bild angezeigt — am besten eine gerade Anzahl."
+                fields:
+                  - { label: "Bild", name: "src", widget: "image" }
+                  - { label: "Alt-Text", name: "alt", widget: "string" }
+              - label: "Feature-Karten"
+                name: "features"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Titel", name: "titel", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
 
   - name: pages
     label: "Seiten"

@@ -27,35 +27,33 @@ nav_sticky: true
   </div>
 </section>
 
+{% assign verein = site.data.startseite.verein %}
 <section id="verein" class="container section">
   <div class="split">
     <div class="split__text">
-      <p class="kicker">Der Verein</p>
-      <h2>Die Idee kam auf der boot. Der Rest ist Vereinsgeschichte.</h2>
-      <p>Die Idee zum eigenen Tauchclub entstand auf der boot, der Düsseldorfer Wassersportmesse. Im April 1996 wurde daraus Ernst: Gründung in der Weilburger Kneipe „Zum Stadtpfeifer“. Aus der kleinen Runde sind über 50 Mitglieder geworden, vom Jugendlichen bis zum Tauchlehrer.</p>
-      <p>Getaucht wird bei uns in aller Breite: vom klassischen Sporttauchen bis zum technischen Tauchen. Zuhause sind wir im Verbandssee in Schönbach bei Herborn und in den Seen der Umgebung. Und meist geht es einmal im Jahr gemeinsam auf Tauchreise.</p>
-      <p>Als Mitglied im <a href="https://www.vdst.de">VDST</a> bilden wir nach CMAS-Richtlinien aus: weltweit anerkannt, gründlich und ohne Zeitdruck. Der Verein ist außerdem Mitglied im Hessischen Tauchsportverband und im Landessportbund Hessen.</p>
+      <p class="kicker">{{ verein.kicker }}</p>
+      <h2>{{ verein.titel }}</h2>
+      {{ verein.text | markdownify }}
     </div>
     <div class="split__media--grid">
-      <div class="split__media-lead"><img src="{{ '/assets/img/verein-gruppe.webp' | relative_url }}" alt="" width="972" height="798" loading="lazy"></div>
-      <div class="split__media-item"><img src="{{ '/assets/img/verein-schoenbach.webp' | relative_url }}" alt="" width="474" height="356" loading="lazy"></div>
-      <div class="split__media-item"><img src="{{ '/assets/img/verein-stammtisch.webp' | relative_url }}" alt="" width="474" height="316" loading="lazy"></div>
+      {% if verein.bild_gross.src %}
+      <div class="split__media-lead"><img src="{{ verein.bild_gross.src | relative_url }}" alt="{{ verein.bild_gross.alt | escape }}" loading="lazy"></div>
+      {% endif %}
+      {% for bild in verein.bilder_klein %}
+      <div class="split__media-item"><img src="{{ bild.src | relative_url }}" alt="{{ bild.alt | escape }}" loading="lazy"></div>
+      {% endfor %}
     </div>
   </div>
+  {% if verein.features and verein.features.size > 0 %}
   <div class="feature-grid">
+    {% for feature in verein.features %}
     <div class="feature-card">
-      <h3>Eigener Kompressor</h3>
-      <p>Flaschenfüllungen zum Vorzugspreis, direkt im Verein, ohne Umweg über den Tauchshop.</p>
+      <h3>{{ feature.titel }}</h3>
+      <p>{{ feature.text }}</p>
     </div>
-    <div class="feature-card">
-      <h3>Gemeinsam tauchen</h3>
-      <p>Regelmäßig zusammen im Verbandssee in Schönbach und an den Seen der Umgebung. Keiner taucht allein.</p>
-    </div>
-    <div class="feature-card">
-      <h3>Ausfahrten &amp; Reisen</h3>
-      <p>Wochenenden an heimischen Seen, Clubreisen ans Meer. Gemeinsam macht's mehr Spaß.</p>
-    </div>
+    {% endfor %}
   </div>
+  {% endif %}
 </section>
 
 <section id="ausbildung" class="section section--dark">
