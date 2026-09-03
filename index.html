@@ -6,11 +6,8 @@ nav_sticky: true
 {% assign hero = site.data.startseite.hero %}
 <section id="start" class="hero">
   <div class="hero__media">
-    <img src="{{ hero.bild.src | relative_url }}" alt="{{ hero.bild.alt | escape }}" loading="eager">
+    {% include bild-mit-quelle.html bild=hero.bild loading="eager" %}
     <div class="hero__scrim"></div>
-    {% if hero.bild.quelle.fotograf %}
-    {% include bild-credit.html author=hero.bild.quelle.fotograf author_url=hero.bild.quelle.fotograf_url photo_url=hero.bild.quelle.foto_url source=hero.bild.quelle.plattform %}
-    {% endif %}
     <div class="hero__content">
       <div class="hero__inner">
         <div class="hero__text">
@@ -37,10 +34,10 @@ nav_sticky: true
     </div>
     <div class="split__media--grid">
       {% if verein.bild_gross.src %}
-      <div class="split__media-lead"><img src="{{ verein.bild_gross.src | relative_url }}" alt="{{ verein.bild_gross.alt | escape }}" loading="lazy"></div>
+      <div class="split__media-lead">{% include bild-mit-quelle.html bild=verein.bild_gross %}</div>
       {% endif %}
       {% for bild in verein.bilder_klein %}
-      <div class="split__media-item"><img src="{{ bild.src | relative_url }}" alt="{{ bild.alt | escape }}" loading="lazy"></div>
+      <div class="split__media-item">{% include bild-mit-quelle.html bild=bild %}</div>
       {% endfor %}
     </div>
   </div>

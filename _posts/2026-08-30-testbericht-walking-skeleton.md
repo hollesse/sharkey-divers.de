@@ -6,8 +6,10 @@ titelbild:
   src: /assets/uploads/2026-08-30-testbericht-walking-skeleton/bericht-hero.webp
   alt: "Taucher unter Wasser mit aufsteigenden Luftblasen"
 images:
-  - /assets/uploads/2026-08-30-testbericht-walking-skeleton/bericht-bild-1.webp
-  - /assets/uploads/2026-08-30-testbericht-walking-skeleton/bericht-bild-2.webp
+  - src: /assets/uploads/2026-08-30-testbericht-walking-skeleton/bericht-bild-1.webp
+    alt: "Beispielbild aus dem Tauchbericht"
+  - src: /assets/uploads/2026-08-30-testbericht-walking-skeleton/bericht-bild-2.webp
+    alt: "Weiteres Beispielbild aus dem Tauchbericht"
 ---
 
 Dies ist ein Beispiel-Tauchbericht, der beweisen soll, dass das Gesamtsystem

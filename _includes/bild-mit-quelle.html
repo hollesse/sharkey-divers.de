@@ -1,0 +1,14 @@
+<!-- Bild mit Quelle — Jekyll-Gegenstueck zum CMS-Feldtyp "Bild mit Quelle"
+     (YAML-Anker &bild_mit_quelle_felder in admin/config.yml).
+     Parameter:
+       bild       — Objekt {src, alt, quelle: {fotograf, fotograf_url, foto_url, plattform}}
+                    (quelle ist optional; ohne fotograf kein Overlay)
+       loading    — "eager" | "lazy" (Default: lazy)
+       link       — optional: URL, verlinkt nur das Bild (nicht den Bildnachweis)
+       link_class — optional: CSS-Klasse fuer den Link
+     Der Bildnachweis (.bild-credit) ist absolut positioniert — der Aufrufer
+     muss einen position:relative-Container um dieses Include stellen. -->
+{% if include.link %}<a href="{{ include.link }}"{% if include.link_class %} class="{{ include.link_class }}"{% endif %}>{% endif %}<img src="{{ include.bild.src | relative_url }}" alt="{{ include.bild.alt | escape }}" loading="{{ include.loading | default: 'lazy' }}">{% if include.link %}</a>{% endif %}
+{%- if include.bild.quelle.fotograf %}
+{% include bild-credit.html author=include.bild.quelle.fotograf author_url=include.bild.quelle.fotograf_url photo_url=include.bild.quelle.foto_url source=include.bild.quelle.plattform %}
+{%- endif %}

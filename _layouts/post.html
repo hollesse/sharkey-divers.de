@@ -12,10 +12,7 @@ layout: default
   {% if page.titelbild.src %}
   <div class="bericht-article__hero">
     <div class="bericht-article__hero-media">
-      <img src="{{ page.titelbild.src | relative_url }}" alt="{{ page.titelbild.alt | escape }}" loading="lazy">
-      {% if page.titelbild.quelle.fotograf %}
-      {% include bild-credit.html author=page.titelbild.quelle.fotograf author_url=page.titelbild.quelle.fotograf_url photo_url=page.titelbild.quelle.foto_url source=page.titelbild.quelle.plattform %}
-      {% endif %}
+      {% include bild-mit-quelle.html bild=page.titelbild %}
     </div>
   </div>
   {% endif %}
@@ -26,7 +23,7 @@ layout: default
     {% if page.images and page.images.size > 0 %}
     <div class="bericht-gallery">
       {% for bild in page.images %}
-      <img src="{{ bild | relative_url }}" alt="" loading="lazy">
+      <div class="bericht-gallery__item">{% include bild-mit-quelle.html bild=bild %}</div>
       {% endfor %}
     </div>
     {% endif %}

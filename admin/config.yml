@@ -45,16 +45,18 @@ collections:
       # Theme-Ergaenzung design-system-001.
       - { label: "Teaser", name: "teaser", widget: "text", required: false }
       - { label: "Text", name: "body", widget: "markdown" }
-      # Titelbild als Objekt (Muster aus der Sveltia-Doku, docs/fields/image):
-      # Bild + Alt-Text gebuendelt, Quelle/Copyright als eigenes Unter-Objekt.
-      # Quelle-Struktur wie die Theme-Bildnachweise: "Foto: <Fotograf> /
-      # <Plattform>", Fotograf verlinkt aufs Profil, Plattform-Wort aufs
-      # Foto. Overlay unten rechts.
+      # "Feldtyp" Bild-mit-Quelle: Sveltia unterstuetzt registerFieldType
+      # noch nicht (Stand 09/2026, sveltia-cms#709), daher als YAML-Anker —
+      # hier einmal definiert, ueberall per Alias *bild_mit_quelle_felder
+      # wiederverwendet. Struktur: Bild + Alt-Text, Quelle/Copyright als
+      # optionales Unter-Objekt ("Foto: <Fotograf> / <Plattform>", Fotograf
+      # verlinkt aufs Profil, Plattform-Wort aufs Foto, Overlay unten
+      # rechts). Jekyll-Gegenstueck: _includes/bild-mit-quelle.html.
       - label: "Titelbild"
         name: "titelbild"
         widget: "object"
         required: false
-        fields:
+        fields: &bild_mit_quelle_felder
           - { label: "Bild", name: "src", widget: "image" }
           - { label: "Alt-Text", name: "alt", widget: "string", hint: "Kurze Bildbeschreibung fuer Screenreader, z. B. \"Taucherin schwimmt ueber ein Riff\"." }
           - label: "Quelle"
@@ -69,8 +71,8 @@ collections:
       - label: "Galerie"
         name: "images"
         widget: "list"
-        field: { label: "Bild", name: "image", widget: "image" }
         required: false
+        fields: *bild_mit_quelle_felder
 
   # Startseiten-Sektionen als je eigene Daten-Datei (_data/startseite/*.yml,
   # Jekyll mappt den Ordner auf site.data.startseite.<name>). Jede Sektion
@@ -92,18 +94,7 @@ collections:
           - label: "Bild"
             name: "bild"
             widget: "object"
-            fields:
-              - { label: "Bild", name: "src", widget: "image" }
-              - { label: "Alt-Text", name: "alt", widget: "string", hint: "Kurze Bildbeschreibung fuer Screenreader." }
-              - label: "Quelle"
-                name: "quelle"
-                widget: "object"
-                required: false
-                fields:
-                  - { label: "Fotograf", name: "fotograf", widget: "string", required: false }
-                  - { label: "Fotograf-Link", name: "fotograf_url", widget: "string", required: false }
-                  - { label: "Foto-Link", name: "foto_url", widget: "string", required: false }
-                  - { label: "Plattform", name: "plattform", widget: "string", required: false, default: "Unsplash" }
+            fields: *bild_mit_quelle_felder
           - label: "Button (primaer)"
             name: "button_primaer"
             widget: "object"
@@ -129,17 +120,13 @@ collections:
           - label: "Grosses Bild"
             name: "bild_gross"
             widget: "object"
-            fields:
-              - { label: "Bild", name: "src", widget: "image" }
-              - { label: "Alt-Text", name: "alt", widget: "string", hint: "Kurze Bildbeschreibung fuer Screenreader." }
+            fields: *bild_mit_quelle_felder
           - label: "Kleine Bilder"
             name: "bilder_klein"
             widget: "list"
             required: false
             hint: "Werden zweispaltig unter dem grossen Bild angezeigt — am besten eine gerade Anzahl."
-            fields:
-              - { label: "Bild", name: "src", widget: "image" }
-              - { label: "Alt-Text", name: "alt", widget: "string" }
+            fields: *bild_mit_quelle_felder
           - label: "Feature-Karten"
             name: "features"
             widget: "list"

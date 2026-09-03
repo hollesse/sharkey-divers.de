@@ -11,8 +11,10 @@ titelbild:
     foto_url: "https://unsplash.com/de/fotos/person-die-unter-wasser-schwimmt-fotografie-3_h9trxhQmY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
     plattform: "Unsplash"
 images:
-  - /assets/uploads/2026-09-01-testbericht-mit-bildquelle/bericht-bild-1.webp
-  - /assets/uploads/2026-09-01-testbericht-mit-bildquelle/bericht-bild-2.webp
+  - src: /assets/uploads/2026-09-01-testbericht-mit-bildquelle/bericht-bild-1.webp
+    alt: "Beispielbild aus dem Tauchbericht"
+  - src: /assets/uploads/2026-09-01-testbericht-mit-bildquelle/bericht-bild-2.webp
+    alt: "Weiteres Beispielbild aus dem Tauchbericht"
 ---
 
 Dieser Beispielbericht ist eine Kopie des Walking-Skeleton-Testberichts und

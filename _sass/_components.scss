@@ -59,6 +59,7 @@
 .split__media--grid .split__media-lead {
   grid-column: 1 / -1;
   height: 220px;
+  position: relative; // Anker fuer .bild-credit
 }
 
 .split__media--grid .split__media-lead img,
@@ -71,6 +72,7 @@
 
 .split__media--grid .split__media-item {
   height: 150px;
+  position: relative; // Anker fuer .bild-credit
 }
 
 .split__media--single {
@@ -435,6 +437,10 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: $space-14;
   margin: $space-26 0;
+}
+
+.bericht-gallery__item {
+  position: relative; // Anker fuer .bild-credit
 }
 
 .bericht-gallery img {
