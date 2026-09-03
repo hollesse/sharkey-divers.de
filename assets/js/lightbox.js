@@ -40,7 +40,12 @@
     el.addEventListener("click", function () {
       zeige(i);
       dialog.showModal();
+      document.documentElement.style.overflow = "hidden"; // Hintergrund-Scroll sperren
     });
+  });
+
+  dialog.addEventListener("close", function () {
+    document.documentElement.style.overflow = "";
   });
 
   dialog.querySelector(".lightbox__close").addEventListener("click", function () {
