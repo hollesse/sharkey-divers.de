@@ -22,9 +22,13 @@ bilder_klein:
       fotograf_url: https://unsplash.com/de/@layaclode?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
       foto_url: https://unsplash.com/de/fotos/person-die-vor-einem-gewasser-sitzt-AwfxsOAkHXI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
       plattform: Unsplash
-  - src: /assets/img/verein-stammtisch.webp
+  - src: /assets/uploads/startseite/mael-balland-vvxx_g6Q0sk-unsplash.webp
     alt: Vereinsmitglieder beim Stammtisch
-    quelle: null
+    quelle:
+      fotograf: Maël BALLAND
+      fotograf_url: https://unsplash.com/de/@mael_balland?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+      foto_url: https://unsplash.com/de/fotos/mann-im-taucheranzug-vvxx_g6Q0sk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
+      plattform: Unsplash
 features:
   - titel: Eigener Kompressor
     text: Flaschenfüllungen zum Vorzugspreis, direkt im Verein, ohne Umweg über den Tauchshop.
