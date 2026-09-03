@@ -180,14 +180,6 @@ collections:
           - { label: "Sektion aktiv", name: "aktiv", widget: "boolean", default: true, hint: "Aus = Sektion, Navbar- und Footer-Menuepunkt werden ausgeblendet. Die Termine selbst bleiben in der Sammlung 'Termine' erhalten." }
           - { label: "Kicker (kleine Zeile ueber dem Titel)", name: "kicker", widget: "string" }
           - { label: "Titel", name: "titel", widget: "string" }
-      - label: "Mitmachen (CTA-Box)"
-        name: "cta"
-        file: "_data/startseite/cta.yml"
-        fields:
-          - { label: "Titel", name: "titel", widget: "string" }
-          - { label: "Text", name: "text", widget: "text" }
-          - { label: "E-Mail-Adresse", name: "email", widget: "string", hint: "Wird als Button angezeigt und als mailto-Link verlinkt." }
-          - { label: "Hinweis unter dem Button", name: "hinweis", widget: "string", required: false }
       - label: "Berichte (Vorschau)"
         name: "berichte"
         file: "_data/startseite/berichte.yml"
@@ -196,6 +188,14 @@ collections:
           - { label: "Titel", name: "titel", widget: "string" }
           - { label: "Link-Text zur Uebersicht", name: "link_text", widget: "string" }
           - { label: "Anzahl Berichte", name: "anzahl", widget: "number", value_type: "int", min: 1, max: 6, default: 3, hint: "Wie viele der neuesten Berichte auf der Startseite erscheinen." }
+      - label: "Mitmachen (CTA-Box)"
+        name: "cta"
+        file: "_data/startseite/cta.yml"
+        fields:
+          - { label: "Titel", name: "titel", widget: "string" }
+          - { label: "Text", name: "text", widget: "text" }
+          - { label: "E-Mail-Adresse", name: "email", widget: "string", hint: "Wird als Button angezeigt und als mailto-Link verlinkt." }
+          - { label: "Hinweis unter dem Button", name: "hinweis", widget: "string", required: false }
       - label: "Footer"
         name: "footer"
         file: "_data/startseite/footer.yml"
