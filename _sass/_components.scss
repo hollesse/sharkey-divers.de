@@ -428,7 +428,9 @@
 
 .bericht-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  // auto-fill (nicht auto-fit): leere Spalten bleiben erhalten, damit ein
+  // einzelnes Bild normal klein bleibt statt die volle Breite zu fuellen
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: $space-14;
   margin: $space-26 0;
   align-items: start; // unterschiedlich hohe Thumbnails oben ausrichten
