@@ -60,9 +60,9 @@ nav_sticky: true
       <p class="kicker kicker--light">{{ ausbildung.kicker }}</p>
       <h2>{{ ausbildung.titel }}</h2>
       {{ ausbildung.text | markdownify }}
-      {% if ausbildung.info_zeilen and ausbildung.info_zeilen.size > 0 %}
+      {% if ausbildung.features and ausbildung.features.size > 0 %}
       <div class="info-rows">
-        {% for zeile in ausbildung.info_zeilen %}
+        {% for zeile in ausbildung.features %}
         <div class="info-row">
           <strong>{{ zeile.titel }}</strong>
           <span>{{ zeile.text }}</span>

@@ -146,10 +146,10 @@ collections:
           - { label: "Kicker (kleine Zeile ueber dem Titel)", name: "kicker", widget: "string" }
           - { label: "Titel", name: "titel", widget: "string" }
           - { label: "Text", name: "text", widget: "markdown", hint: "Links im Text sind moeglich, z. B. auf #mitmachen." }
-          - label: "Info-Zeilen"
-            name: "info_zeilen"
+          - label: "Feature-Karten"
+            name: "features"
             widget: "list"
-            hint: "Beliebig viele Zeilen, untereinander unter dem Text."
+            hint: "Beliebig viele Karten, untereinander unter dem Text."
             fields:
               - { label: "Titel", name: "titel", widget: "string" }
               - { label: "Text", name: "text", widget: "text" }
