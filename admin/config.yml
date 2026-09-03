@@ -74,6 +74,21 @@ collections:
         required: false
         fields: *bild_mit_quelle_felder
 
+  # Termine als eigene Collection (_termine/, je Termin eine Datei) — werden
+  # haeufiger gepflegt als der Rest der Startseite. Angezeigt in der
+  # Startseiten-Sektion "Termine" (dort auch der Aktiv-Schalter).
+  - name: termine
+    label: "Termine"
+    folder: "_termine"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{datum}} — {{title}}"
+    sortable_fields: [datum, title]
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum", name: "datum", widget: "datetime", time_format: false, format: "YYYY-MM-DD", hint: "Vergangene Termine verschwinden nicht automatisch — bitte gelegentlich aufraeumen." }
+      - { label: "Info", name: "info", widget: "string", hint: "Kurze Zusatzinfo, z. B. Uhrzeit und Ort." }
+
   # Startseiten-Sektionen als je eigene Daten-Datei (_data/startseite/*.yml,
   # Jekyll mappt den Ordner auf site.data.startseite.<name>). Jede Sektion
   # erscheint im CMS als eigener Eintrag der Sammlung "Startseite"; weitere
@@ -157,6 +172,13 @@ collections:
             name: "bild"
             widget: "object"
             fields: *bild_mit_quelle_felder
+      - label: "Termine"
+        name: "termine"
+        file: "_data/startseite/termine.yml"
+        fields:
+          - { label: "Sektion aktiv", name: "aktiv", widget: "boolean", default: true, hint: "Aus = Sektion, Navbar- und Footer-Menuepunkt werden ausgeblendet. Die Termine selbst bleiben in der Sammlung 'Termine' erhalten." }
+          - { label: "Kicker (kleine Zeile ueber dem Titel)", name: "kicker", widget: "string" }
+          - { label: "Titel", name: "titel", widget: "string" }
 
   - name: pages
     label: "Seiten"

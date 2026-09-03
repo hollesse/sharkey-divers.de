@@ -79,31 +79,25 @@ nav_sticky: true
   </div>
 </section>
 
+{% assign termine_cfg = site.data.startseite.termine %}
+{% if termine_cfg.aktiv %}
 <section id="termine" class="container section">
-  <p class="kicker">Termine</p>
-  <h2 class="section-title">Demnächst im Verein</h2>
-  <!-- TODO: Die drei Beispiel-Termine sind hart codiert (aus dem
-       Clot-Prototyp uebernommen). Pflegbarkeit (z. B. per Sveltia-Data-
-       Collection) folgt in einem separaten Task. -->
+  <p class="kicker">{{ termine_cfg.kicker }}</p>
+  <h2 class="section-title">{{ termine_cfg.titel }}</h2>
+  {% assign termine = site.termine | sort: "datum" %}
+  {% assign wochentage = "Mo,Di,Mi,Do,Fr,Sa,So" | split: "," %}
   <div class="termine-list">
+    {% for termin in termine %}
+    {% assign wt_index = termin.datum | date: "%u" | minus: 1 %}
     <div class="termine-list__row">
-      <span class="termine-list__date">Sa, 12.09.</span>
-      <strong class="termine-list__title">Ausfahrt Schönbach</strong>
-      <span class="termine-list__info">Gemeinsamer Tauchtag am Verbandssee, Grillen im Anschluss</span>
+      <span class="termine-list__date">{{ wochentage[wt_index] }}, {{ termin.datum | date: "%d.%m." }}</span>
+      <strong class="termine-list__title">{{ termin.title }}</strong>
+      <span class="termine-list__info">{{ termin.info }}</span>
     </div>
-    <div class="termine-list__row">
-      <span class="termine-list__date">Do, 24.09.</span>
-      <strong class="termine-list__title">Stammtisch</strong>
-      <span class="termine-list__info">Ab 19:30 Uhr, Ort wird in der Vereinsgruppe angekündigt</span>
-    </div>
-    <div class="termine-list__row">
-      <span class="termine-list__date">Sa, 10.10.</span>
-      <strong class="termine-list__title">Kompressor-Wartungstag</strong>
-      <span class="termine-list__info">Helfende Hände gesucht, danach Flaschenfüllen für alle</span>
-    </div>
+    {% endfor %}
   </div>
-  <p class="termine-hint">Alle Termine ohne Gewähr, kurzfristige Änderungen kündigen wir per Mail und in der Vereinsgruppe an.</p>
 </section>
+{% endif %}
 
 {% assign neueste_berichte = site.posts | slice: 0, 3 %}
 {% if neueste_berichte.size > 0 %}

@@ -25,7 +25,7 @@
       <div class="site-footer__links">
         <a href="{{ '/' | relative_url }}#verein">Der Verein</a>
         <a href="{{ '/' | relative_url }}#ausbildung">Ausbildung</a>
-        <a href="{{ '/' | relative_url }}#termine">Termine</a>
+        {% if site.data.startseite.termine.aktiv %}<a href="{{ '/' | relative_url }}#termine">Termine</a>{% endif %}
         <a href="{{ '/berichte.html' | relative_url }}">Berichte</a>
       </div>
     </div>

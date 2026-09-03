@@ -22,6 +22,11 @@ collections:
   posts:
     output: true
     permalink: /berichte/:year/:month/:day/:title/
+  # Termine als eigene Collection (je Termin eine Datei unter _termine/),
+  # gepflegt via Sveltia CMS. Keine eigenen Seiten, nur Daten fuer die
+  # Startseiten-Sektion.
+  termine:
+    output: false
 
 defaults:
   - scope:
