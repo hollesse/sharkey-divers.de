@@ -12,7 +12,7 @@ Vereinsregister: HRB 999999 **// TODO**
 Registergericht: Amtsgericht Limburg an der Lahn **// TODO**
 
 **Vertreten durch:**
-1. Vorsitzender:
+1\. Vorsitzender:
 Herrn Markus Schuster
 Am weißen Rain 4
 D - 35789 Weilmünster
