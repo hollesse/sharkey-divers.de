@@ -264,7 +264,12 @@
   flex-direction: column;
 }
 
+.bericht-card__media-wrap {
+  position: relative; // Anker fuer .bild-credit auf dem Kartenbild
+}
+
 .bericht-card__media {
+  display: block;
   height: 170px;
 }
 

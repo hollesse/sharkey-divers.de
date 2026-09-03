@@ -5,7 +5,12 @@
 {% assign hl = include.heading | default: "h3" %}
 <article class="bericht-card">
   {% if include.post.images and include.post.images.size > 0 %}
-  <a href="{{ include.post.url | relative_url }}" class="bericht-card__media"><img src="{{ include.post.images[0] | relative_url }}" alt="" loading="lazy"></a>
+  <div class="bericht-card__media-wrap">
+    <a href="{{ include.post.url | relative_url }}" class="bericht-card__media"><img src="{{ include.post.images[0] | relative_url }}" alt="" loading="lazy"></a>
+    {%- if include.post.bild_fotograf %}
+    {% include bild-credit.html author=include.post.bild_fotograf author_url=include.post.bild_fotograf_url photo_url=include.post.bild_foto_url source=include.post.bild_plattform %}
+    {%- endif %}
+  </div>
   {% endif %}
   <div class="bericht-card__body">
     <span class="bericht-card__date">{% include monat-jahr.html date=include.post.date %}</span>
