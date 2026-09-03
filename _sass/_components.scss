@@ -591,9 +591,24 @@
   border-radius: $radius-md;
 }
 
-// Hinweistext der Termin-Sektion, wenn keine Termine anstehen
+// Empty-State der Termin-Sektion, wenn keine Termine anstehen: helle
+// Karte im Stil der Sektionsflaechen, zentriert, mit Kalender-Icon
 .termine-leer {
-  margin: $space-16 0 0;
+  margin-top: $space-16;
+  padding: clamp(28px, 4vw, 44px) $space-16;
+  background: $color-mist-100;
+  border-radius: $radius-md;
+  text-align: center;
+}
+
+.termine-leer svg {
+  display: block;
+  margin: 0 auto $space-12;
+  color: $color-slate-400;
+}
+
+.termine-leer p {
+  margin: 0;
   font-size: $font-size-16-5;
   color: $color-slate-500;
 }
