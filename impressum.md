@@ -15,7 +15,7 @@ Registergericht: {{ site.data.verein.registergericht }} **// TODO**
 
 ## Kontakt
 Telefon: {{ site.data.verein.telefon }}
-E-Mail: {% include email-geschuetzt.html email=site.data.verein.email %}
+E-Mail: {% include email-geschuetzt.html %}
 
 ## Umsatzsteuer-ID
 Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:

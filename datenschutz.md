@@ -74,7 +74,7 @@ Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
 {{ site.data.verein.vorsitzender_adresse }}
 
 Telefon: {{ site.data.verein.telefon }}
-E-Mail: {% include email-geschuetzt.html email=site.data.verein.email %}
+E-Mail: {% include email-geschuetzt.html %}
 
 Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.
 

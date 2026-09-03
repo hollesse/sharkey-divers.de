@@ -5,12 +5,14 @@
      statt der Adresse ein Hinweis (bewusst OHNE "(at)"-Schreibweise —
      die koennen Harvester genauso lesen).
      Parameter:
-       email — die Adresse (aus dem CMS, normal gepflegt)
+       email — optional: die Adresse; ohne Angabe wird die zentrale
+               Vereins-E-Mail (site.data.verein.email) verwendet
        class — optional: CSS-Klassen fuer den Link (z. B. Button-Stile)
      Grenze des Verfahrens: Harvester, die einen echten Browser ausfuehren,
      kommen weiterhin an die Adresse — mehr ist ohne Server/Fremddienst
      auf einer statischen Seite nicht moeglich. {% endcomment %}
-{% assign email_teile = include.email | split: "@" %}
+{% assign email_adresse = include.email | default: site.data.verein.email %}
+{% assign email_teile = email_adresse | split: "@" %}
 <a href="#" class="email-schutz{% if include.class %} {{ include.class }}{% endif %}" data-n="{{ email_teile[0] }}" data-d="{{ email_teile[1] }}" hidden>E-Mail</a>
 <noscript>Bitte aktivieren Sie JavaScript, um die E-Mail-Adresse zu sehen.</noscript>
 <script>

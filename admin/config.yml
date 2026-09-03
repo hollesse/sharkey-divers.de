@@ -204,7 +204,8 @@ collections:
         fields:
           - { label: "Titel", name: "titel", widget: "string" }
           - { label: "Text", name: "text", widget: "text" }
-          - { label: "E-Mail-Adresse", name: "email", widget: "string", hint: "Wird als Button angezeigt und als mailto-Link verlinkt." }
+          # Die E-Mail-Adresse des Buttons kommt zentral aus den
+          # Vereinsdaten (site.data.verein.email).
           - { label: "Hinweis unter dem Button", name: "hinweis", widget: "string", required: false }
   - name: pages
     label: "Seiten"
@@ -285,7 +286,7 @@ collections:
           - { label: "Vereinsname", name: "name", widget: "string", hint: "Platzhalter im Text: {{ site.data.verein.name }}" }
           - { label: "Adresse", name: "adresse", widget: "text", hint: "Mehrzeilig. Wird im Footer angezeigt und ueberall dort, wo im Text der Platzhalter {{ site.data.verein.adresse }} steht." }
           - { label: "Telefon", name: "telefon", widget: "string", hint: "Platzhalter im Text: {{ site.data.verein.telefon }}" }
-          - { label: "E-Mail", name: "email", widget: "string", hint: "Platzhalter fuer die spam-geschuetzte Anzeige im Text: {% include email-geschuetzt.html email=site.data.verein.email %}" }
+          - { label: "E-Mail", name: "email", widget: "string", hint: "Platzhalter fuer die spam-geschuetzte Anzeige im Text: {% include email-geschuetzt.html %}" }
           - { label: "Adresse 1. Vorsitzender", name: "vorsitzender_adresse", widget: "text", hint: "Mehrzeilig. Platzhalter im Text: {{ site.data.verein.vorsitzender_adresse }}" }
           - { label: "Vereinsregister-Nummer", name: "registernummer", widget: "string", hint: "Platzhalter im Text: {{ site.data.verein.registernummer }}" }
           - { label: "Registergericht", name: "registergericht", widget: "string", hint: "Platzhalter im Text: {{ site.data.verein.registergericht }}" }
