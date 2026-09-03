@@ -437,6 +437,79 @@
   position: relative; // Anker fuer .bild-credit
 }
 
+// Lightbox fuer die Bericht-Galerie (assets/js/lightbox.js, ADR 0007:
+// first-party). Basis ist das native <dialog>-Element.
+.lightbox-klickbar {
+  cursor: zoom-in;
+}
+
+.lightbox {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  max-width: none;
+  max-height: none;
+  overflow: visible;
+}
+
+.lightbox[open] {
+  display: flex;
+  align-items: center;
+  gap: $space-12;
+}
+
+.lightbox::backdrop {
+  background: rgba(8, 28, 40, 0.88);
+}
+
+.lightbox__figure {
+  margin: 0;
+}
+
+.lightbox__figure img {
+  display: block;
+  max-width: min(84vw, 1100px);
+  max-height: 82vh;
+  width: auto;
+  height: auto;
+  border-radius: $radius-md;
+}
+
+.lightbox__figure figcaption {
+  margin-top: $space-8;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: $font-size-14-5;
+}
+
+.lightbox__nav,
+.lightbox__close {
+  border: 0;
+  cursor: pointer;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: $radius-sm;
+  font-size: 28px;
+  line-height: 1;
+  padding: $space-8 $space-12;
+}
+
+.lightbox__nav:hover,
+.lightbox__close:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.lightbox__close {
+  position: fixed;
+  top: $space-16;
+  right: $space-16;
+}
+
+// Bei nur einem Galeriebild gibt es nichts zu blaettern.
+.lightbox--einzelbild .lightbox__nav {
+  display: none;
+}
+
 .bericht-gallery img {
   width: 100%;
   height: 200px;
