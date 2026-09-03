@@ -84,7 +84,8 @@ deployt wird; *wohin* (welcher Account) klärt der einmalige `wrangler login`.
    Klon-Verzeichnis kann gelöscht werden.
 
 6. Die Worker-URL aus Schritt 2 an drei Stellen eintragen:
-   - Hier in dieser Checkliste als Referenz.
+   - Hier in dieser Checkliste als Referenz:
+     `https://sveltia-cms-auth.soft-bush-cd2b.workers.dev` (deployt 2026-09-03).
    - In `admin/config.yml` → `backend.base_url` (ersetzt den Platzhalter
      `https://SVELTIA-AUTH-WORKER-URL.example`).
    - Als Authorization-Callback-URL zurück in die GitHub OAuth App (Schritt 3).

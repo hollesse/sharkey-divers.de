@@ -4,3 +4,4 @@ vendor/
 .jekyll-cache/
 .worktrees/
 .agentheim/state/
+.idea/
