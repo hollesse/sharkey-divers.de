@@ -60,7 +60,8 @@ collections:
         fields: &bild_mit_quelle_felder
           - { label: "Bild", name: "src", widget: "image" }
           - { label: "Alt-Text", name: "alt", widget: "string", hint: "Kurze Bildbeschreibung fuer Screenreader, z. B. \"Taucherin schwimmt ueber ein Riff\"." }
-          - label: "Quelle"
+          - &quelle_feld
+            label: "Quelle"
             name: "quelle"
             widget: "object"
             required: false
@@ -69,11 +70,18 @@ collections:
               - { label: "Fotograf-Link", name: "fotograf_url", widget: "string", required: false }
               - { label: "Foto-Link", name: "foto_url", widget: "string", required: false }
               - { label: "Plattform", name: "plattform", widget: "string", required: false, default: "Unsplash" }
+      # "Feldtyp" Galerie-Bild: wie Bild-mit-Quelle, plus sichtbare
+      # Bildunterschrift (unter dem Bild und in der Lightbox).
+      # Jekyll-Gegenstueck: _includes/galerie.html.
       - label: "Galerie"
         name: "images"
         widget: "list"
         required: false
-        fields: *bild_mit_quelle_felder
+        fields:
+          - { label: "Bild", name: "src", widget: "image" }
+          - { label: "Alt-Text", name: "alt", widget: "string", hint: "Kurze Bildbeschreibung fuer Screenreader." }
+          - { label: "Bildunterschrift", name: "bildunterschrift", widget: "string", required: false, hint: "Sichtbarer Text unter dem Bild und in der Grossansicht." }
+          - *quelle_feld
 
   # Termine als eigene Collection (_termine/, je Termin eine Datei) — werden
   # haeufiger gepflegt als der Rest der Startseite. Angezeigt in der

@@ -14,6 +14,7 @@ titelbild:
 images:
   - src: /assets/uploads/2026-09-01-testbericht-mit-bildquelle/karl-callwood-vMXggrXITYU-unsplash.webp
     alt: Beispielbild aus dem Tauchbericht
+    bildunterschrift: "Unterwasseransicht im Pool — Beispiel für eine Bildunterschrift"
     quelle:
       fotograf: Karl Callwood
       fotograf_url: https://unsplash.com/de/@climatechangevi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText

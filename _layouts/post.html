@@ -20,17 +20,9 @@ layout: default
   <div class="bericht-article__body prose">
     {{ content }}
 
-    {% if page.images and page.images.size > 0 %}
-    <div class="bericht-gallery">
-      {% for bild in page.images %}
-      <div class="bericht-gallery__item">{% include bild-mit-quelle.html bild=bild %}</div>
-      {% endfor %}
-    </div>
-    {% endif %}
+    {% include galerie.html bilder=page.images %}
   </div>
 </article>
-
-<script src="{{ '/assets/js/lightbox.js' | relative_url }}" defer></script>
 
 {% unless page.cta_banner == false %}
 {% assign banner = site.data.berichte.banner %}

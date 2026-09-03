@@ -1,0 +1,21 @@
+{% comment %} Bildergalerie — Jekyll-Gegenstueck zum CMS-Feldtyp
+   "Galerie-Bild" (Bild + Alt-Text + optionale Bildunterschrift + optionale
+   Quelle, siehe admin/config.yml). Kapselt die komplette Galerie-
+   Funktionalitaet: Grid, Credit-Overlay, Bildunterschriften und die
+   Lightbox (assets/js/lightbox.js) — das Script wird nur eingebunden,
+   wenn tatsaechlich Bilder vorhanden sind.
+   Parameter:
+     bilder — Liste von Galerie-Bildern {src, alt, bildunterschrift, quelle} {% endcomment %}
+{% if include.bilder and include.bilder.size > 0 %}
+<div class="bericht-gallery">
+  {% for bild in include.bilder %}
+  <figure class="bericht-gallery__item">
+    <div class="bericht-gallery__media">{% include bild-mit-quelle.html bild=bild %}</div>
+    {% if bild.bildunterschrift %}
+    <figcaption class="bericht-gallery__caption">{{ bild.bildunterschrift }}</figcaption>
+    {% endif %}
+  </figure>
+  {% endfor %}
+</div>
+<script src="{{ '/assets/js/lightbox.js' | relative_url }}" defer></script>
+{% endif %}

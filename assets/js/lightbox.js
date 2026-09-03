@@ -12,6 +12,7 @@
       return {
         img: item.querySelector("img"),
         credit: item.querySelector(".bild-credit"),
+        caption: item.querySelector(".bericht-gallery__caption"),
       };
     })
     .filter(function (e) { return e.img; });
@@ -43,7 +44,10 @@
     var eintrag = eintraege[index];
     gross.src = eintrag.img.src;
     gross.alt = eintrag.img.alt;
-    beschriftung.textContent = eintrag.img.alt;
+    // Sichtbare Bildunterschrift nur, wenn eine gepflegt ist (der Alt-Text
+    // bleibt Screenreadern vorbehalten)
+    beschriftung.textContent = eintrag.caption ? eintrag.caption.textContent : "";
+    beschriftung.hidden = !eintrag.caption;
     if (eintrag.credit) {
       quelle.innerHTML = eintrag.credit.innerHTML;
       quelle.hidden = false;
