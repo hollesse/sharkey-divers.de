@@ -15,13 +15,18 @@ public_folder: "/assets/uploads"
 
 # Bildoptimierung beim Upload (ADR 0005): Sveltia transformiert automatisch
 # nach WebP, max. 1600px Kantenlaenge, Qualitaet ~80.
-media_library:
-  config:
+# Sveltia-eigene Syntax (media_libraries, Transformations unter "all") --
+# die alte Decap-Form media_library ohne "name" scheitert an Sveltias
+# Config-Validierung. Bewusste Abweichung von der Decap-Kompatibilitaet:
+# Decap kennt dieses Feature ohnehin nicht und ignoriert unbekannte Keys.
+media_libraries:
+  all:
     transformations:
       raster_image:
         format: webp
         quality: 80
         width: 1600
+        height: 1600
 
 collections:
   - name: berichte
