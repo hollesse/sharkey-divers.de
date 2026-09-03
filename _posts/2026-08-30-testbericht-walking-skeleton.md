@@ -9,7 +9,7 @@ images:
 bild_fotograf: ''
 bild_fotograf_url: ''
 bild_foto_url: ''
-bild_plattform: Unsplash
+bild_plattform: ''
 ---
 
 Dies ist ein Beispiel-Tauchbericht, der beweisen soll, dass das Gesamtsystem
