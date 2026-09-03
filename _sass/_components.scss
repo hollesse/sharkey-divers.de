@@ -591,26 +591,38 @@
   border-radius: $radius-md;
 }
 
-// Empty-State der Termin-Sektion, wenn keine Termine anstehen: helle
-// Karte im Stil der Sektionsflaechen, zentriert, mit Kalender-Icon
+// Empty-State der Termin-Sektion, wenn keine Termine anstehen — nach dem
+// Claude-Design-Entwurf ("Gerade Funkstille"): gestrichelt umrandete Karte,
+// Wellen-und-Blasen-Icon, Titel + Text zentriert.
 .termine-leer {
-  margin-top: $space-16;
-  padding: clamp(28px, 4vw, 44px) $space-16;
-  background: $color-mist-100;
-  border-radius: $radius-md;
+  border: 1px dashed $color-frost-200;
+  border-radius: $radius-lg;
+  padding: clamp(32px, 5vw, 56px) clamp(20px, 4vw, 48px);
   text-align: center;
+  background: $color-frost-50;
 }
 
 .termine-leer svg {
+  width: 72px;
+  height: 45px;
   display: block;
-  margin: 0 auto $space-12;
-  color: $color-slate-400;
+  margin: 0 auto $space-16;
+  color: $color-footer-accent; // gleicher Wellenton wie im Entwurf (#9fc4d8)
+}
+
+.termine-leer h3 {
+  margin: 0 0 $space-8;
+  font-family: $font-heading;
+  font-size: 20px;
+  color: $color-ink;
 }
 
 .termine-leer p {
-  margin: 0;
-  font-size: $font-size-16-5;
-  color: $color-slate-500;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.6;
+  color: $color-slate-600;
+  max-width: 420px;
 }
 
 .bericht-banner {

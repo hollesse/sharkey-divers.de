@@ -188,7 +188,8 @@ collections:
           - { label: "Sektion aktiv", name: "aktiv", widget: "boolean", default: true, hint: "Aus = Sektion, Navbar- und Footer-Menuepunkt werden ausgeblendet. Die Termine selbst bleiben in der Sammlung 'Termine' erhalten." }
           - { label: "Kicker (kleine Zeile ueber dem Titel)", name: "kicker", widget: "string" }
           - { label: "Titel", name: "titel", widget: "string" }
-          - { label: "Text wenn keine Termine anstehen", name: "kein_termin_text", widget: "string", hint: "Wird statt der Terminliste angezeigt, wenn die Sammlung 'Termine' leer ist." }
+          - { label: "Titel wenn keine Termine anstehen", name: "kein_termin_titel", widget: "string", hint: "Ueberschrift der Hinweis-Karte, wenn die Sammlung 'Termine' leer ist." }
+          - { label: "Text wenn keine Termine anstehen", name: "kein_termin_text", widget: "text", hint: "Text der Hinweis-Karte, wenn die Sammlung 'Termine' leer ist." }
       - label: "Berichte (Vorschau)"
         name: "berichte"
         file: "_data/startseite/berichte.yml"

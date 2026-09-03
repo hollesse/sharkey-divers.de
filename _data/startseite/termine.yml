@@ -1,4 +1,5 @@
 aktiv: true
 kicker: Termine
 titel: Demnächst im Verein
-kein_termin_text: "Aktuell stehen keine Termine fest — schau bald wieder vorbei."
+kein_termin_titel: "Gerade Funkstille"
+kein_termin_text: "Aktuell steht nichts im Kalender. Neue Termine kündigen wir per Mail und in der Vereinsgruppe an, danach stehen sie auch hier."

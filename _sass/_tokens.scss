@@ -28,6 +28,8 @@ $color-border-input:  #d4dee4;
 $color-footer-text:   #a9bcc7;
 $color-footer-link:   #c3d4dd;
 $color-footer-accent: #9fc4d8;
+$color-frost-50:      #f7fafc; // Empty-State-Karte: Hintergrund
+$color-frost-200:     #c8d8e2; // Empty-State-Karte: gestrichelte Kontur
 
 // Typografie (self-hosted, ADR 0007 -- siehe _fonts.scss)
 $font-heading: "Schibsted Grotesk", sans-serif;
