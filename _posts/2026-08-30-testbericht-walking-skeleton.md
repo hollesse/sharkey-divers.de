@@ -16,11 +16,6 @@ images:
     quelle: null
 ---
 
-Dies ist ein Beispiel-Tauchbericht, der beweisen soll, dass das Gesamtsystem
-(Jekyll-Build, Post-Collection, Bild-Referenz, Theme) tatsächlich
-funktioniert. Inhaltlich noch ohne Anspruch &ndash; die echten Berichte
-folgen in späteren Tasks, geschrieben von echten Vereinsmitgliedern.
+Dies ist ein Beispiel-Tauchbericht, der beweisen soll, dass das Gesamtsystem (Jekyll-Build, Post-Collection, Bild-Referenz, Theme) tatsächlich funktioniert. Inhaltlich noch ohne Anspruch &ndash; die echten Berichte folgen in späteren Tasks, geschrieben von echten Vereinsmitgliedern.
 
-Das `titelbild` (Bild + Alt-Text, optional mit Quelle) wird als großes
-Titelbild angezeigt, die Bilder in `images` als Galerie darunter &ndash;
-genau wie im Clot-Prototyp (`docs/design-prototype/bericht.html`).
+Das `titelbild` (Bild + Alt-Text, optional mit Quelle) wird als großes Titelbild angezeigt, die Bilder in `images` als Galerie darunter &ndash; genau wie im Clot-Prototyp (`docs/design-prototype/bericht.html`).

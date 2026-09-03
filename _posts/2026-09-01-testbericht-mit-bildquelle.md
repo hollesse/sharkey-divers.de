@@ -17,11 +17,6 @@ images:
     alt: "Weiteres Beispielbild aus dem Tauchbericht"
 ---
 
-Dieser Beispielbericht ist eine Kopie des Walking-Skeleton-Testberichts und
-demonstriert die **Titelbild-Quelle**: Über das optionale Unter-Objekt
-`Quelle` (Fotograf, Fotograf-Link, Foto-Link, Plattform) im Titelbild-Feld
-erscheint unten rechts im Titelbild ein kleines Copyright-Overlay (hier
-beispielhaft mit der Quelle des Hero-Banners: &bdquo;Foto: Bobbi Wu /
-Unsplash&ldquo;).
+Dieser Beispielbericht ist eine Kopie des Walking-Skeleton-Testberichts und demonstriert die **Titelbild-Quelle**: Über das optionale Unter-Objekt `Quelle` (Fotograf, Fotograf-Link, Foto-Link, Plattform) im Titelbild-Feld erscheint unten rechts im Titelbild ein kleines Copyright-Overlay (hier beispielhaft mit der Quelle des Hero-Banners: &bdquo;Foto: Bobbi Wu / Unsplash&ldquo;).
 
 Die Galerie darunter funktioniert unverändert wie im ersten Testbericht.

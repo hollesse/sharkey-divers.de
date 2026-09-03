@@ -12,6 +12,14 @@ timezone: Europe/Berlin
 
 markdown: kramdown
 
+# Jeder Zeilenumbruch im Markdown wird zu <br> (wie Redakteure es aus
+# Word/CMS-Editoren erwarten, z. B. fuer Adressen im Impressum). Absaetze
+# in Markdown-Quelltexten duerfen deshalb NICHT mehr hart umbrochen
+# werden — eine Zeile pro Absatz.
+kramdown:
+  input: GFM
+  hard_wrap: true
+
 # Jekyll-eigene Sass-Pipeline (kein zusaetzliches Gem noetig, ships mit
 # Jekyll 4). Tokens/Layouts/Komponenten liegen als Partials unter _sass/,
 # Einstiegspunkt ist assets/css/main.scss.
