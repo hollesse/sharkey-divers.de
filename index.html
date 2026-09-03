@@ -119,15 +119,16 @@ nav_sticky: true
 </section>
 {% endif %}
 
+{% assign cta = site.data.startseite.cta %}
 <section id="mitmachen" class="container section">
   <div class="cta-box">
     <div class="cta-box__text">
-      <h2>Lust, es mal zu probieren?</h2>
-      <p>Komm zum Schnuppertauchen mit, kostenlos und unverbindlich. Ausrüstung stellen wir. Schreib uns kurz eine Mail, dann finden wir einen passenden Termin.</p>
+      <h2>{{ cta.titel }}</h2>
+      <p>{{ cta.text }}</p>
     </div>
     <div class="cta-box__action">
-      <a href="mailto:info@tauchclub-weilburg.de" class="btn btn--white">info@tauchclub-weilburg.de</a>
-      <span class="cta-box__hint">Wir melden uns meist innerhalb weniger Tage.</span>
+      <a href="mailto:{{ cta.email }}" class="btn btn--white">{{ cta.email }}</a>
+      {% if cta.hinweis %}<span class="cta-box__hint">{{ cta.hinweis }}</span>{% endif %}
     </div>
   </div>
 </section>

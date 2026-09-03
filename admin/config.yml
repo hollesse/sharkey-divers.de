@@ -179,6 +179,14 @@ collections:
           - { label: "Sektion aktiv", name: "aktiv", widget: "boolean", default: true, hint: "Aus = Sektion, Navbar- und Footer-Menuepunkt werden ausgeblendet. Die Termine selbst bleiben in der Sammlung 'Termine' erhalten." }
           - { label: "Kicker (kleine Zeile ueber dem Titel)", name: "kicker", widget: "string" }
           - { label: "Titel", name: "titel", widget: "string" }
+      - label: "Mitmachen (CTA-Box)"
+        name: "cta"
+        file: "_data/startseite/cta.yml"
+        fields:
+          - { label: "Titel", name: "titel", widget: "string" }
+          - { label: "Text", name: "text", widget: "text" }
+          - { label: "E-Mail-Adresse", name: "email", widget: "string", hint: "Wird als Button angezeigt und als mailto-Link verlinkt." }
+          - { label: "Hinweis unter dem Button", name: "hinweis", widget: "string", required: false }
 
   - name: pages
     label: "Seiten"
