@@ -1,5 +1,5 @@
 ---
-title: 'Walking Skeleton: Ohne Titelbild-Quelle'
+title: 'Walking Skeleton 1: Ohne Titelbild-Quelle'
 date: 2026-08-30
 teaser: Ein Beispielbericht mit Titelbild und Galerie, der zeigt, dass Jekyll-Build, Post-Collection und Theme zusammenspielen.
 cta_banner: false
@@ -14,6 +14,7 @@ titelbild:
 images:
   - src: /assets/uploads/2026-09-01-testbericht-mit-bildquelle/karl-callwood-vMXggrXITYU-unsplash.webp
     alt: Beispielbild aus dem Tauchbericht
+    bildunterschrift: ''
     quelle:
       fotograf: Karl Callwood
       fotograf_url: https://unsplash.com/de/@climatechangevi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
@@ -21,6 +22,7 @@ images:
       plattform: Unsplash
   - src: /assets/uploads/2026-08-30-testbericht-walking-skeleton/karl-callwood-h8lg44k8vKE-unsplash.webp
     alt: Weiteres Beispielbild aus dem Tauchbericht
+    bildunterschrift: ''
     quelle:
       fotograf: Karl Callwood
       fotograf_url: https://unsplash.com/de/@climatechangevi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
