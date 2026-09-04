@@ -7,6 +7,9 @@ backend:
   repo: hollesse/sharkey-divers.de
   branch: main
   base_url: https://sveltia-cms-cloudflare-access-auth.soft-bush-cd2b.workers.dev
+  # Nur OAuth-Login anbieten — blendet "Sign In Using Access Token" aus.
+  # Achtung: leeres Array waere ein Sveltia-Konfigurationsfehler.
+  auth_methods: [oauth]
 
 # Kein Editorial Workflow in v1 (ADR 0003) -- Redakteure committen direkt auf main.
 
