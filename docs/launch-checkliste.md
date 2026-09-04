@@ -85,7 +85,9 @@ deployt wird; *wohin* (welcher Account) klärt der einmalige `wrangler login`.
 
 6. Die Worker-URL aus Schritt 2 an drei Stellen eintragen:
    - Hier in dieser Checkliste als Referenz:
-     `https://sveltia-cms-auth.soft-bush-cd2b.workers.dev` (deployt 2026-09-03).
+     `https://sveltia-cms-cloudflare-access-auth.soft-bush-cd2b.workers.dev`
+     (Hybrid-Worker sveltia-cms-cloudflare-access-auth, ersetzt seit
+     2026-09-04 den urspruenglichen sveltia-cms-auth-Worker).
    - In `admin/config.yml` → `backend.base_url` (ersetzt den Platzhalter
      `https://SVELTIA-AUTH-WORKER-URL.example`).
    - Als Authorization-Callback-URL zurück in die GitHub OAuth App (Schritt 3).
