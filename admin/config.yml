@@ -6,7 +6,7 @@ backend:
   name: github
   repo: hollesse/sharkey-divers.de
   branch: main
-  base_url: https://sveltia-cms-auth.soft-bush-cd2b.workers.dev
+  base_url: https://sveltia-cms-cloudflare-access-auth.soft-bush-cd2b.workers.dev
 
 # Kein Editorial Workflow in v1 (ADR 0003) -- Redakteure committen direkt auf main.
 
