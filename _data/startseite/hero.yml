@@ -1,7 +1,6 @@
 # Herobanner der Startseite, pflegbar via Sveltia CMS
 # (Collection "Startseite" -> Eintrag "Herobanner").
 # Bild-Struktur wie das Titelbild der Berichte: src + alt + quelle-Objekt.
-kicker: "Tauchclub Sharkey Divers Weilburg e.V."
 titel: "Gemeinsam abtauchen. Seit 1996."
 text: "Über 50 Taucherinnen und Taucher und Ausbildung nach VDST/CMAS, vom ersten Atemzug unter Wasser bis zum technischen Tauchen. Getaucht wird im Verbandssee des HTSV in Schönbach bei Herborn."
 bild:
